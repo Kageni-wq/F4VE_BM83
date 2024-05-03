@@ -1,0 +1,2456 @@
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"bm83.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/bm83.c"
+  20              		.section	.text.BM83_generic_write,"ax",%progbits
+  21              		.align	1
+  22              		.global	BM83_generic_write
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	BM83_generic_write:
+  28              	.LVL0:
+  29              	.LFB135:
+   1:Core/Src/bm83.c **** #include "bm83.h"
+   2:Core/Src/bm83.c **** 
+   3:Core/Src/bm83.c **** 
+   4:Core/Src/bm83.c **** err_t BM83_Initialise ( BM83_t *ctx ) 
+   5:Core/Src/bm83.c **** {
+   6:Core/Src/bm83.c ****     err_t error_flag = BM83_OK;
+   7:Core/Src/bm83.c ****     
+   8:Core/Src/bm83.c ****     BM83_set_application_mode ( ctx );
+   9:Core/Src/bm83.c ****     BM83_set_mfb_pin ( ctx, 1 );
+  10:Core/Src/bm83.c ****     BM83_soft_unmute_output ( ctx );
+  11:Core/Src/bm83.c ****     BM83_reset_device ( ctx );
+  12:Core/Src/bm83.c **** 
+  13:Core/Src/bm83.c ****     error_flag |= BM83_power_on_device ( ctx );
+  14:Core/Src/bm83.c ****     error_flag |= BM83_reset_to_default ( ctx );
+  15:Core/Src/bm83.c ****     error_flag |= BM83_enter_pairing_mode ( ctx );
+  16:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+  17:Core/Src/bm83.c ****     
+  18:Core/Src/bm83.c ****     return error_flag;
+  19:Core/Src/bm83.c **** }
+  20:Core/Src/bm83.c **** 
+  21:Core/Src/bm83.c **** err_t BM83_generic_write ( BM83_t *ctx, uint8_t *data_buf, uint16_t len ) 
+  22:Core/Src/bm83.c **** {
+  30              		.loc 1 22 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 22 1 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              	.LCFI0:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 2
+
+
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+  39              		.cfi_offset 14, -4
+  23:Core/Src/bm83.c ****     return HAL_UART_Transmit(&huart1, data_buf, len, HAL_MAX_DELAY );
+  40              		.loc 1 23 5 is_stmt 1 view .LVU2
+  41              		.loc 1 23 12 is_stmt 0 view .LVU3
+  42 0002 4FF0FF33 		mov	r3, #-1
+  43 0006 0248     		ldr	r0, .L3
+  44              	.LVL1:
+  45              		.loc 1 23 12 view .LVU4
+  46 0008 FFF7FEFF 		bl	HAL_UART_Transmit
+  47              	.LVL2:
+  24:Core/Src/bm83.c **** }
+  48              		.loc 1 24 1 view .LVU5
+  49 000c 08BD     		pop	{r3, pc}
+  50              	.L4:
+  51 000e 00BF     		.align	2
+  52              	.L3:
+  53 0010 00000000 		.word	huart1
+  54              		.cfi_endproc
+  55              	.LFE135:
+  57              		.section	.text.BM83_generic_read,"ax",%progbits
+  58              		.align	1
+  59              		.global	BM83_generic_read
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  64              	BM83_generic_read:
+  65              	.LVL3:
+  66              	.LFB136:
+  25:Core/Src/bm83.c **** 
+  26:Core/Src/bm83.c **** err_t BM83_generic_read ( BM83_t *ctx, uint8_t *data_buf, uint16_t max_len ) 
+  27:Core/Src/bm83.c **** {
+  67              		.loc 1 27 1 is_stmt 1 view -0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		.loc 1 27 1 is_stmt 0 view .LVU7
+  72 0000 08B5     		push	{r3, lr}
+  73              	.LCFI1:
+  74              		.cfi_def_cfa_offset 8
+  75              		.cfi_offset 3, -8
+  76              		.cfi_offset 14, -4
+  28:Core/Src/bm83.c ****     return HAL_UART_Receive(&huart1, data_buf, max_len, HAL_MAX_DELAY );
+  77              		.loc 1 28 5 is_stmt 1 view .LVU8
+  78              		.loc 1 28 12 is_stmt 0 view .LVU9
+  79 0002 4FF0FF33 		mov	r3, #-1
+  80 0006 0248     		ldr	r0, .L7
+  81              	.LVL4:
+  82              		.loc 1 28 12 view .LVU10
+  83 0008 FFF7FEFF 		bl	HAL_UART_Receive
+  84              	.LVL5:
+  29:Core/Src/bm83.c **** }
+  85              		.loc 1 29 1 view .LVU11
+  86 000c 08BD     		pop	{r3, pc}
+  87              	.L8:
+  88 000e 00BF     		.align	2
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 3
+
+
+  89              	.L7:
+  90 0010 00000000 		.word	huart1
+  91              		.cfi_endproc
+  92              	.LFE136:
+  94              		.section	.text.BM83_set_mfb_pin,"ax",%progbits
+  95              		.align	1
+  96              		.global	BM83_set_mfb_pin
+  97              		.syntax unified
+  98              		.thumb
+  99              		.thumb_func
+ 101              	BM83_set_mfb_pin:
+ 102              	.LVL6:
+ 103              	.LFB137:
+  30:Core/Src/bm83.c **** 
+  31:Core/Src/bm83.c **** void BM83_set_mfb_pin ( BM83_t *ctx, uint8_t state )
+  32:Core/Src/bm83.c **** {
+ 104              		.loc 1 32 1 is_stmt 1 view -0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108              		.loc 1 32 1 is_stmt 0 view .LVU13
+ 109 0000 08B5     		push	{r3, lr}
+ 110              	.LCFI2:
+ 111              		.cfi_def_cfa_offset 8
+ 112              		.cfi_offset 3, -8
+ 113              		.cfi_offset 14, -4
+  33:Core/Src/bm83.c ****     if (state == 0) {
+ 114              		.loc 1 33 5 is_stmt 1 view .LVU14
+ 115              		.loc 1 33 8 is_stmt 0 view .LVU15
+ 116 0002 31B9     		cbnz	r1, .L10
+  34:Core/Src/bm83.c ****         HAL_GPIO_WritePin(MFB_GPIO_Port, MFB_Pin, GPIO_PIN_RESET); // Set pin to low
+ 117              		.loc 1 34 9 is_stmt 1 view .LVU16
+ 118 0004 0022     		movs	r2, #0
+ 119 0006 4FF48071 		mov	r1, #256
+ 120              	.LVL7:
+ 121              		.loc 1 34 9 is_stmt 0 view .LVU17
+ 122 000a 0548     		ldr	r0, .L13
+ 123              	.LVL8:
+ 124              		.loc 1 34 9 view .LVU18
+ 125 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 126              	.LVL9:
+ 127              	.L9:
+  35:Core/Src/bm83.c ****     } else {
+  36:Core/Src/bm83.c ****         HAL_GPIO_WritePin(MFB_GPIO_Port, MFB_Pin, GPIO_PIN_SET); // Set pin to high
+  37:Core/Src/bm83.c ****     }
+  38:Core/Src/bm83.c **** } 
+ 128              		.loc 1 38 1 view .LVU19
+ 129 0010 08BD     		pop	{r3, pc}
+ 130              	.LVL10:
+ 131              	.L10:
+  36:Core/Src/bm83.c ****     }
+ 132              		.loc 1 36 9 is_stmt 1 view .LVU20
+ 133 0012 0122     		movs	r2, #1
+ 134 0014 4FF48071 		mov	r1, #256
+ 135              	.LVL11:
+  36:Core/Src/bm83.c ****     }
+ 136              		.loc 1 36 9 is_stmt 0 view .LVU21
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 4
+
+
+ 137 0018 0148     		ldr	r0, .L13
+ 138              	.LVL12:
+  36:Core/Src/bm83.c ****     }
+ 139              		.loc 1 36 9 view .LVU22
+ 140 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 141              	.LVL13:
+ 142              		.loc 1 38 1 view .LVU23
+ 143 001e F7E7     		b	.L9
+ 144              	.L14:
+ 145              		.align	2
+ 146              	.L13:
+ 147 0020 00040240 		.word	1073873920
+ 148              		.cfi_endproc
+ 149              	.LFE137:
+ 151              		.section	.text.BM83_set_rst_pin,"ax",%progbits
+ 152              		.align	1
+ 153              		.global	BM83_set_rst_pin
+ 154              		.syntax unified
+ 155              		.thumb
+ 156              		.thumb_func
+ 158              	BM83_set_rst_pin:
+ 159              	.LVL14:
+ 160              	.LFB138:
+  39:Core/Src/bm83.c **** 
+  40:Core/Src/bm83.c **** void BM83_set_rst_pin ( BM83_t *ctx, uint8_t state )
+  41:Core/Src/bm83.c **** {
+ 161              		.loc 1 41 1 is_stmt 1 view -0
+ 162              		.cfi_startproc
+ 163              		@ args = 0, pretend = 0, frame = 0
+ 164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 165              		.loc 1 41 1 is_stmt 0 view .LVU25
+ 166 0000 08B5     		push	{r3, lr}
+ 167              	.LCFI3:
+ 168              		.cfi_def_cfa_offset 8
+ 169              		.cfi_offset 3, -8
+ 170              		.cfi_offset 14, -4
+  42:Core/Src/bm83.c **** if (state == 0) {
+ 171              		.loc 1 42 1 is_stmt 1 view .LVU26
+ 172              		.loc 1 42 4 is_stmt 0 view .LVU27
+ 173 0002 31B9     		cbnz	r1, .L16
+  43:Core/Src/bm83.c ****         HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_RESET); // Set pin to low
+ 174              		.loc 1 43 9 is_stmt 1 view .LVU28
+ 175 0004 0022     		movs	r2, #0
+ 176 0006 4FF40071 		mov	r1, #512
+ 177              	.LVL15:
+ 178              		.loc 1 43 9 is_stmt 0 view .LVU29
+ 179 000a 0548     		ldr	r0, .L19
+ 180              	.LVL16:
+ 181              		.loc 1 43 9 view .LVU30
+ 182 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 183              	.LVL17:
+ 184              	.L15:
+  44:Core/Src/bm83.c ****     } else {
+  45:Core/Src/bm83.c ****         HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_SET); // Set pin to high
+  46:Core/Src/bm83.c ****     }
+  47:Core/Src/bm83.c **** }
+ 185              		.loc 1 47 1 view .LVU31
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 5
+
+
+ 186 0010 08BD     		pop	{r3, pc}
+ 187              	.LVL18:
+ 188              	.L16:
+  45:Core/Src/bm83.c ****     }
+ 189              		.loc 1 45 9 is_stmt 1 view .LVU32
+ 190 0012 0122     		movs	r2, #1
+ 191 0014 4FF40071 		mov	r1, #512
+ 192              	.LVL19:
+  45:Core/Src/bm83.c ****     }
+ 193              		.loc 1 45 9 is_stmt 0 view .LVU33
+ 194 0018 0148     		ldr	r0, .L19
+ 195              	.LVL20:
+  45:Core/Src/bm83.c ****     }
+ 196              		.loc 1 45 9 view .LVU34
+ 197 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 198              	.LVL21:
+ 199              		.loc 1 47 1 view .LVU35
+ 200 001e F7E7     		b	.L15
+ 201              	.L20:
+ 202              		.align	2
+ 203              	.L19:
+ 204 0020 00040240 		.word	1073873920
+ 205              		.cfi_endproc
+ 206              	.LFE138:
+ 208              		.section	.text.BM83_set_application_mode,"ax",%progbits
+ 209              		.align	1
+ 210              		.global	BM83_set_application_mode
+ 211              		.syntax unified
+ 212              		.thumb
+ 213              		.thumb_func
+ 215              	BM83_set_application_mode:
+ 216              	.LVL22:
+ 217              	.LFB139:
+  48:Core/Src/bm83.c **** 
+  49:Core/Src/bm83.c **** void BM83_set_application_mode ( BM83_t *ctx )
+  50:Core/Src/bm83.c **** {
+ 218              		.loc 1 50 1 is_stmt 1 view -0
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 0
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ 222              		.loc 1 50 1 is_stmt 0 view .LVU37
+ 223 0000 08B5     		push	{r3, lr}
+ 224              	.LCFI4:
+ 225              		.cfi_def_cfa_offset 8
+ 226              		.cfi_offset 3, -8
+ 227              		.cfi_offset 14, -4
+  51:Core/Src/bm83.c ****     HAL_GPIO_WritePin ( mod_pin, mod_pin, GPIO_PIN_SET );
+ 228              		.loc 1 51 5 is_stmt 1 view .LVU38
+ 229 0002 0122     		movs	r2, #1
+ 230 0004 4021     		movs	r1, #64
+ 231 0006 0846     		mov	r0, r1
+ 232              	.LVL23:
+ 233              		.loc 1 51 5 is_stmt 0 view .LVU39
+ 234 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 235              	.LVL24:
+  52:Core/Src/bm83.c **** }
+ 236              		.loc 1 52 1 view .LVU40
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 6
+
+
+ 237 000c 08BD     		pop	{r3, pc}
+ 238              		.cfi_endproc
+ 239              	.LFE139:
+ 241              		.section	.text.BM83_set_test_mode,"ax",%progbits
+ 242              		.align	1
+ 243              		.global	BM83_set_test_mode
+ 244              		.syntax unified
+ 245              		.thumb
+ 246              		.thumb_func
+ 248              	BM83_set_test_mode:
+ 249              	.LVL25:
+ 250              	.LFB140:
+  53:Core/Src/bm83.c **** 
+  54:Core/Src/bm83.c **** void BM83_set_test_mode ( BM83_t *ctx )
+  55:Core/Src/bm83.c **** {
+ 251              		.loc 1 55 1 is_stmt 1 view -0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 0
+ 254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 255              		.loc 1 55 1 is_stmt 0 view .LVU42
+ 256 0000 08B5     		push	{r3, lr}
+ 257              	.LCFI5:
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 3, -8
+ 260              		.cfi_offset 14, -4
+  56:Core/Src/bm83.c ****     HAL_GPIO_WritePin ( mod_pin, mod_pin, GPIO_PIN_RESET );
+ 261              		.loc 1 56 5 is_stmt 1 view .LVU43
+ 262 0002 0022     		movs	r2, #0
+ 263 0004 4021     		movs	r1, #64
+ 264 0006 0846     		mov	r0, r1
+ 265              	.LVL26:
+ 266              		.loc 1 56 5 is_stmt 0 view .LVU44
+ 267 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 268              	.LVL27:
+  57:Core/Src/bm83.c **** }
+ 269              		.loc 1 57 1 view .LVU45
+ 270 000c 08BD     		pop	{r3, pc}
+ 271              		.cfi_endproc
+ 272              	.LFE140:
+ 274              		.section	.text.BM83_soft_mute_output,"ax",%progbits
+ 275              		.align	1
+ 276              		.global	BM83_soft_mute_output
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 281              	BM83_soft_mute_output:
+ 282              	.LVL28:
+ 283              	.LFB142:
+  58:Core/Src/bm83.c **** 
+  59:Core/Src/bm83.c **** void BM83_reset_device ( BM83_t *ctx )
+  60:Core/Src/bm83.c **** {
+  61:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_RESET);
+  62:Core/Src/bm83.c ****     HAL_Delay(1000);
+  63:Core/Src/bm83.c ****     HAL_Delay(1000);
+  64:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_SET);
+  65:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+  66:Core/Src/bm83.c **** }
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 7
+
+
+  67:Core/Src/bm83.c **** 
+  68:Core/Src/bm83.c **** void BM83_soft_mute_output ( BM83_t *ctx )
+  69:Core/Src/bm83.c **** {
+ 284              		.loc 1 69 1 is_stmt 1 view -0
+ 285              		.cfi_startproc
+ 286              		@ args = 0, pretend = 0, frame = 0
+ 287              		@ frame_needed = 0, uses_anonymous_args = 0
+ 288              		.loc 1 69 1 is_stmt 0 view .LVU47
+ 289 0000 08B5     		push	{r3, lr}
+ 290              	.LCFI6:
+ 291              		.cfi_def_cfa_offset 8
+ 292              		.cfi_offset 3, -8
+ 293              		.cfi_offset 14, -4
+  70:Core/Src/bm83.c ****     HAL_GPIO_WritePin(sm_port, sm_pin, GPIO_PIN_SET);
+ 294              		.loc 1 70 5 is_stmt 1 view .LVU48
+ 295 0002 0122     		movs	r2, #1
+ 296 0004 8021     		movs	r1, #128
+ 297 0006 0248     		ldr	r0, .L27
+ 298              	.LVL29:
+ 299              		.loc 1 70 5 is_stmt 0 view .LVU49
+ 300 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 301              	.LVL30:
+  71:Core/Src/bm83.c **** }
+ 302              		.loc 1 71 1 view .LVU50
+ 303 000c 08BD     		pop	{r3, pc}
+ 304              	.L28:
+ 305 000e 00BF     		.align	2
+ 306              	.L27:
+ 307 0010 00040240 		.word	1073873920
+ 308              		.cfi_endproc
+ 309              	.LFE142:
+ 311              		.section	.text.BM83_soft_unmute_output,"ax",%progbits
+ 312              		.align	1
+ 313              		.global	BM83_soft_unmute_output
+ 314              		.syntax unified
+ 315              		.thumb
+ 316              		.thumb_func
+ 318              	BM83_soft_unmute_output:
+ 319              	.LVL31:
+ 320              	.LFB143:
+  72:Core/Src/bm83.c **** 
+  73:Core/Src/bm83.c **** void BM83_soft_unmute_output ( BM83_t *ctx )
+  74:Core/Src/bm83.c **** {
+ 321              		.loc 1 74 1 is_stmt 1 view -0
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325              		.loc 1 74 1 is_stmt 0 view .LVU52
+ 326 0000 08B5     		push	{r3, lr}
+ 327              	.LCFI7:
+ 328              		.cfi_def_cfa_offset 8
+ 329              		.cfi_offset 3, -8
+ 330              		.cfi_offset 14, -4
+  75:Core/Src/bm83.c ****     HAL_GPIO_WritePin(sm_port, sm_pin, GPIO_PIN_RESET);
+ 331              		.loc 1 75 5 is_stmt 1 view .LVU53
+ 332 0002 0022     		movs	r2, #0
+ 333 0004 8021     		movs	r1, #128
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 8
+
+
+ 334 0006 0248     		ldr	r0, .L31
+ 335              	.LVL32:
+ 336              		.loc 1 75 5 is_stmt 0 view .LVU54
+ 337 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 338              	.LVL33:
+  76:Core/Src/bm83.c **** }
+ 339              		.loc 1 76 1 view .LVU55
+ 340 000c 08BD     		pop	{r3, pc}
+ 341              	.L32:
+ 342 000e 00BF     		.align	2
+ 343              	.L31:
+ 344 0010 00040240 		.word	1073873920
+ 345              		.cfi_endproc
+ 346              	.LFE143:
+ 348              		.section	.text.BM83_send_command,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	BM83_send_command
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 355              	BM83_send_command:
+ 356              	.LVL34:
+ 357              	.LFB144:
+  77:Core/Src/bm83.c **** 
+  78:Core/Src/bm83.c **** void BM83_send_command ( BM83_t *ctx )
+  79:Core/Src/bm83.c **** {
+ 358              		.loc 1 79 1 is_stmt 1 view -0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 8
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		.loc 1 79 1 is_stmt 0 view .LVU57
+ 363 0000 10B5     		push	{r4, lr}
+ 364              	.LCFI8:
+ 365              		.cfi_def_cfa_offset 8
+ 366              		.cfi_offset 4, -8
+ 367              		.cfi_offset 14, -4
+ 368 0002 82B0     		sub	sp, sp, #8
+ 369              	.LCFI9:
+ 370              		.cfi_def_cfa_offset 16
+ 371 0004 0446     		mov	r4, r0
+  80:Core/Src/bm83.c ****     uint8_t cmd_buf[ 4 ] = { 0 };
+ 372              		.loc 1 80 5 is_stmt 1 view .LVU58
+ 373              		.loc 1 80 13 is_stmt 0 view .LVU59
+ 374 0006 0023     		movs	r3, #0
+ 375 0008 0193     		str	r3, [sp, #4]
+  81:Core/Src/bm83.c ****     uint8_t package_len = ctx->command_packet.param_len + 1;
+ 376              		.loc 1 81 5 is_stmt 1 view .LVU60
+ 377              		.loc 1 81 46 is_stmt 0 view .LVU61
+ 378 000a 90F80135 		ldrb	r3, [r0, #1281]	@ zero_extendqisi2
+ 379              		.loc 1 81 13 view .LVU62
+ 380 000e 0133     		adds	r3, r3, #1
+ 381              	.LVL35:
+  82:Core/Src/bm83.c ****     cmd_buf[ 0 ] = BM83_START_HEADER;
+ 382              		.loc 1 82 5 is_stmt 1 view .LVU63
+ 383              		.loc 1 82 18 is_stmt 0 view .LVU64
+ 384 0010 AA22     		movs	r2, #170
+ 385 0012 8DF80420 		strb	r2, [sp, #4]
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 9
+
+
+  83:Core/Src/bm83.c ****     cmd_buf[ 1 ] = ( uint8_t ) ( ( package_len >> 8 ) & 0xFF );
+ 386              		.loc 1 83 5 is_stmt 1 view .LVU65
+ 387              		.loc 1 83 20 is_stmt 0 view .LVU66
+ 388 0016 0022     		movs	r2, #0
+ 389              		.loc 1 83 18 view .LVU67
+ 390 0018 8DF80520 		strb	r2, [sp, #5]
+  84:Core/Src/bm83.c ****     cmd_buf[ 2 ] = ( uint8_t ) ( package_len & 0xFF );
+ 391              		.loc 1 84 5 is_stmt 1 view .LVU68
+ 392              		.loc 1 84 18 is_stmt 0 view .LVU69
+ 393 001c 8DF80630 		strb	r3, [sp, #6]
+  85:Core/Src/bm83.c ****     cmd_buf[ 3 ] = ctx->command_packet.opcode;
+ 394              		.loc 1 85 5 is_stmt 1 view .LVU70
+ 395              		.loc 1 85 39 is_stmt 0 view .LVU71
+ 396 0020 90F80034 		ldrb	r3, [r0, #1024]	@ zero_extendqisi2
+ 397              	.LVL36:
+ 398              		.loc 1 85 18 view .LVU72
+ 399 0024 8DF80730 		strb	r3, [sp, #7]
+  86:Core/Src/bm83.c ****     
+  87:Core/Src/bm83.c ****     HAL_Delay(10);
+ 400              		.loc 1 87 5 is_stmt 1 view .LVU73
+ 401 0028 0A20     		movs	r0, #10
+ 402              	.LVL37:
+ 403              		.loc 1 87 5 is_stmt 0 view .LVU74
+ 404 002a FFF7FEFF 		bl	HAL_Delay
+ 405              	.LVL38:
+  88:Core/Src/bm83.c ****     BM83_generic_write ( ctx, cmd_buf, 4 );
+ 406              		.loc 1 88 5 is_stmt 1 view .LVU75
+ 407 002e 0422     		movs	r2, #4
+ 408 0030 0DEB0201 		add	r1, sp, r2
+ 409 0034 2046     		mov	r0, r4
+ 410 0036 FFF7FEFF 		bl	BM83_generic_write
+ 411              	.LVL39:
+  89:Core/Src/bm83.c ****     uint8_t checksum = cmd_buf[ 1 ] + cmd_buf[ 2 ] + cmd_buf[ 3 ];
+ 412              		.loc 1 89 5 view .LVU76
+ 413              		.loc 1 89 31 is_stmt 0 view .LVU77
+ 414 003a 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
+ 415              		.loc 1 89 46 view .LVU78
+ 416 003e 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
+ 417              		.loc 1 89 37 view .LVU79
+ 418 0042 1344     		add	r3, r3, r2
+ 419              		.loc 1 89 61 view .LVU80
+ 420 0044 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 421              		.loc 1 89 52 view .LVU81
+ 422 0048 52FA83F3 		uxtab	r3, r2, r3
+ 423              		.loc 1 89 13 view .LVU82
+ 424 004c 8DF80330 		strb	r3, [sp, #3]
+  90:Core/Src/bm83.c ****     if ( ctx->command_packet.param_len ) 
+ 425              		.loc 1 90 5 is_stmt 1 view .LVU83
+ 426              		.loc 1 90 29 is_stmt 0 view .LVU84
+ 427 0050 94F80125 		ldrb	r2, [r4, #1281]	@ zero_extendqisi2
+ 428              		.loc 1 90 8 view .LVU85
+ 429 0054 7AB9     		cbnz	r2, .L38
+ 430              	.L34:
+  91:Core/Src/bm83.c ****     {
+  92:Core/Src/bm83.c ****         BM83_generic_write ( ctx, ctx->command_packet.param_buf, ctx->command_packet.param_len );
+  93:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->command_packet.param_len; cnt++ )
+  94:Core/Src/bm83.c ****         {
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 10
+
+
+  95:Core/Src/bm83.c ****             checksum += ctx->command_packet.param_buf[ cnt ];
+  96:Core/Src/bm83.c ****         }
+  97:Core/Src/bm83.c ****     }    
+  98:Core/Src/bm83.c ****     checksum = ~checksum + 1;
+ 431              		.loc 1 98 5 is_stmt 1 view .LVU86
+ 432              		.loc 1 98 14 is_stmt 0 view .LVU87
+ 433 0056 9DF80330 		ldrb	r3, [sp, #3]	@ zero_extendqisi2
+ 434 005a 5B42     		rsbs	r3, r3, #0
+ 435 005c 8DF80330 		strb	r3, [sp, #3]
+  99:Core/Src/bm83.c ****     BM83_generic_write ( ctx, &checksum, 1 );
+ 436              		.loc 1 99 5 is_stmt 1 view .LVU88
+ 437 0060 0122     		movs	r2, #1
+ 438 0062 0DF10301 		add	r1, sp, #3
+ 439 0066 2046     		mov	r0, r4
+ 440 0068 FFF7FEFF 		bl	BM83_generic_write
+ 441              	.LVL40:
+ 100:Core/Src/bm83.c ****     HAL_Delay(10);
+ 442              		.loc 1 100 5 view .LVU89
+ 443 006c 0A20     		movs	r0, #10
+ 444 006e FFF7FEFF 		bl	HAL_Delay
+ 445              	.LVL41:
+ 101:Core/Src/bm83.c **** }
+ 446              		.loc 1 101 1 is_stmt 0 view .LVU90
+ 447 0072 02B0     		add	sp, sp, #8
+ 448              	.LCFI10:
+ 449              		.cfi_remember_state
+ 450              		.cfi_def_cfa_offset 8
+ 451              		@ sp needed
+ 452 0074 10BD     		pop	{r4, pc}
+ 453              	.LVL42:
+ 454              	.L38:
+ 455              	.LCFI11:
+ 456              		.cfi_restore_state
+  92:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->command_packet.param_len; cnt++ )
+ 457              		.loc 1 92 9 is_stmt 1 view .LVU91
+ 458 0076 04F20141 		addw	r1, r4, #1025
+ 459 007a 2046     		mov	r0, r4
+ 460 007c FFF7FEFF 		bl	BM83_generic_write
+ 461              	.LVL43:
+  93:Core/Src/bm83.c ****         {
+ 462              		.loc 1 93 9 view .LVU92
+ 463              	.LBB2:
+  93:Core/Src/bm83.c ****         {
+ 464              		.loc 1 93 15 view .LVU93
+  93:Core/Src/bm83.c ****         {
+ 465              		.loc 1 93 24 is_stmt 0 view .LVU94
+ 466 0080 0023     		movs	r3, #0
+  93:Core/Src/bm83.c ****         {
+ 467              		.loc 1 93 9 view .LVU95
+ 468 0082 09E0     		b	.L35
+ 469              	.LVL44:
+ 470              	.L36:
+  95:Core/Src/bm83.c ****         }
+ 471              		.loc 1 95 13 is_stmt 1 discriminator 3 view .LVU96
+  95:Core/Src/bm83.c ****         }
+ 472              		.loc 1 95 54 is_stmt 0 discriminator 3 view .LVU97
+ 473 0084 E218     		adds	r2, r4, r3
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 11
+
+
+ 474 0086 92F80124 		ldrb	r2, [r2, #1025]	@ zero_extendqisi2
+  95:Core/Src/bm83.c ****         }
+ 475              		.loc 1 95 22 discriminator 3 view .LVU98
+ 476 008a 9DF80310 		ldrb	r1, [sp, #3]	@ zero_extendqisi2
+ 477 008e 0A44     		add	r2, r2, r1
+ 478 0090 8DF80320 		strb	r2, [sp, #3]
+  93:Core/Src/bm83.c ****         {
+ 479              		.loc 1 93 73 is_stmt 1 discriminator 3 view .LVU99
+ 480 0094 0133     		adds	r3, r3, #1
+ 481              	.LVL45:
+  93:Core/Src/bm83.c ****         {
+ 482              		.loc 1 93 73 is_stmt 0 discriminator 3 view .LVU100
+ 483 0096 9BB2     		uxth	r3, r3
+ 484              	.LVL46:
+ 485              	.L35:
+  93:Core/Src/bm83.c ****         {
+ 486              		.loc 1 93 37 is_stmt 1 discriminator 1 view .LVU101
+  93:Core/Src/bm83.c ****         {
+ 487              		.loc 1 93 58 is_stmt 0 discriminator 1 view .LVU102
+ 488 0098 94F80125 		ldrb	r2, [r4, #1281]	@ zero_extendqisi2
+  93:Core/Src/bm83.c ****         {
+ 489              		.loc 1 93 37 discriminator 1 view .LVU103
+ 490 009c 9A42     		cmp	r2, r3
+ 491 009e F1D8     		bhi	.L36
+ 492 00a0 D9E7     		b	.L34
+ 493              	.LBE2:
+ 494              		.cfi_endproc
+ 495              	.LFE144:
+ 497              		.section	.text.BM83_read_event,"ax",%progbits
+ 498              		.align	1
+ 499              		.global	BM83_read_event
+ 500              		.syntax unified
+ 501              		.thumb
+ 502              		.thumb_func
+ 504              	BM83_read_event:
+ 505              	.LVL47:
+ 506              	.LFB146:
+ 102:Core/Src/bm83.c **** 
+ 103:Core/Src/bm83.c **** err_t BM83_send_command_with_ack_check ( BM83_t *ctx )
+ 104:Core/Src/bm83.c **** {
+ 105:Core/Src/bm83.c ****     BM83_send_command ( ctx );
+ 106:Core/Src/bm83.c ****     if ( BM83_ERROR == BM83_read_event ( ctx ) )
+ 107:Core/Src/bm83.c ****     {
+ 108:Core/Src/bm83.c ****         BM83_send_command ( ctx );
+ 109:Core/Src/bm83.c ****         if ( BM83_ERROR == BM83_read_event ( ctx ) )
+ 110:Core/Src/bm83.c ****         {
+ 111:Core/Src/bm83.c ****             return BM83_ERROR;
+ 112:Core/Src/bm83.c ****         }
+ 113:Core/Src/bm83.c ****     }
+ 114:Core/Src/bm83.c ****     if ( ( BM83_EVT_CMD_ACK == ctx->event_packet.opcode ) && 
+ 115:Core/Src/bm83.c ****          ( ctx->command_packet.opcode == ctx->event_packet.param_buf[ 0 ] ) && 
+ 116:Core/Src/bm83.c ****          ( 2 == ctx->event_packet.param_len ) )
+ 117:Core/Src/bm83.c ****     {
+ 118:Core/Src/bm83.c ****         return ctx->event_packet.param_buf[ 1 ];
+ 119:Core/Src/bm83.c ****     }
+ 120:Core/Src/bm83.c ****     return BM83_ERROR;
+ 121:Core/Src/bm83.c **** }
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 12
+
+
+ 122:Core/Src/bm83.c **** 
+ 123:Core/Src/bm83.c **** err_t BM83_read_event ( BM83_t *ctx )
+ 124:Core/Src/bm83.c **** {
+ 507              		.loc 1 124 1 is_stmt 1 view -0
+ 508              		.cfi_startproc
+ 509              		@ args = 0, pretend = 0, frame = 8
+ 510              		@ frame_needed = 0, uses_anonymous_args = 0
+ 511              		.loc 1 124 1 is_stmt 0 view .LVU105
+ 512 0000 70B5     		push	{r4, r5, r6, lr}
+ 513              	.LCFI12:
+ 514              		.cfi_def_cfa_offset 16
+ 515              		.cfi_offset 4, -16
+ 516              		.cfi_offset 5, -12
+ 517              		.cfi_offset 6, -8
+ 518              		.cfi_offset 14, -4
+ 519 0002 82B0     		sub	sp, sp, #8
+ 520              	.LCFI13:
+ 521              		.cfi_def_cfa_offset 24
+ 522 0004 0546     		mov	r5, r0
+ 125:Core/Src/bm83.c ****     uint8_t timeout = 200;
+ 523              		.loc 1 125 5 is_stmt 1 view .LVU106
+ 524              	.LVL48:
+ 126:Core/Src/bm83.c ****     uint8_t evt_buf[ 4 ] = { 0 };
+ 525              		.loc 1 126 5 view .LVU107
+ 526              		.loc 1 126 13 is_stmt 0 view .LVU108
+ 527 0006 0023     		movs	r3, #0
+ 528 0008 0193     		str	r3, [sp, #4]
+ 127:Core/Src/bm83.c ****     while ( BM83_START_HEADER != evt_buf[ 0 ] )
+ 529              		.loc 1 127 5 is_stmt 1 view .LVU109
+ 125:Core/Src/bm83.c ****     uint8_t timeout = 200;
+ 530              		.loc 1 125 13 is_stmt 0 view .LVU110
+ 531 000a C824     		movs	r4, #200
+ 532              	.LVL49:
+ 533              	.L40:
+ 534              		.loc 1 127 31 is_stmt 1 view .LVU111
+ 535              		.loc 1 127 41 is_stmt 0 view .LVU112
+ 536 000c 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 537              		.loc 1 127 31 view .LVU113
+ 538 0010 AA2B     		cmp	r3, #170
+ 539 0012 0ED0     		beq	.L53
+ 128:Core/Src/bm83.c ****     {
+ 129:Core/Src/bm83.c ****         BM83_generic_read( ctx, evt_buf, 1 );
+ 540              		.loc 1 129 9 is_stmt 1 view .LVU114
+ 541 0014 0122     		movs	r2, #1
+ 542 0016 01A9     		add	r1, sp, #4
+ 543 0018 2846     		mov	r0, r5
+ 544 001a FFF7FEFF 		bl	BM83_generic_read
+ 545              	.LVL50:
+ 130:Core/Src/bm83.c ****         HAL_Delay(1);
+ 546              		.loc 1 130 9 view .LVU115
+ 547 001e 0120     		movs	r0, #1
+ 548 0020 FFF7FEFF 		bl	HAL_Delay
+ 549              	.LVL51:
+ 131:Core/Src/bm83.c ****         timeout--;
+ 550              		.loc 1 131 9 view .LVU116
+ 551              		.loc 1 131 16 is_stmt 0 view .LVU117
+ 552 0024 631E     		subs	r3, r4, #1
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 13
+
+
+ 553              	.LVL52:
+ 132:Core/Src/bm83.c ****         if ( 0 == timeout )
+ 554              		.loc 1 132 9 is_stmt 1 view .LVU118
+ 555              		.loc 1 132 12 is_stmt 0 view .LVU119
+ 556 0026 13F0FF04 		ands	r4, r3, #255
+ 557 002a EFD1     		bne	.L40
+ 133:Core/Src/bm83.c ****         {
+ 134:Core/Src/bm83.c ****             return BM83_ERROR;
+ 558              		.loc 1 134 20 view .LVU120
+ 559 002c 4FF0FF30 		mov	r0, #-1
+ 560 0030 52E0     		b	.L39
+ 561              	.LVL53:
+ 562              	.L53:
+ 135:Core/Src/bm83.c ****         }
+ 136:Core/Src/bm83.c ****     }
+ 137:Core/Src/bm83.c ****     HAL_Delay(10);
+ 563              		.loc 1 137 5 is_stmt 1 view .LVU121
+ 564 0032 0A20     		movs	r0, #10
+ 565 0034 FFF7FEFF 		bl	HAL_Delay
+ 566              	.LVL54:
+ 138:Core/Src/bm83.c ****     if ( 3 == BM83_generic_read( ctx, &evt_buf[ 1 ], 3 ) )
+ 567              		.loc 1 138 5 view .LVU122
+ 568              		.loc 1 138 15 is_stmt 0 view .LVU123
+ 569 0038 0322     		movs	r2, #3
+ 570 003a 0DF10501 		add	r1, sp, #5
+ 571 003e 2846     		mov	r0, r5
+ 572 0040 FFF7FEFF 		bl	BM83_generic_read
+ 573              	.LVL55:
+ 574              		.loc 1 138 8 view .LVU124
+ 575 0044 0328     		cmp	r0, #3
+ 576 0046 58D1     		bne	.L50
+ 139:Core/Src/bm83.c ****     {
+ 140:Core/Src/bm83.c ****         ctx->event_packet.param_len = ( uint16_t ) ( ( ( uint16_t ) evt_buf[ 1 ] << 8 ) | evt_buf[ 
+ 577              		.loc 1 140 9 is_stmt 1 view .LVU125
+ 578              		.loc 1 140 89 is_stmt 0 view .LVU126
+ 579 0048 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 580              		.loc 1 140 106 view .LVU127
+ 581 004c 013B     		subs	r3, r3, #1
+ 582              		.loc 1 140 37 view .LVU128
+ 583 004e 85F80336 		strb	r3, [r5, #1539]
+ 141:Core/Src/bm83.c ****         ctx->event_packet.opcode = evt_buf[ 3 ];
+ 584              		.loc 1 141 9 is_stmt 1 view .LVU129
+ 585              		.loc 1 141 43 is_stmt 0 view .LVU130
+ 586 0052 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 587              		.loc 1 141 34 view .LVU131
+ 588 0056 85F80235 		strb	r3, [r5, #1282]
+ 142:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 589              		.loc 1 142 9 is_stmt 1 view .LVU132
+ 590              	.LBB3:
+ 591              		.loc 1 142 15 view .LVU133
+ 592              	.LVL56:
+ 593              		.loc 1 142 24 is_stmt 0 view .LVU134
+ 594 005a 0024     		movs	r4, #0
+ 595              	.LVL57:
+ 596              	.L43:
+ 597              		.loc 1 142 37 is_stmt 1 discriminator 1 view .LVU135
+ 598              		.loc 1 142 56 is_stmt 0 discriminator 1 view .LVU136
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 14
+
+
+ 599 005c 95F80366 		ldrb	r6, [r5, #1539]	@ zero_extendqisi2
+ 600              		.loc 1 142 37 discriminator 1 view .LVU137
+ 601 0060 A642     		cmp	r6, r4
+ 602 0062 05D9     		bls	.L54
+ 143:Core/Src/bm83.c ****         {
+ 144:Core/Src/bm83.c ****             HAL_Delay(1);
+ 603              		.loc 1 144 13 is_stmt 1 discriminator 3 view .LVU138
+ 604 0064 0120     		movs	r0, #1
+ 605 0066 FFF7FEFF 		bl	HAL_Delay
+ 606              	.LVL58:
+ 142:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 607              		.loc 1 142 71 discriminator 3 view .LVU139
+ 608 006a 0134     		adds	r4, r4, #1
+ 609              	.LVL59:
+ 142:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 610              		.loc 1 142 71 is_stmt 0 discriminator 3 view .LVU140
+ 611 006c A4B2     		uxth	r4, r4
+ 612              	.LVL60:
+ 142:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 613              		.loc 1 142 71 discriminator 3 view .LVU141
+ 614 006e F5E7     		b	.L43
+ 615              	.L54:
+ 142:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 616              		.loc 1 142 71 discriminator 3 view .LVU142
+ 617              	.LBE3:
+ 145:Core/Src/bm83.c ****         }
+ 146:Core/Src/bm83.c ****         if ( ctx->event_packet.param_len == 
+ 618              		.loc 1 146 9 is_stmt 1 view .LVU143
+ 147:Core/Src/bm83.c ****              BM83_generic_read( ctx, ctx->event_packet.param_buf, ctx->event_packet.param_len ) )
+ 619              		.loc 1 147 14 is_stmt 0 view .LVU144
+ 620 0070 3246     		mov	r2, r6
+ 621 0072 05F20351 		addw	r1, r5, #1283
+ 622 0076 2846     		mov	r0, r5
+ 623 0078 FFF7FEFF 		bl	BM83_generic_read
+ 624              	.LVL61:
+ 146:Core/Src/bm83.c ****              BM83_generic_read( ctx, ctx->event_packet.param_buf, ctx->event_packet.param_len ) )
+ 625              		.loc 1 146 12 view .LVU145
+ 626 007c 8642     		cmp	r6, r0
+ 627 007e 3FD1     		bne	.L51
+ 628              	.LBB4:
+ 148:Core/Src/bm83.c ****         {
+ 149:Core/Src/bm83.c ****             uint8_t checksum_read = 0;
+ 629              		.loc 1 149 13 is_stmt 1 view .LVU146
+ 630              		.loc 1 149 21 is_stmt 0 view .LVU147
+ 631 0080 0023     		movs	r3, #0
+ 632 0082 8DF80330 		strb	r3, [sp, #3]
+ 150:Core/Src/bm83.c ****             if ( 1 == BM83_generic_read( ctx, &checksum_read, 1 ) )
+ 633              		.loc 1 150 13 is_stmt 1 view .LVU148
+ 634              		.loc 1 150 23 is_stmt 0 view .LVU149
+ 635 0086 0122     		movs	r2, #1
+ 636 0088 0DF10301 		add	r1, sp, #3
+ 637 008c 2846     		mov	r0, r5
+ 638 008e FFF7FEFF 		bl	BM83_generic_read
+ 639              	.LVL62:
+ 640              		.loc 1 150 16 view .LVU150
+ 641 0092 0128     		cmp	r0, #1
+ 642 0094 2ED1     		bne	.L45
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 15
+
+
+ 643              	.LBB5:
+ 151:Core/Src/bm83.c ****             {
+ 152:Core/Src/bm83.c ****                 uint8_t checksum = evt_buf[ 1 ] + evt_buf[ 2 ] + evt_buf[ 3 ];
+ 644              		.loc 1 152 17 is_stmt 1 view .LVU151
+ 645              		.loc 1 152 43 is_stmt 0 view .LVU152
+ 646 0096 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
+ 647              		.loc 1 152 58 view .LVU153
+ 648 009a 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 649              		.loc 1 152 49 view .LVU154
+ 650 009e 1A44     		add	r2, r2, r3
+ 651              		.loc 1 152 73 view .LVU155
+ 652 00a0 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 653              		.loc 1 152 25 view .LVU156
+ 654 00a4 53FA82F2 		uxtab	r2, r3, r2
+ 655 00a8 D2B2     		uxtb	r2, r2
+ 656              	.LVL63:
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 657              		.loc 1 153 17 is_stmt 1 view .LVU157
+ 658              	.LBB6:
+ 659              		.loc 1 153 23 view .LVU158
+ 660              		.loc 1 153 32 is_stmt 0 view .LVU159
+ 661 00aa 0023     		movs	r3, #0
+ 662              		.loc 1 153 17 view .LVU160
+ 663 00ac 06E0     		b	.L46
+ 664              	.LVL64:
+ 665              	.L47:
+ 154:Core/Src/bm83.c ****                 {
+ 155:Core/Src/bm83.c ****                     checksum += ctx->event_packet.param_buf[ cnt ];
+ 666              		.loc 1 155 21 is_stmt 1 discriminator 3 view .LVU161
+ 667              		.loc 1 155 60 is_stmt 0 discriminator 3 view .LVU162
+ 668 00ae E918     		adds	r1, r5, r3
+ 669 00b0 91F80315 		ldrb	r1, [r1, #1283]	@ zero_extendqisi2
+ 670              		.loc 1 155 30 discriminator 3 view .LVU163
+ 671 00b4 0A44     		add	r2, r2, r1
+ 672              	.LVL65:
+ 673              		.loc 1 155 30 discriminator 3 view .LVU164
+ 674 00b6 D2B2     		uxtb	r2, r2
+ 675              	.LVL66:
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 676              		.loc 1 153 79 is_stmt 1 discriminator 3 view .LVU165
+ 677 00b8 0133     		adds	r3, r3, #1
+ 678              	.LVL67:
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 679              		.loc 1 153 79 is_stmt 0 discriminator 3 view .LVU166
+ 680 00ba 9BB2     		uxth	r3, r3
+ 681              	.LVL68:
+ 682              	.L46:
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 683              		.loc 1 153 45 is_stmt 1 discriminator 1 view .LVU167
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 684              		.loc 1 153 64 is_stmt 0 discriminator 1 view .LVU168
+ 685 00bc 95F80316 		ldrb	r1, [r5, #1539]	@ zero_extendqisi2
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ 686              		.loc 1 153 45 discriminator 1 view .LVU169
+ 687 00c0 9942     		cmp	r1, r3
+ 688 00c2 F4D8     		bhi	.L47
+ 153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 16
+
+
+ 689              		.loc 1 153 45 discriminator 1 view .LVU170
+ 690              	.LBE6:
+ 156:Core/Src/bm83.c ****                 }
+ 157:Core/Src/bm83.c ****                 checksum = ~checksum + 1;
+ 691              		.loc 1 157 17 is_stmt 1 view .LVU171
+ 692              		.loc 1 157 26 is_stmt 0 view .LVU172
+ 693 00c4 5242     		rsbs	r2, r2, #0
+ 694              	.LVL69:
+ 695              		.loc 1 157 26 view .LVU173
+ 696 00c6 D2B2     		uxtb	r2, r2
+ 697              	.LVL70:
+ 158:Core/Src/bm83.c ****                 if ( checksum == checksum_read )
+ 698              		.loc 1 158 17 is_stmt 1 view .LVU174
+ 699              		.loc 1 158 31 is_stmt 0 view .LVU175
+ 700 00c8 9DF80330 		ldrb	r3, [sp, #3]	@ zero_extendqisi2
+ 701              	.LVL71:
+ 702              		.loc 1 158 20 view .LVU176
+ 703 00cc 9342     		cmp	r3, r2
+ 704 00ce 11D1     		bne	.L45
+ 159:Core/Src/bm83.c ****                 {
+ 160:Core/Src/bm83.c ****                     if ( BM83_EVT_CMD_ACK != ctx->event_packet.opcode )
+ 705              		.loc 1 160 21 is_stmt 1 view .LVU177
+ 706              		.loc 1 160 63 is_stmt 0 view .LVU178
+ 707 00d0 95F80235 		ldrb	r3, [r5, #1282]	@ zero_extendqisi2
+ 708              		.loc 1 160 24 view .LVU179
+ 709 00d4 13B9     		cbnz	r3, .L55
+ 710              	.LVL72:
+ 711              	.L48:
+ 161:Core/Src/bm83.c ****                     {
+ 162:Core/Src/bm83.c ****                         ctx->command_packet.opcode = BM83_CMD_EVENT_ACK;
+ 163:Core/Src/bm83.c ****                         ctx->command_packet.param_buf[ 0 ] = ctx->event_packet.opcode;
+ 164:Core/Src/bm83.c ****                         ctx->command_packet.param_len = 1;
+ 165:Core/Src/bm83.c ****                         BM83_send_command ( ctx );
+ 166:Core/Src/bm83.c ****                     }
+ 167:Core/Src/bm83.c ****                     return BM83_OK;
+ 712              		.loc 1 167 21 is_stmt 1 view .LVU180
+ 713              		.loc 1 167 28 is_stmt 0 view .LVU181
+ 714 00d6 0020     		movs	r0, #0
+ 715              	.LVL73:
+ 716              	.L39:
+ 717              		.loc 1 167 28 view .LVU182
+ 718              	.LBE5:
+ 719              	.LBE4:
+ 168:Core/Src/bm83.c ****                 }
+ 169:Core/Src/bm83.c ****             }
+ 170:Core/Src/bm83.c ****         }
+ 171:Core/Src/bm83.c ****     }
+ 172:Core/Src/bm83.c ****     return BM83_ERROR;
+ 173:Core/Src/bm83.c **** }
+ 720              		.loc 1 173 1 view .LVU183
+ 721 00d8 02B0     		add	sp, sp, #8
+ 722              	.LCFI14:
+ 723              		.cfi_remember_state
+ 724              		.cfi_def_cfa_offset 16
+ 725              		@ sp needed
+ 726 00da 70BD     		pop	{r4, r5, r6, pc}
+ 727              	.LVL74:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 17
+
+
+ 728              	.L55:
+ 729              	.LCFI15:
+ 730              		.cfi_restore_state
+ 731              	.LBB8:
+ 732              	.LBB7:
+ 162:Core/Src/bm83.c ****                         ctx->command_packet.param_buf[ 0 ] = ctx->event_packet.opcode;
+ 733              		.loc 1 162 25 is_stmt 1 view .LVU184
+ 162:Core/Src/bm83.c ****                         ctx->command_packet.param_buf[ 0 ] = ctx->event_packet.opcode;
+ 734              		.loc 1 162 52 is_stmt 0 view .LVU185
+ 735 00dc 1422     		movs	r2, #20
+ 736              	.LVL75:
+ 162:Core/Src/bm83.c ****                         ctx->command_packet.param_buf[ 0 ] = ctx->event_packet.opcode;
+ 737              		.loc 1 162 52 view .LVU186
+ 738 00de 85F80024 		strb	r2, [r5, #1024]
+ 163:Core/Src/bm83.c ****                         ctx->command_packet.param_len = 1;
+ 739              		.loc 1 163 25 is_stmt 1 view .LVU187
+ 163:Core/Src/bm83.c ****                         ctx->command_packet.param_len = 1;
+ 740              		.loc 1 163 60 is_stmt 0 view .LVU188
+ 741 00e2 85F80134 		strb	r3, [r5, #1025]
+ 164:Core/Src/bm83.c ****                         BM83_send_command ( ctx );
+ 742              		.loc 1 164 25 is_stmt 1 view .LVU189
+ 164:Core/Src/bm83.c ****                         BM83_send_command ( ctx );
+ 743              		.loc 1 164 55 is_stmt 0 view .LVU190
+ 744 00e6 0123     		movs	r3, #1
+ 745 00e8 85F80135 		strb	r3, [r5, #1281]
+ 165:Core/Src/bm83.c ****                     }
+ 746              		.loc 1 165 25 is_stmt 1 view .LVU191
+ 747 00ec 2846     		mov	r0, r5
+ 748 00ee FFF7FEFF 		bl	BM83_send_command
+ 749              	.LVL76:
+ 750 00f2 F0E7     		b	.L48
+ 751              	.LVL77:
+ 752              	.L45:
+ 165:Core/Src/bm83.c ****                     }
+ 753              		.loc 1 165 25 is_stmt 0 view .LVU192
+ 754              	.LBE7:
+ 755              	.LBE8:
+ 172:Core/Src/bm83.c **** }
+ 756              		.loc 1 172 12 view .LVU193
+ 757 00f4 4FF0FF30 		mov	r0, #-1
+ 758              	.LBB9:
+ 759 00f8 EEE7     		b	.L39
+ 760              	.LVL78:
+ 761              	.L50:
+ 172:Core/Src/bm83.c **** }
+ 762              		.loc 1 172 12 view .LVU194
+ 763              	.LBE9:
+ 764 00fa 4FF0FF30 		mov	r0, #-1
+ 765 00fe EBE7     		b	.L39
+ 766              	.LVL79:
+ 767              	.L51:
+ 172:Core/Src/bm83.c **** }
+ 768              		.loc 1 172 12 view .LVU195
+ 769 0100 4FF0FF30 		mov	r0, #-1
+ 770 0104 E8E7     		b	.L39
+ 771              		.cfi_endproc
+ 772              	.LFE146:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 18
+
+
+ 774              		.section	.text.BM83_send_command_with_ack_check,"ax",%progbits
+ 775              		.align	1
+ 776              		.global	BM83_send_command_with_ack_check
+ 777              		.syntax unified
+ 778              		.thumb
+ 779              		.thumb_func
+ 781              	BM83_send_command_with_ack_check:
+ 782              	.LVL80:
+ 783              	.LFB145:
+ 104:Core/Src/bm83.c ****     BM83_send_command ( ctx );
+ 784              		.loc 1 104 1 is_stmt 1 view -0
+ 785              		.cfi_startproc
+ 786              		@ args = 0, pretend = 0, frame = 0
+ 787              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104:Core/Src/bm83.c ****     BM83_send_command ( ctx );
+ 788              		.loc 1 104 1 is_stmt 0 view .LVU197
+ 789 0000 10B5     		push	{r4, lr}
+ 790              	.LCFI16:
+ 791              		.cfi_def_cfa_offset 8
+ 792              		.cfi_offset 4, -8
+ 793              		.cfi_offset 14, -4
+ 794 0002 0446     		mov	r4, r0
+ 105:Core/Src/bm83.c ****     if ( BM83_ERROR == BM83_read_event ( ctx ) )
+ 795              		.loc 1 105 5 is_stmt 1 view .LVU198
+ 796 0004 FFF7FEFF 		bl	BM83_send_command
+ 797              	.LVL81:
+ 106:Core/Src/bm83.c ****     {
+ 798              		.loc 1 106 5 view .LVU199
+ 106:Core/Src/bm83.c ****     {
+ 799              		.loc 1 106 24 is_stmt 0 view .LVU200
+ 800 0008 2046     		mov	r0, r4
+ 801 000a FFF7FEFF 		bl	BM83_read_event
+ 802              	.LVL82:
+ 106:Core/Src/bm83.c ****     {
+ 803              		.loc 1 106 8 view .LVU201
+ 804 000e B0F1FF3F 		cmp	r0, #-1
+ 805 0012 0FD0     		beq	.L63
+ 806              	.L57:
+ 114:Core/Src/bm83.c ****          ( ctx->command_packet.opcode == ctx->event_packet.param_buf[ 0 ] ) && 
+ 807              		.loc 1 114 5 is_stmt 1 view .LVU202
+ 114:Core/Src/bm83.c ****          ( ctx->command_packet.opcode == ctx->event_packet.param_buf[ 0 ] ) && 
+ 808              		.loc 1 114 49 is_stmt 0 view .LVU203
+ 809 0014 94F80235 		ldrb	r3, [r4, #1282]	@ zero_extendqisi2
+ 114:Core/Src/bm83.c ****          ( ctx->command_packet.opcode == ctx->event_packet.param_buf[ 0 ] ) && 
+ 810              		.loc 1 114 8 view .LVU204
+ 811 0018 B3B9     		cbnz	r3, .L59
+ 115:Core/Src/bm83.c ****          ( 2 == ctx->event_packet.param_len ) )
+ 812              		.loc 1 115 31 discriminator 1 view .LVU205
+ 813 001a 94F80024 		ldrb	r2, [r4, #1024]	@ zero_extendqisi2
+ 115:Core/Src/bm83.c ****          ( 2 == ctx->event_packet.param_len ) )
+ 814              		.loc 1 115 69 discriminator 1 view .LVU206
+ 815 001e 94F80335 		ldrb	r3, [r4, #1283]	@ zero_extendqisi2
+ 114:Core/Src/bm83.c ****          ( ctx->command_packet.opcode == ctx->event_packet.param_buf[ 0 ] ) && 
+ 816              		.loc 1 114 59 discriminator 1 view .LVU207
+ 817 0022 9A42     		cmp	r2, r3
+ 818 0024 13D1     		bne	.L60
+ 116:Core/Src/bm83.c ****     {
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 19
+
+
+ 819              		.loc 1 116 34 view .LVU208
+ 820 0026 94F80336 		ldrb	r3, [r4, #1539]	@ zero_extendqisi2
+ 115:Core/Src/bm83.c ****          ( 2 == ctx->event_packet.param_len ) )
+ 821              		.loc 1 115 77 view .LVU209
+ 822 002a 022B     		cmp	r3, #2
+ 823 002c 12D1     		bne	.L61
+ 118:Core/Src/bm83.c ****     }
+ 824              		.loc 1 118 9 is_stmt 1 view .LVU210
+ 118:Core/Src/bm83.c ****     }
+ 825              		.loc 1 118 43 is_stmt 0 view .LVU211
+ 826 002e 94F80405 		ldrb	r0, [r4, #1284]	@ zero_extendqisi2
+ 827              	.L56:
+ 121:Core/Src/bm83.c **** 
+ 828              		.loc 1 121 1 view .LVU212
+ 829 0032 10BD     		pop	{r4, pc}
+ 830              	.LVL83:
+ 831              	.L63:
+ 108:Core/Src/bm83.c ****         if ( BM83_ERROR == BM83_read_event ( ctx ) )
+ 832              		.loc 1 108 9 is_stmt 1 view .LVU213
+ 833 0034 2046     		mov	r0, r4
+ 834 0036 FFF7FEFF 		bl	BM83_send_command
+ 835              	.LVL84:
+ 109:Core/Src/bm83.c ****         {
+ 836              		.loc 1 109 9 view .LVU214
+ 109:Core/Src/bm83.c ****         {
+ 837              		.loc 1 109 28 is_stmt 0 view .LVU215
+ 838 003a 2046     		mov	r0, r4
+ 839 003c FFF7FEFF 		bl	BM83_read_event
+ 840              	.LVL85:
+ 109:Core/Src/bm83.c ****         {
+ 841              		.loc 1 109 12 view .LVU216
+ 842 0040 B0F1FF3F 		cmp	r0, #-1
+ 843 0044 E6D1     		bne	.L57
+ 844 0046 F4E7     		b	.L56
+ 845              	.L59:
+ 120:Core/Src/bm83.c **** }
+ 846              		.loc 1 120 12 view .LVU217
+ 847 0048 4FF0FF30 		mov	r0, #-1
+ 848 004c F1E7     		b	.L56
+ 849              	.L60:
+ 850 004e 4FF0FF30 		mov	r0, #-1
+ 851 0052 EEE7     		b	.L56
+ 852              	.L61:
+ 853 0054 4FF0FF30 		mov	r0, #-1
+ 854 0058 EBE7     		b	.L56
+ 855              		.cfi_endproc
+ 856              	.LFE145:
+ 858              		.section	.text.BM83_wait_for_event,"ax",%progbits
+ 859              		.align	1
+ 860              		.global	BM83_wait_for_event
+ 861              		.syntax unified
+ 862              		.thumb
+ 863              		.thumb_func
+ 865              	BM83_wait_for_event:
+ 866              	.LVL86:
+ 867              	.LFB147:
+ 174:Core/Src/bm83.c **** 
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 20
+
+
+ 175:Core/Src/bm83.c **** void BM83_wait_for_event ( BM83_t *ctx, uint8_t opcode )
+ 176:Core/Src/bm83.c **** {
+ 868              		.loc 1 176 1 is_stmt 1 view -0
+ 869              		.cfi_startproc
+ 870              		@ args = 0, pretend = 0, frame = 0
+ 871              		@ frame_needed = 0, uses_anonymous_args = 0
+ 872              		.loc 1 176 1 is_stmt 0 view .LVU219
+ 873 0000 38B5     		push	{r3, r4, r5, lr}
+ 874              	.LCFI17:
+ 875              		.cfi_def_cfa_offset 16
+ 876              		.cfi_offset 3, -16
+ 877              		.cfi_offset 4, -12
+ 878              		.cfi_offset 5, -8
+ 879              		.cfi_offset 14, -4
+ 880 0002 0446     		mov	r4, r0
+ 881 0004 0D46     		mov	r5, r1
+ 882              	.LVL87:
+ 883              	.L65:
+ 177:Core/Src/bm83.c ****     do 
+ 884              		.loc 1 177 5 is_stmt 1 discriminator 1 view .LVU220
+ 178:Core/Src/bm83.c ****     {
+ 179:Core/Src/bm83.c ****         BM83_read_event ( ctx );
+ 885              		.loc 1 179 9 discriminator 1 view .LVU221
+ 886 0006 2046     		mov	r0, r4
+ 887 0008 FFF7FEFF 		bl	BM83_read_event
+ 888              	.LVL88:
+ 180:Core/Src/bm83.c ****     } while ( ctx->event_packet.opcode != opcode );
+ 889              		.loc 1 180 40 discriminator 1 view .LVU222
+ 890              		.loc 1 180 32 is_stmt 0 discriminator 1 view .LVU223
+ 891 000c 94F80235 		ldrb	r3, [r4, #1282]	@ zero_extendqisi2
+ 892              		.loc 1 180 40 discriminator 1 view .LVU224
+ 893 0010 AB42     		cmp	r3, r5
+ 894 0012 F8D1     		bne	.L65
+ 181:Core/Src/bm83.c **** }
+ 895              		.loc 1 181 1 view .LVU225
+ 896 0014 38BD     		pop	{r3, r4, r5, pc}
+ 897              		.loc 1 181 1 view .LVU226
+ 898              		.cfi_endproc
+ 899              	.LFE147:
+ 901              		.section	.text.BM83_clear_events,"ax",%progbits
+ 902              		.align	1
+ 903              		.global	BM83_clear_events
+ 904              		.syntax unified
+ 905              		.thumb
+ 906              		.thumb_func
+ 908              	BM83_clear_events:
+ 909              	.LVL89:
+ 910              	.LFB148:
+ 182:Core/Src/bm83.c **** 
+ 183:Core/Src/bm83.c **** void BM83_clear_events ( BM83_t *ctx )
+ 184:Core/Src/bm83.c **** {
+ 911              		.loc 1 184 1 is_stmt 1 view -0
+ 912              		.cfi_startproc
+ 913              		@ args = 0, pretend = 0, frame = 0
+ 914              		@ frame_needed = 0, uses_anonymous_args = 0
+ 915              		.loc 1 184 1 is_stmt 0 view .LVU228
+ 916 0000 38B5     		push	{r3, r4, r5, lr}
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 21
+
+
+ 917              	.LCFI18:
+ 918              		.cfi_def_cfa_offset 16
+ 919              		.cfi_offset 3, -16
+ 920              		.cfi_offset 4, -12
+ 921              		.cfi_offset 5, -8
+ 922              		.cfi_offset 14, -4
+ 923 0002 0446     		mov	r4, r0
+ 185:Core/Src/bm83.c ****     while ( BM83_OK == BM83_read_event ( ctx ) );
+ 924              		.loc 1 185 5 is_stmt 1 view .LVU229
+ 925              	.LVL90:
+ 926              	.L68:
+ 927              		.loc 1 185 21 discriminator 1 view .LVU230
+ 928              		.loc 1 185 24 is_stmt 0 discriminator 1 view .LVU231
+ 929 0004 2046     		mov	r0, r4
+ 930 0006 FFF7FEFF 		bl	BM83_read_event
+ 931              	.LVL91:
+ 932              		.loc 1 185 21 discriminator 1 view .LVU232
+ 933 000a 0028     		cmp	r0, #0
+ 934 000c FAD0     		beq	.L68
+ 186:Core/Src/bm83.c ****     ctx->event_packet.opcode = 0;
+ 935              		.loc 1 186 5 is_stmt 1 view .LVU233
+ 936              		.loc 1 186 30 is_stmt 0 view .LVU234
+ 937 000e 0025     		movs	r5, #0
+ 938 0010 84F80255 		strb	r5, [r4, #1282]
+ 187:Core/Src/bm83.c ****     memset ( ctx->event_packet.param_buf, 0, 256 );
+ 939              		.loc 1 187 5 is_stmt 1 view .LVU235
+ 940 0014 4FF48072 		mov	r2, #256
+ 941 0018 2946     		mov	r1, r5
+ 942 001a 04F20350 		addw	r0, r4, #1283
+ 943 001e FFF7FEFF 		bl	memset
+ 944              	.LVL92:
+ 188:Core/Src/bm83.c ****     ctx->event_packet.param_len = 0;
+ 945              		.loc 1 188 5 view .LVU236
+ 946              		.loc 1 188 33 is_stmt 0 view .LVU237
+ 947 0022 84F80356 		strb	r5, [r4, #1539]
+ 189:Core/Src/bm83.c **** }
+ 948              		.loc 1 189 1 view .LVU238
+ 949 0026 38BD     		pop	{r3, r4, r5, pc}
+ 950              		.loc 1 189 1 view .LVU239
+ 951              		.cfi_endproc
+ 952              	.LFE148:
+ 954              		.section	.text.BM83_reset_device,"ax",%progbits
+ 955              		.align	1
+ 956              		.global	BM83_reset_device
+ 957              		.syntax unified
+ 958              		.thumb
+ 959              		.thumb_func
+ 961              	BM83_reset_device:
+ 962              	.LVL93:
+ 963              	.LFB141:
+  60:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_RESET);
+ 964              		.loc 1 60 1 is_stmt 1 view -0
+ 965              		.cfi_startproc
+ 966              		@ args = 0, pretend = 0, frame = 0
+ 967              		@ frame_needed = 0, uses_anonymous_args = 0
+  60:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_RESET);
+ 968              		.loc 1 60 1 is_stmt 0 view .LVU241
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 22
+
+
+ 969 0000 38B5     		push	{r3, r4, r5, lr}
+ 970              	.LCFI19:
+ 971              		.cfi_def_cfa_offset 16
+ 972              		.cfi_offset 3, -16
+ 973              		.cfi_offset 4, -12
+ 974              		.cfi_offset 5, -8
+ 975              		.cfi_offset 14, -4
+ 976 0002 0446     		mov	r4, r0
+  61:Core/Src/bm83.c ****     HAL_Delay(1000);
+ 977              		.loc 1 61 5 is_stmt 1 view .LVU242
+ 978 0004 0C4D     		ldr	r5, .L72
+ 979 0006 0022     		movs	r2, #0
+ 980 0008 4FF40071 		mov	r1, #512
+ 981 000c 2846     		mov	r0, r5
+ 982              	.LVL94:
+  61:Core/Src/bm83.c ****     HAL_Delay(1000);
+ 983              		.loc 1 61 5 is_stmt 0 view .LVU243
+ 984 000e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 985              	.LVL95:
+  62:Core/Src/bm83.c ****     HAL_Delay(1000);
+ 986              		.loc 1 62 5 is_stmt 1 view .LVU244
+ 987 0012 4FF47A70 		mov	r0, #1000
+ 988 0016 FFF7FEFF 		bl	HAL_Delay
+ 989              	.LVL96:
+  63:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_SET);
+ 990              		.loc 1 63 5 view .LVU245
+ 991 001a 4FF47A70 		mov	r0, #1000
+ 992 001e FFF7FEFF 		bl	HAL_Delay
+ 993              	.LVL97:
+  64:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 994              		.loc 1 64 5 view .LVU246
+ 995 0022 0122     		movs	r2, #1
+ 996 0024 4FF40071 		mov	r1, #512
+ 997 0028 2846     		mov	r0, r5
+ 998 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 999              	.LVL98:
+  65:Core/Src/bm83.c **** }
+ 1000              		.loc 1 65 5 view .LVU247
+ 1001 002e 2046     		mov	r0, r4
+ 1002 0030 FFF7FEFF 		bl	BM83_clear_events
+ 1003              	.LVL99:
+  66:Core/Src/bm83.c **** 
+ 1004              		.loc 1 66 1 is_stmt 0 view .LVU248
+ 1005 0034 38BD     		pop	{r3, r4, r5, pc}
+ 1006              	.LVL100:
+ 1007              	.L73:
+  66:Core/Src/bm83.c **** 
+ 1008              		.loc 1 66 1 view .LVU249
+ 1009 0036 00BF     		.align	2
+ 1010              	.L72:
+ 1011 0038 00040240 		.word	1073873920
+ 1012              		.cfi_endproc
+ 1013              	.LFE141:
+ 1015              		.section	.text.BM83_send_mmi_action,"ax",%progbits
+ 1016              		.align	1
+ 1017              		.global	BM83_send_mmi_action
+ 1018              		.syntax unified
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 23
+
+
+ 1019              		.thumb
+ 1020              		.thumb_func
+ 1022              	BM83_send_mmi_action:
+ 1023              	.LVL101:
+ 1024              	.LFB149:
+ 190:Core/Src/bm83.c **** 
+ 191:Core/Src/bm83.c **** err_t BM83_send_mmi_action ( BM83_t *ctx, uint8_t database_index, uint8_t action )
+ 192:Core/Src/bm83.c **** {
+ 1025              		.loc 1 192 1 is_stmt 1 view -0
+ 1026              		.cfi_startproc
+ 1027              		@ args = 0, pretend = 0, frame = 0
+ 1028              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1029              		.loc 1 192 1 is_stmt 0 view .LVU251
+ 1030 0000 08B5     		push	{r3, lr}
+ 1031              	.LCFI20:
+ 1032              		.cfi_def_cfa_offset 8
+ 1033              		.cfi_offset 3, -8
+ 1034              		.cfi_offset 14, -4
+ 193:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_MMI_ACTION;
+ 1035              		.loc 1 193 5 is_stmt 1 view .LVU252
+ 1036              		.loc 1 193 32 is_stmt 0 view .LVU253
+ 1037 0002 4FF0020C 		mov	ip, #2
+ 1038 0006 80F800C4 		strb	ip, [r0, #1024]
+ 194:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = database_index;
+ 1039              		.loc 1 194 5 is_stmt 1 view .LVU254
+ 1040              		.loc 1 194 40 is_stmt 0 view .LVU255
+ 1041 000a 80F80114 		strb	r1, [r0, #1025]
+ 195:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = action;
+ 1042              		.loc 1 195 5 is_stmt 1 view .LVU256
+ 1043              		.loc 1 195 40 is_stmt 0 view .LVU257
+ 1044 000e 80F80224 		strb	r2, [r0, #1026]
+ 196:Core/Src/bm83.c ****     ctx->command_packet.param_len = 2;
+ 1045              		.loc 1 196 5 is_stmt 1 view .LVU258
+ 1046              		.loc 1 196 35 is_stmt 0 view .LVU259
+ 1047 0012 80F801C5 		strb	ip, [r0, #1281]
+ 197:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1048              		.loc 1 197 5 is_stmt 1 view .LVU260
+ 1049              		.loc 1 197 12 is_stmt 0 view .LVU261
+ 1050 0016 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1051              	.LVL102:
+ 198:Core/Src/bm83.c **** }
+ 1052              		.loc 1 198 1 view .LVU262
+ 1053 001a 08BD     		pop	{r3, pc}
+ 1054              		.cfi_endproc
+ 1055              	.LFE149:
+ 1057              		.section	.text.BM83_power_on_device,"ax",%progbits
+ 1058              		.align	1
+ 1059              		.global	BM83_power_on_device
+ 1060              		.syntax unified
+ 1061              		.thumb
+ 1062              		.thumb_func
+ 1064              	BM83_power_on_device:
+ 1065              	.LVL103:
+ 1066              	.LFB150:
+ 199:Core/Src/bm83.c **** 
+ 200:Core/Src/bm83.c **** err_t BM83_power_on_device ( BM83_t *ctx )
+ 201:Core/Src/bm83.c **** {
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 24
+
+
+ 1067              		.loc 1 201 1 is_stmt 1 view -0
+ 1068              		.cfi_startproc
+ 1069              		@ args = 0, pretend = 0, frame = 0
+ 1070              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1071              		.loc 1 201 1 is_stmt 0 view .LVU264
+ 1072 0000 38B5     		push	{r3, r4, r5, lr}
+ 1073              	.LCFI21:
+ 1074              		.cfi_def_cfa_offset 16
+ 1075              		.cfi_offset 3, -16
+ 1076              		.cfi_offset 4, -12
+ 1077              		.cfi_offset 5, -8
+ 1078              		.cfi_offset 14, -4
+ 1079 0002 0446     		mov	r4, r0
+ 202:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1080              		.loc 1 202 5 is_stmt 1 view .LVU265
+ 1081 0004 FFF7FEFF 		bl	BM83_clear_events
+ 1082              	.LVL104:
+ 203:Core/Src/bm83.c ****     err_t error_flag = BM83_send_mmi_action ( ctx, 0, BM83_MMI_POWER_ON_BUTTON_PRESS );
+ 1083              		.loc 1 203 5 view .LVU266
+ 1084              		.loc 1 203 24 is_stmt 0 view .LVU267
+ 1085 0008 5122     		movs	r2, #81
+ 1086 000a 0021     		movs	r1, #0
+ 1087 000c 2046     		mov	r0, r4
+ 1088 000e FFF7FEFF 		bl	BM83_send_mmi_action
+ 1089              	.LVL105:
+ 1090 0012 0546     		mov	r5, r0
+ 1091              	.LVL106:
+ 204:Core/Src/bm83.c ****     error_flag |= BM83_send_mmi_action ( ctx, 0, BM83_MMI_POWER_ON_BUTTON_RELEASE );
+ 1092              		.loc 1 204 5 is_stmt 1 view .LVU268
+ 1093              		.loc 1 204 19 is_stmt 0 view .LVU269
+ 1094 0014 5222     		movs	r2, #82
+ 1095 0016 0021     		movs	r1, #0
+ 1096 0018 2046     		mov	r0, r4
+ 1097              	.LVL107:
+ 1098              		.loc 1 204 19 view .LVU270
+ 1099 001a FFF7FEFF 		bl	BM83_send_mmi_action
+ 1100              	.LVL108:
+ 1101              		.loc 1 204 16 view .LVU271
+ 1102 001e 0543     		orrs	r5, r5, r0
+ 1103              	.LVL109:
+ 1104              	.L77:
+ 205:Core/Src/bm83.c ****     do
+ 1105              		.loc 1 205 5 is_stmt 1 discriminator 1 view .LVU272
+ 206:Core/Src/bm83.c ****     {
+ 207:Core/Src/bm83.c ****         BM83_wait_for_event ( ctx, BM83_EVT_BTM_STATE );
+ 1106              		.loc 1 207 9 discriminator 1 view .LVU273
+ 1107 0020 0121     		movs	r1, #1
+ 1108 0022 2046     		mov	r0, r4
+ 1109 0024 FFF7FEFF 		bl	BM83_wait_for_event
+ 1110              	.LVL110:
+ 208:Core/Src/bm83.c ****     } while ( BM83_BTM_STATE_POWER_ON != ctx->event_packet.param_buf[ 0 ] );
+ 1111              		.loc 1 208 39 discriminator 1 view .LVU274
+ 1112              		.loc 1 208 69 is_stmt 0 discriminator 1 view .LVU275
+ 1113 0028 94F80335 		ldrb	r3, [r4, #1283]	@ zero_extendqisi2
+ 1114              		.loc 1 208 39 discriminator 1 view .LVU276
+ 1115 002c 022B     		cmp	r3, #2
+ 1116 002e F7D1     		bne	.L77
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 25
+
+
+ 209:Core/Src/bm83.c ****     return error_flag;
+ 1117              		.loc 1 209 5 is_stmt 1 view .LVU277
+ 210:Core/Src/bm83.c **** }
+ 1118              		.loc 1 210 1 is_stmt 0 view .LVU278
+ 1119 0030 2846     		mov	r0, r5
+ 1120 0032 38BD     		pop	{r3, r4, r5, pc}
+ 1121              		.loc 1 210 1 view .LVU279
+ 1122              		.cfi_endproc
+ 1123              	.LFE150:
+ 1125              		.section	.text.BM83_power_off_device,"ax",%progbits
+ 1126              		.align	1
+ 1127              		.global	BM83_power_off_device
+ 1128              		.syntax unified
+ 1129              		.thumb
+ 1130              		.thumb_func
+ 1132              	BM83_power_off_device:
+ 1133              	.LVL111:
+ 1134              	.LFB151:
+ 211:Core/Src/bm83.c **** 
+ 212:Core/Src/bm83.c **** err_t BM83_power_off_device ( BM83_t *ctx )
+ 213:Core/Src/bm83.c **** {
+ 1135              		.loc 1 213 1 is_stmt 1 view -0
+ 1136              		.cfi_startproc
+ 1137              		@ args = 0, pretend = 0, frame = 0
+ 1138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1139              		.loc 1 213 1 is_stmt 0 view .LVU281
+ 1140 0000 38B5     		push	{r3, r4, r5, lr}
+ 1141              	.LCFI22:
+ 1142              		.cfi_def_cfa_offset 16
+ 1143              		.cfi_offset 3, -16
+ 1144              		.cfi_offset 4, -12
+ 1145              		.cfi_offset 5, -8
+ 1146              		.cfi_offset 14, -4
+ 1147 0002 0446     		mov	r4, r0
+ 214:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1148              		.loc 1 214 5 is_stmt 1 view .LVU282
+ 1149 0004 FFF7FEFF 		bl	BM83_clear_events
+ 1150              	.LVL112:
+ 215:Core/Src/bm83.c ****     err_t error_flag = BM83_send_mmi_action ( ctx, 0, BM83_MMI_POWER_OFF_BUTTON_PRESS );
+ 1151              		.loc 1 215 5 view .LVU283
+ 1152              		.loc 1 215 24 is_stmt 0 view .LVU284
+ 1153 0008 5322     		movs	r2, #83
+ 1154 000a 0021     		movs	r1, #0
+ 1155 000c 2046     		mov	r0, r4
+ 1156 000e FFF7FEFF 		bl	BM83_send_mmi_action
+ 1157              	.LVL113:
+ 1158 0012 0546     		mov	r5, r0
+ 1159              	.LVL114:
+ 216:Core/Src/bm83.c ****     error_flag |= BM83_send_mmi_action ( ctx, 0, BM83_MMI_POWER_OFF_BUTTON_RELEASE );
+ 1160              		.loc 1 216 5 is_stmt 1 view .LVU285
+ 1161              		.loc 1 216 19 is_stmt 0 view .LVU286
+ 1162 0014 5422     		movs	r2, #84
+ 1163 0016 0021     		movs	r1, #0
+ 1164 0018 2046     		mov	r0, r4
+ 1165              	.LVL115:
+ 1166              		.loc 1 216 19 view .LVU287
+ 1167 001a FFF7FEFF 		bl	BM83_send_mmi_action
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 26
+
+
+ 1168              	.LVL116:
+ 1169              		.loc 1 216 16 view .LVU288
+ 1170 001e 0543     		orrs	r5, r5, r0
+ 1171              	.LVL117:
+ 1172              	.L80:
+ 217:Core/Src/bm83.c ****     do
+ 1173              		.loc 1 217 5 is_stmt 1 discriminator 1 view .LVU289
+ 218:Core/Src/bm83.c ****     {
+ 219:Core/Src/bm83.c ****         BM83_wait_for_event ( ctx, BM83_EVT_BTM_STATE );
+ 1174              		.loc 1 219 9 discriminator 1 view .LVU290
+ 1175 0020 0121     		movs	r1, #1
+ 1176 0022 2046     		mov	r0, r4
+ 1177 0024 FFF7FEFF 		bl	BM83_wait_for_event
+ 1178              	.LVL118:
+ 220:Core/Src/bm83.c ****     } while ( BM83_BTM_STATE_POWER_OFF != ctx->event_packet.param_buf[ 0 ] );
+ 1179              		.loc 1 220 40 discriminator 1 view .LVU291
+ 1180              		.loc 1 220 70 is_stmt 0 discriminator 1 view .LVU292
+ 1181 0028 94F80335 		ldrb	r3, [r4, #1283]	@ zero_extendqisi2
+ 1182              		.loc 1 220 40 discriminator 1 view .LVU293
+ 1183 002c 002B     		cmp	r3, #0
+ 1184 002e F7D1     		bne	.L80
+ 221:Core/Src/bm83.c ****     return error_flag;
+ 1185              		.loc 1 221 5 is_stmt 1 view .LVU294
+ 222:Core/Src/bm83.c **** }
+ 1186              		.loc 1 222 1 is_stmt 0 view .LVU295
+ 1187 0030 2846     		mov	r0, r5
+ 1188 0032 38BD     		pop	{r3, r4, r5, pc}
+ 1189              		.loc 1 222 1 view .LVU296
+ 1190              		.cfi_endproc
+ 1191              	.LFE151:
+ 1193              		.section	.text.BM83_enter_pairing_mode,"ax",%progbits
+ 1194              		.align	1
+ 1195              		.global	BM83_enter_pairing_mode
+ 1196              		.syntax unified
+ 1197              		.thumb
+ 1198              		.thumb_func
+ 1200              	BM83_enter_pairing_mode:
+ 1201              	.LVL119:
+ 1202              	.LFB152:
+ 223:Core/Src/bm83.c **** 
+ 224:Core/Src/bm83.c **** err_t BM83_enter_pairing_mode ( BM83_t *ctx )
+ 225:Core/Src/bm83.c **** {
+ 1203              		.loc 1 225 1 is_stmt 1 view -0
+ 1204              		.cfi_startproc
+ 1205              		@ args = 0, pretend = 0, frame = 0
+ 1206              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1207              		.loc 1 225 1 is_stmt 0 view .LVU298
+ 1208 0000 38B5     		push	{r3, r4, r5, lr}
+ 1209              	.LCFI23:
+ 1210              		.cfi_def_cfa_offset 16
+ 1211              		.cfi_offset 3, -16
+ 1212              		.cfi_offset 4, -12
+ 1213              		.cfi_offset 5, -8
+ 1214              		.cfi_offset 14, -4
+ 1215 0002 0446     		mov	r4, r0
+ 226:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1216              		.loc 1 226 5 is_stmt 1 view .LVU299
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 27
+
+
+ 1217 0004 FFF7FEFF 		bl	BM83_clear_events
+ 1218              	.LVL120:
+ 227:Core/Src/bm83.c ****     err_t error_flag = BM83_send_mmi_action ( ctx, 0, BM83_MMI_ENTER_PAIRING_MODE );
+ 1219              		.loc 1 227 5 view .LVU300
+ 1220              		.loc 1 227 24 is_stmt 0 view .LVU301
+ 1221 0008 5D22     		movs	r2, #93
+ 1222 000a 0021     		movs	r1, #0
+ 1223 000c 2046     		mov	r0, r4
+ 1224 000e FFF7FEFF 		bl	BM83_send_mmi_action
+ 1225              	.LVL121:
+ 1226 0012 0546     		mov	r5, r0
+ 1227              	.LVL122:
+ 1228              	.L83:
+ 228:Core/Src/bm83.c ****     do
+ 1229              		.loc 1 228 5 is_stmt 1 discriminator 1 view .LVU302
+ 229:Core/Src/bm83.c ****     {
+ 230:Core/Src/bm83.c ****         BM83_wait_for_event ( ctx, BM83_EVT_BTM_STATE );
+ 1230              		.loc 1 230 9 discriminator 1 view .LVU303
+ 1231 0014 0121     		movs	r1, #1
+ 1232 0016 2046     		mov	r0, r4
+ 1233 0018 FFF7FEFF 		bl	BM83_wait_for_event
+ 1234              	.LVL123:
+ 231:Core/Src/bm83.c ****     } while ( BM83_BTM_STATE_PAIRING_STATE != ctx->event_packet.param_buf[ 0 ] );
+ 1235              		.loc 1 231 44 discriminator 1 view .LVU304
+ 1236              		.loc 1 231 74 is_stmt 0 discriminator 1 view .LVU305
+ 1237 001c 94F80335 		ldrb	r3, [r4, #1283]	@ zero_extendqisi2
+ 1238              		.loc 1 231 44 discriminator 1 view .LVU306
+ 1239 0020 012B     		cmp	r3, #1
+ 1240 0022 F7D1     		bne	.L83
+ 232:Core/Src/bm83.c ****     return error_flag;
+ 1241              		.loc 1 232 5 is_stmt 1 view .LVU307
+ 233:Core/Src/bm83.c **** }
+ 1242              		.loc 1 233 1 is_stmt 0 view .LVU308
+ 1243 0024 2846     		mov	r0, r5
+ 1244 0026 38BD     		pop	{r3, r4, r5, pc}
+ 1245              		.loc 1 233 1 view .LVU309
+ 1246              		.cfi_endproc
+ 1247              	.LFE152:
+ 1249              		.section	.text.BM83_reset_to_default,"ax",%progbits
+ 1250              		.align	1
+ 1251              		.global	BM83_reset_to_default
+ 1252              		.syntax unified
+ 1253              		.thumb
+ 1254              		.thumb_func
+ 1256              	BM83_reset_to_default:
+ 1257              	.LVL124:
+ 1258              	.LFB153:
+ 234:Core/Src/bm83.c **** 
+ 235:Core/Src/bm83.c **** err_t BM83_reset_to_default ( BM83_t *ctx )
+ 236:Core/Src/bm83.c **** {
+ 1259              		.loc 1 236 1 is_stmt 1 view -0
+ 1260              		.cfi_startproc
+ 1261              		@ args = 0, pretend = 0, frame = 0
+ 1262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1263              		.loc 1 236 1 is_stmt 0 view .LVU311
+ 1264 0000 38B5     		push	{r3, r4, r5, lr}
+ 1265              	.LCFI24:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 28
+
+
+ 1266              		.cfi_def_cfa_offset 16
+ 1267              		.cfi_offset 3, -16
+ 1268              		.cfi_offset 4, -12
+ 1269              		.cfi_offset 5, -8
+ 1270              		.cfi_offset 14, -4
+ 1271 0002 0446     		mov	r4, r0
+ 237:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1272              		.loc 1 237 5 is_stmt 1 view .LVU312
+ 1273 0004 FFF7FEFF 		bl	BM83_clear_events
+ 1274              	.LVL125:
+ 238:Core/Src/bm83.c ****     err_t error_flag = BM83_send_mmi_action ( ctx, 0, BM83_MMI_RESET_EEPROM_SETTING );
+ 1275              		.loc 1 238 5 view .LVU313
+ 1276              		.loc 1 238 24 is_stmt 0 view .LVU314
+ 1277 0008 5622     		movs	r2, #86
+ 1278 000a 0021     		movs	r1, #0
+ 1279 000c 2046     		mov	r0, r4
+ 1280 000e FFF7FEFF 		bl	BM83_send_mmi_action
+ 1281              	.LVL126:
+ 1282 0012 0546     		mov	r5, r0
+ 1283              	.LVL127:
+ 239:Core/Src/bm83.c ****     BM83_wait_for_event ( ctx, BM83_EVT_RESET_TO_DEFAULT );
+ 1284              		.loc 1 239 5 is_stmt 1 view .LVU315
+ 1285 0014 0E21     		movs	r1, #14
+ 1286 0016 2046     		mov	r0, r4
+ 1287              	.LVL128:
+ 1288              		.loc 1 239 5 is_stmt 0 view .LVU316
+ 1289 0018 FFF7FEFF 		bl	BM83_wait_for_event
+ 1290              	.LVL129:
+ 240:Core/Src/bm83.c ****     return error_flag;
+ 1291              		.loc 1 240 5 is_stmt 1 view .LVU317
+ 241:Core/Src/bm83.c **** }
+ 1292              		.loc 1 241 1 is_stmt 0 view .LVU318
+ 1293 001c 2846     		mov	r0, r5
+ 1294 001e 38BD     		pop	{r3, r4, r5, pc}
+ 1295              		.loc 1 241 1 view .LVU319
+ 1296              		.cfi_endproc
+ 1297              	.LFE153:
+ 1299              		.section	.text.BM83_Initialise,"ax",%progbits
+ 1300              		.align	1
+ 1301              		.global	BM83_Initialise
+ 1302              		.syntax unified
+ 1303              		.thumb
+ 1304              		.thumb_func
+ 1306              	BM83_Initialise:
+ 1307              	.LVL130:
+ 1308              	.LFB134:
+   5:Core/Src/bm83.c ****     
+ 1309              		.loc 1 5 1 is_stmt 1 view -0
+ 1310              		.cfi_startproc
+ 1311              		@ args = 0, pretend = 0, frame = 0
+ 1312              		@ frame_needed = 0, uses_anonymous_args = 0
+   5:Core/Src/bm83.c ****     
+ 1313              		.loc 1 5 1 is_stmt 0 view .LVU321
+ 1314 0000 38B5     		push	{r3, r4, r5, lr}
+ 1315              	.LCFI25:
+ 1316              		.cfi_def_cfa_offset 16
+ 1317              		.cfi_offset 3, -16
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 29
+
+
+ 1318              		.cfi_offset 4, -12
+ 1319              		.cfi_offset 5, -8
+ 1320              		.cfi_offset 14, -4
+ 1321 0002 0446     		mov	r4, r0
+   6:Core/Src/bm83.c ****     
+ 1322              		.loc 1 6 5 is_stmt 1 view .LVU322
+ 1323              	.LVL131:
+   8:Core/Src/bm83.c ****     BM83_set_mfb_pin ( ctx, 1 );
+ 1324              		.loc 1 8 5 view .LVU323
+ 1325 0004 FFF7FEFF 		bl	BM83_set_application_mode
+ 1326              	.LVL132:
+   9:Core/Src/bm83.c ****     BM83_soft_unmute_output ( ctx );
+ 1327              		.loc 1 9 5 view .LVU324
+ 1328 0008 0121     		movs	r1, #1
+ 1329 000a 2046     		mov	r0, r4
+ 1330 000c FFF7FEFF 		bl	BM83_set_mfb_pin
+ 1331              	.LVL133:
+  10:Core/Src/bm83.c ****     BM83_reset_device ( ctx );
+ 1332              		.loc 1 10 5 view .LVU325
+ 1333 0010 2046     		mov	r0, r4
+ 1334 0012 FFF7FEFF 		bl	BM83_soft_unmute_output
+ 1335              	.LVL134:
+  11:Core/Src/bm83.c **** 
+ 1336              		.loc 1 11 5 view .LVU326
+ 1337 0016 2046     		mov	r0, r4
+ 1338 0018 FFF7FEFF 		bl	BM83_reset_device
+ 1339              	.LVL135:
+  13:Core/Src/bm83.c ****     error_flag |= BM83_reset_to_default ( ctx );
+ 1340              		.loc 1 13 5 view .LVU327
+  13:Core/Src/bm83.c ****     error_flag |= BM83_reset_to_default ( ctx );
+ 1341              		.loc 1 13 19 is_stmt 0 view .LVU328
+ 1342 001c 2046     		mov	r0, r4
+ 1343 001e FFF7FEFF 		bl	BM83_power_on_device
+ 1344              	.LVL136:
+ 1345 0022 0546     		mov	r5, r0
+ 1346              	.LVL137:
+  14:Core/Src/bm83.c ****     error_flag |= BM83_enter_pairing_mode ( ctx );
+ 1347              		.loc 1 14 5 is_stmt 1 view .LVU329
+  14:Core/Src/bm83.c ****     error_flag |= BM83_enter_pairing_mode ( ctx );
+ 1348              		.loc 1 14 19 is_stmt 0 view .LVU330
+ 1349 0024 2046     		mov	r0, r4
+ 1350              	.LVL138:
+  14:Core/Src/bm83.c ****     error_flag |= BM83_enter_pairing_mode ( ctx );
+ 1351              		.loc 1 14 19 view .LVU331
+ 1352 0026 FFF7FEFF 		bl	BM83_reset_to_default
+ 1353              	.LVL139:
+  14:Core/Src/bm83.c ****     error_flag |= BM83_enter_pairing_mode ( ctx );
+ 1354              		.loc 1 14 16 view .LVU332
+ 1355 002a 0543     		orrs	r5, r5, r0
+ 1356              	.LVL140:
+  15:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1357              		.loc 1 15 5 is_stmt 1 view .LVU333
+  15:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1358              		.loc 1 15 19 is_stmt 0 view .LVU334
+ 1359 002c 2046     		mov	r0, r4
+ 1360 002e FFF7FEFF 		bl	BM83_enter_pairing_mode
+ 1361              	.LVL141:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 30
+
+
+  15:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1362              		.loc 1 15 16 view .LVU335
+ 1363 0032 0543     		orrs	r5, r5, r0
+ 1364              	.LVL142:
+  16:Core/Src/bm83.c ****     
+ 1365              		.loc 1 16 5 is_stmt 1 view .LVU336
+ 1366 0034 2046     		mov	r0, r4
+ 1367 0036 FFF7FEFF 		bl	BM83_clear_events
+ 1368              	.LVL143:
+  18:Core/Src/bm83.c **** }
+ 1369              		.loc 1 18 5 view .LVU337
+  19:Core/Src/bm83.c **** 
+ 1370              		.loc 1 19 1 is_stmt 0 view .LVU338
+ 1371 003a 2846     		mov	r0, r5
+ 1372 003c 38BD     		pop	{r3, r4, r5, pc}
+  19:Core/Src/bm83.c **** 
+ 1373              		.loc 1 19 1 view .LVU339
+ 1374              		.cfi_endproc
+ 1375              	.LFE134:
+ 1377              		.section	.text.BM83_set_device_name,"ax",%progbits
+ 1378              		.align	1
+ 1379              		.global	BM83_set_device_name
+ 1380              		.syntax unified
+ 1381              		.thumb
+ 1382              		.thumb_func
+ 1384              	BM83_set_device_name:
+ 1385              	.LVL144:
+ 1386              	.LFB154:
+ 242:Core/Src/bm83.c **** 
+ 243:Core/Src/bm83.c **** err_t BM83_set_device_name ( BM83_t *ctx, uint8_t *device_name )
+ 244:Core/Src/bm83.c **** {
+ 1387              		.loc 1 244 1 is_stmt 1 view -0
+ 1388              		.cfi_startproc
+ 1389              		@ args = 0, pretend = 0, frame = 0
+ 1390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1391              		.loc 1 244 1 is_stmt 0 view .LVU341
+ 1392 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 1393              	.LCFI26:
+ 1394              		.cfi_def_cfa_offset 24
+ 1395              		.cfi_offset 4, -24
+ 1396              		.cfi_offset 5, -20
+ 1397              		.cfi_offset 6, -16
+ 1398              		.cfi_offset 7, -12
+ 1399              		.cfi_offset 8, -8
+ 1400              		.cfi_offset 14, -4
+ 1401 0004 0446     		mov	r4, r0
+ 1402 0006 0F46     		mov	r7, r1
+ 245:Core/Src/bm83.c ****     uint8_t device_name_size = strlen( device_name );
+ 1403              		.loc 1 245 5 is_stmt 1 view .LVU342
+ 1404              		.loc 1 245 32 is_stmt 0 view .LVU343
+ 1405 0008 0846     		mov	r0, r1
+ 1406              	.LVL145:
+ 1407              		.loc 1 245 32 view .LVU344
+ 1408 000a FFF7FEFF 		bl	strlen
+ 1409              	.LVL146:
+ 1410              		.loc 1 245 13 view .LVU345
+ 1411 000e C6B2     		uxtb	r6, r0
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 31
+
+
+ 1412              	.LVL147:
+ 246:Core/Src/bm83.c ****     if ( device_name_size >= 32 )
+ 1413              		.loc 1 246 5 is_stmt 1 view .LVU346
+ 1414              		.loc 1 246 8 is_stmt 0 view .LVU347
+ 1415 0010 1F2E     		cmp	r6, #31
+ 1416 0012 2BD8     		bhi	.L91
+ 247:Core/Src/bm83.c ****     {
+ 248:Core/Src/bm83.c ****         return BM83_ERROR;
+ 249:Core/Src/bm83.c ****     }
+ 250:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
+ 1417              		.loc 1 250 5 is_stmt 1 view .LVU348
+ 1418 0014 2046     		mov	r0, r4
+ 1419 0016 FFF7FEFF 		bl	BM83_clear_events
+ 1420              	.LVL148:
+ 251:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_CHANGE_DEVICE_NAME;
+ 1421              		.loc 1 251 5 view .LVU349
+ 1422              		.loc 1 251 32 is_stmt 0 view .LVU350
+ 1423 001a 0523     		movs	r3, #5
+ 1424 001c 84F80034 		strb	r3, [r4, #1024]
+ 252:Core/Src/bm83.c ****     memcpy ( ctx->command_packet.param_buf, device_name, device_name_size );
+ 1425              		.loc 1 252 5 is_stmt 1 view .LVU351
+ 1426 0020 3246     		mov	r2, r6
+ 1427 0022 3946     		mov	r1, r7
+ 1428 0024 04F20140 		addw	r0, r4, #1025
+ 1429 0028 FFF7FEFF 		bl	memcpy
+ 1430              	.LVL149:
+ 253:Core/Src/bm83.c ****     ctx->command_packet.param_len = device_name_size;
+ 1431              		.loc 1 253 5 view .LVU352
+ 1432              		.loc 1 253 35 is_stmt 0 view .LVU353
+ 1433 002c 84F80165 		strb	r6, [r4, #1281]
+ 254:Core/Src/bm83.c ****     err_t error_flag = BM83_send_command_with_ack_check ( ctx );
+ 1434              		.loc 1 254 5 is_stmt 1 view .LVU354
+ 1435              		.loc 1 254 24 is_stmt 0 view .LVU355
+ 1436 0030 2046     		mov	r0, r4
+ 1437 0032 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1438              	.LVL150:
+ 1439 0036 8046     		mov	r8, r0
+ 1440              	.LVL151:
+ 255:Core/Src/bm83.c ****     
+ 256:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_CONFIGURE_VENDOR_PARAM;
+ 1441              		.loc 1 256 5 is_stmt 1 view .LVU356
+ 1442              		.loc 1 256 32 is_stmt 0 view .LVU357
+ 1443 0038 3523     		movs	r3, #53
+ 1444 003a 84F80034 		strb	r3, [r4, #1024]
+ 257:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = 0x00;
+ 1445              		.loc 1 257 5 is_stmt 1 view .LVU358
+ 1446              		.loc 1 257 40 is_stmt 0 view .LVU359
+ 1447 003e 0023     		movs	r3, #0
+ 1448 0040 84F80134 		strb	r3, [r4, #1025]
+ 258:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = 0x00;
+ 1449              		.loc 1 258 5 is_stmt 1 view .LVU360
+ 1450              		.loc 1 258 40 is_stmt 0 view .LVU361
+ 1451 0044 84F80234 		strb	r3, [r4, #1026]
+ 259:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 2 ] = device_name_size;
+ 1452              		.loc 1 259 5 is_stmt 1 view .LVU362
+ 1453              		.loc 1 259 40 is_stmt 0 view .LVU363
+ 1454 0048 84F80364 		strb	r6, [r4, #1027]
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 32
+
+
+ 260:Core/Src/bm83.c ****     memcpy ( &ctx->command_packet.param_buf[ 3 ], device_name, device_name_size );
+ 1455              		.loc 1 260 5 is_stmt 1 view .LVU364
+ 1456 004c 3246     		mov	r2, r6
+ 1457 004e 3946     		mov	r1, r7
+ 1458 0050 04F20440 		addw	r0, r4, #1028
+ 1459              	.LVL152:
+ 1460              		.loc 1 260 5 is_stmt 0 view .LVU365
+ 1461 0054 FFF7FEFF 		bl	memcpy
+ 1462              	.LVL153:
+ 261:Core/Src/bm83.c ****     ctx->command_packet.param_len = device_name_size + 3;
+ 1463              		.loc 1 261 5 is_stmt 1 view .LVU366
+ 1464              		.loc 1 261 54 is_stmt 0 view .LVU367
+ 1465 0058 0336     		adds	r6, r6, #3
+ 1466              	.LVL154:
+ 1467              		.loc 1 261 35 view .LVU368
+ 1468 005a 84F80165 		strb	r6, [r4, #1281]
+ 262:Core/Src/bm83.c ****     error_flag |= BM83_send_command_with_ack_check ( ctx );
+ 1469              		.loc 1 262 5 is_stmt 1 view .LVU369
+ 1470              		.loc 1 262 19 is_stmt 0 view .LVU370
+ 1471 005e 2046     		mov	r0, r4
+ 1472 0060 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1473              	.LVL155:
+ 1474              		.loc 1 262 16 view .LVU371
+ 1475 0064 48EA0000 		orr	r0, r8, r0
+ 1476              	.LVL156:
+ 263:Core/Src/bm83.c ****     return error_flag;
+ 1477              		.loc 1 263 5 is_stmt 1 view .LVU372
+ 1478              	.L89:
+ 264:Core/Src/bm83.c **** }
+ 1479              		.loc 1 264 1 is_stmt 0 view .LVU373
+ 1480 0068 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1481              	.LVL157:
+ 1482              	.L91:
+ 248:Core/Src/bm83.c ****     }
+ 1483              		.loc 1 248 16 view .LVU374
+ 1484 006c 4FF0FF30 		mov	r0, #-1
+ 1485 0070 FAE7     		b	.L89
+ 1486              		.cfi_endproc
+ 1487              	.LFE154:
+ 1489              		.section	.text.BM83_music_control,"ax",%progbits
+ 1490              		.align	1
+ 1491              		.global	BM83_music_control
+ 1492              		.syntax unified
+ 1493              		.thumb
+ 1494              		.thumb_func
+ 1496              	BM83_music_control:
+ 1497              	.LVL158:
+ 1498              	.LFB155:
+ 265:Core/Src/bm83.c **** 
+ 266:Core/Src/bm83.c **** err_t BM83_music_control ( BM83_t *ctx, BM83_music_control_t action )
+ 267:Core/Src/bm83.c **** {
+ 1499              		.loc 1 267 1 is_stmt 1 view -0
+ 1500              		.cfi_startproc
+ 1501              		@ args = 0, pretend = 0, frame = 0
+ 1502              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1503              		.loc 1 267 1 is_stmt 0 view .LVU376
+ 1504 0000 08B5     		push	{r3, lr}
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 33
+
+
+ 1505              	.LCFI27:
+ 1506              		.cfi_def_cfa_offset 8
+ 1507              		.cfi_offset 3, -8
+ 1508              		.cfi_offset 14, -4
+ 268:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_MUSIC_CONTROL;
+ 1509              		.loc 1 268 5 is_stmt 1 view .LVU377
+ 1510              		.loc 1 268 32 is_stmt 0 view .LVU378
+ 1511 0002 0422     		movs	r2, #4
+ 1512 0004 80F80024 		strb	r2, [r0, #1024]
+ 269:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = 0x00;
+ 1513              		.loc 1 269 5 is_stmt 1 view .LVU379
+ 1514              		.loc 1 269 40 is_stmt 0 view .LVU380
+ 1515 0008 0022     		movs	r2, #0
+ 1516 000a 80F80124 		strb	r2, [r0, #1025]
+ 270:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = action;
+ 1517              		.loc 1 270 5 is_stmt 1 view .LVU381
+ 1518              		.loc 1 270 40 is_stmt 0 view .LVU382
+ 1519 000e 80F80214 		strb	r1, [r0, #1026]
+ 271:Core/Src/bm83.c ****     ctx->command_packet.param_len = 2;
+ 1520              		.loc 1 271 5 is_stmt 1 view .LVU383
+ 1521              		.loc 1 271 35 is_stmt 0 view .LVU384
+ 1522 0012 0222     		movs	r2, #2
+ 1523 0014 80F80125 		strb	r2, [r0, #1281]
+ 272:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1524              		.loc 1 272 5 is_stmt 1 view .LVU385
+ 1525              		.loc 1 272 12 is_stmt 0 view .LVU386
+ 1526 0018 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1527              	.LVL159:
+ 273:Core/Src/bm83.c **** }
+ 1528              		.loc 1 273 1 view .LVU387
+ 1529 001c 08BD     		pop	{r3, pc}
+ 1530              		.cfi_endproc
+ 1531              	.LFE155:
+ 1533              		.section	.text.BM83_make_call,"ax",%progbits
+ 1534              		.align	1
+ 1535              		.global	BM83_make_call
+ 1536              		.syntax unified
+ 1537              		.thumb
+ 1538              		.thumb_func
+ 1540              	BM83_make_call:
+ 1541              	.LVL160:
+ 1542              	.LFB156:
+ 274:Core/Src/bm83.c **** 
+ 275:Core/Src/bm83.c **** err_t BM83_make_call ( BM83_t *ctx, uint8_t database_index, uint8_t *phone_number )
+ 276:Core/Src/bm83.c **** {
+ 1543              		.loc 1 276 1 is_stmt 1 view -0
+ 1544              		.cfi_startproc
+ 1545              		@ args = 0, pretend = 0, frame = 0
+ 1546              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1547              		.loc 1 276 1 is_stmt 0 view .LVU389
+ 1548 0000 70B5     		push	{r4, r5, r6, lr}
+ 1549              	.LCFI28:
+ 1550              		.cfi_def_cfa_offset 16
+ 1551              		.cfi_offset 4, -16
+ 1552              		.cfi_offset 5, -12
+ 1553              		.cfi_offset 6, -8
+ 1554              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 34
+
+
+ 1555 0002 0446     		mov	r4, r0
+ 1556 0004 0E46     		mov	r6, r1
+ 1557 0006 1546     		mov	r5, r2
+ 277:Core/Src/bm83.c ****     if ( strlen ( phone_number ) > 19 )
+ 1558              		.loc 1 277 5 is_stmt 1 view .LVU390
+ 1559              	.LBB10:
+ 1560              		.loc 1 277 10 is_stmt 0 view .LVU391
+ 1561 0008 1046     		mov	r0, r2
+ 1562              	.LVL161:
+ 1563              		.loc 1 277 10 view .LVU392
+ 1564 000a FFF7FEFF 		bl	strlen
+ 1565              	.LVL162:
+ 1566              		.loc 1 277 8 view .LVU393
+ 1567 000e 1328     		cmp	r0, #19
+ 1568 0010 18D8     		bhi	.L97
+ 1569              	.LBE10:
+ 278:Core/Src/bm83.c ****     {
+ 279:Core/Src/bm83.c ****         return BM83_ERROR;
+ 280:Core/Src/bm83.c ****     }
+ 281:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_MAKE_CALL;
+ 1570              		.loc 1 281 5 is_stmt 1 view .LVU394
+ 1571              		.loc 1 281 32 is_stmt 0 view .LVU395
+ 1572 0012 0023     		movs	r3, #0
+ 1573 0014 84F80034 		strb	r3, [r4, #1024]
+ 282:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = database_index;
+ 1574              		.loc 1 282 5 is_stmt 1 view .LVU396
+ 1575              		.loc 1 282 40 is_stmt 0 view .LVU397
+ 1576 0018 84F80164 		strb	r6, [r4, #1025]
+ 283:Core/Src/bm83.c ****     memcpy ( &ctx->command_packet.param_buf[ 1 ], phone_number, strlen ( phone_number ) );
+ 1577              		.loc 1 283 5 is_stmt 1 view .LVU398
+ 1578              		.loc 1 283 14 is_stmt 0 view .LVU399
+ 1579 001c 04F20246 		addw	r6, r4, #1026
+ 1580              		.loc 1 283 5 view .LVU400
+ 1581 0020 2846     		mov	r0, r5
+ 1582 0022 FFF7FEFF 		bl	strlen
+ 1583              	.LVL163:
+ 1584 0026 0246     		mov	r2, r0
+ 1585 0028 2946     		mov	r1, r5
+ 1586 002a 3046     		mov	r0, r6
+ 1587 002c FFF7FEFF 		bl	memcpy
+ 1588              	.LVL164:
+ 284:Core/Src/bm83.c ****     ctx->command_packet.param_len = strlen ( phone_number ) + 1;
+ 1589              		.loc 1 284 5 is_stmt 1 view .LVU401
+ 1590              		.loc 1 284 37 is_stmt 0 view .LVU402
+ 1591 0030 2846     		mov	r0, r5
+ 1592 0032 FFF7FEFF 		bl	strlen
+ 1593              	.LVL165:
+ 1594              		.loc 1 284 61 view .LVU403
+ 1595 0036 0130     		adds	r0, r0, #1
+ 1596              		.loc 1 284 35 view .LVU404
+ 1597 0038 84F80105 		strb	r0, [r4, #1281]
+ 285:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1598              		.loc 1 285 5 is_stmt 1 view .LVU405
+ 1599              		.loc 1 285 12 is_stmt 0 view .LVU406
+ 1600 003c 2046     		mov	r0, r4
+ 1601 003e FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1602              	.LVL166:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 35
+
+
+ 1603              	.L95:
+ 286:Core/Src/bm83.c **** }
+ 1604              		.loc 1 286 1 view .LVU407
+ 1605 0042 70BD     		pop	{r4, r5, r6, pc}
+ 1606              	.LVL167:
+ 1607              	.L97:
+ 1608              	.LBB11:
+ 279:Core/Src/bm83.c ****     }
+ 1609              		.loc 1 279 16 view .LVU408
+ 1610 0044 4FF0FF30 		mov	r0, #-1
+ 1611 0048 FBE7     		b	.L95
+ 1612              	.LBE11:
+ 1613              		.cfi_endproc
+ 1614              	.LFE156:
+ 1616              		.section	.text.BM83_volume_up,"ax",%progbits
+ 1617              		.align	1
+ 1618              		.global	BM83_volume_up
+ 1619              		.syntax unified
+ 1620              		.thumb
+ 1621              		.thumb_func
+ 1623              	BM83_volume_up:
+ 1624              	.LVL168:
+ 1625              	.LFB157:
+ 287:Core/Src/bm83.c **** 
+ 288:Core/Src/bm83.c **** err_t BM83_volume_up ( BM83_t *ctx, uint8_t database_index, uint8_t mask )
+ 289:Core/Src/bm83.c **** {
+ 1626              		.loc 1 289 1 is_stmt 1 view -0
+ 1627              		.cfi_startproc
+ 1628              		@ args = 0, pretend = 0, frame = 0
+ 1629              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1630              		.loc 1 289 1 is_stmt 0 view .LVU410
+ 1631 0000 08B5     		push	{r3, lr}
+ 1632              	.LCFI29:
+ 1633              		.cfi_def_cfa_offset 8
+ 1634              		.cfi_offset 3, -8
+ 1635              		.cfi_offset 14, -4
+ 290:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_SET_OVERALL_GAIN;
+ 1636              		.loc 1 290 5 is_stmt 1 view .LVU411
+ 1637              		.loc 1 290 32 is_stmt 0 view .LVU412
+ 1638 0002 4FF0230C 		mov	ip, #35
+ 1639 0006 80F800C4 		strb	ip, [r0, #1024]
+ 291:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = database_index;
+ 1640              		.loc 1 291 5 is_stmt 1 view .LVU413
+ 1641              		.loc 1 291 40 is_stmt 0 view .LVU414
+ 1642 000a 80F80114 		strb	r1, [r0, #1025]
+ 292:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = mask;
+ 1643              		.loc 1 292 5 is_stmt 1 view .LVU415
+ 1644              		.loc 1 292 40 is_stmt 0 view .LVU416
+ 1645 000e 80F80224 		strb	r2, [r0, #1026]
+ 293:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 2 ] = 0x01;
+ 1646              		.loc 1 293 5 is_stmt 1 view .LVU417
+ 1647              		.loc 1 293 40 is_stmt 0 view .LVU418
+ 1648 0012 0122     		movs	r2, #1
+ 1649              	.LVL169:
+ 1650              		.loc 1 293 40 view .LVU419
+ 1651 0014 80F80324 		strb	r2, [r0, #1027]
+ 294:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 3 ] = 0x00;
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 36
+
+
+ 1652              		.loc 1 294 5 is_stmt 1 view .LVU420
+ 1653              		.loc 1 294 40 is_stmt 0 view .LVU421
+ 1654 0018 0022     		movs	r2, #0
+ 1655 001a 80F80424 		strb	r2, [r0, #1028]
+ 295:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 4 ] = 0x00;
+ 1656              		.loc 1 295 5 is_stmt 1 view .LVU422
+ 1657              		.loc 1 295 40 is_stmt 0 view .LVU423
+ 1658 001e 80F80524 		strb	r2, [r0, #1029]
+ 296:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 5 ] = 0x00;
+ 1659              		.loc 1 296 5 is_stmt 1 view .LVU424
+ 1660              		.loc 1 296 40 is_stmt 0 view .LVU425
+ 1661 0022 80F80624 		strb	r2, [r0, #1030]
+ 297:Core/Src/bm83.c ****     ctx->command_packet.param_len = 6;
+ 1662              		.loc 1 297 5 is_stmt 1 view .LVU426
+ 1663              		.loc 1 297 35 is_stmt 0 view .LVU427
+ 1664 0026 0622     		movs	r2, #6
+ 1665 0028 80F80125 		strb	r2, [r0, #1281]
+ 298:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1666              		.loc 1 298 5 is_stmt 1 view .LVU428
+ 1667              		.loc 1 298 12 is_stmt 0 view .LVU429
+ 1668 002c FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1669              	.LVL170:
+ 299:Core/Src/bm83.c **** }
+ 1670              		.loc 1 299 1 view .LVU430
+ 1671 0030 08BD     		pop	{r3, pc}
+ 1672              		.cfi_endproc
+ 1673              	.LFE157:
+ 1675              		.section	.text.BM83_volume_down,"ax",%progbits
+ 1676              		.align	1
+ 1677              		.global	BM83_volume_down
+ 1678              		.syntax unified
+ 1679              		.thumb
+ 1680              		.thumb_func
+ 1682              	BM83_volume_down:
+ 1683              	.LVL171:
+ 1684              	.LFB158:
+ 300:Core/Src/bm83.c **** 
+ 301:Core/Src/bm83.c **** err_t BM83_volume_down ( BM83_t *ctx, uint8_t database_index, uint8_t mask )
+ 302:Core/Src/bm83.c **** {
+ 1685              		.loc 1 302 1 is_stmt 1 view -0
+ 1686              		.cfi_startproc
+ 1687              		@ args = 0, pretend = 0, frame = 0
+ 1688              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1689              		.loc 1 302 1 is_stmt 0 view .LVU432
+ 1690 0000 08B5     		push	{r3, lr}
+ 1691              	.LCFI30:
+ 1692              		.cfi_def_cfa_offset 8
+ 1693              		.cfi_offset 3, -8
+ 1694              		.cfi_offset 14, -4
+ 303:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_SET_OVERALL_GAIN;
+ 1695              		.loc 1 303 5 is_stmt 1 view .LVU433
+ 1696              		.loc 1 303 32 is_stmt 0 view .LVU434
+ 1697 0002 4FF0230C 		mov	ip, #35
+ 1698 0006 80F800C4 		strb	ip, [r0, #1024]
+ 304:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = database_index;
+ 1699              		.loc 1 304 5 is_stmt 1 view .LVU435
+ 1700              		.loc 1 304 40 is_stmt 0 view .LVU436
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 37
+
+
+ 1701 000a 80F80114 		strb	r1, [r0, #1025]
+ 305:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = mask;
+ 1702              		.loc 1 305 5 is_stmt 1 view .LVU437
+ 1703              		.loc 1 305 40 is_stmt 0 view .LVU438
+ 1704 000e 80F80224 		strb	r2, [r0, #1026]
+ 306:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 2 ] = 0x02;
+ 1705              		.loc 1 306 5 is_stmt 1 view .LVU439
+ 1706              		.loc 1 306 40 is_stmt 0 view .LVU440
+ 1707 0012 0222     		movs	r2, #2
+ 1708              	.LVL172:
+ 1709              		.loc 1 306 40 view .LVU441
+ 1710 0014 80F80324 		strb	r2, [r0, #1027]
+ 307:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 3 ] = 0x00;
+ 1711              		.loc 1 307 5 is_stmt 1 view .LVU442
+ 1712              		.loc 1 307 40 is_stmt 0 view .LVU443
+ 1713 0018 0022     		movs	r2, #0
+ 1714 001a 80F80424 		strb	r2, [r0, #1028]
+ 308:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 4 ] = 0x00;
+ 1715              		.loc 1 308 5 is_stmt 1 view .LVU444
+ 1716              		.loc 1 308 40 is_stmt 0 view .LVU445
+ 1717 001e 80F80524 		strb	r2, [r0, #1029]
+ 309:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 5 ] = 0x00;
+ 1718              		.loc 1 309 5 is_stmt 1 view .LVU446
+ 1719              		.loc 1 309 40 is_stmt 0 view .LVU447
+ 1720 0022 80F80624 		strb	r2, [r0, #1030]
+ 310:Core/Src/bm83.c ****     ctx->command_packet.param_len = 6;
+ 1721              		.loc 1 310 5 is_stmt 1 view .LVU448
+ 1722              		.loc 1 310 35 is_stmt 0 view .LVU449
+ 1723 0026 0622     		movs	r2, #6
+ 1724 0028 80F80125 		strb	r2, [r0, #1281]
+ 311:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1725              		.loc 1 311 5 is_stmt 1 view .LVU450
+ 1726              		.loc 1 311 12 is_stmt 0 view .LVU451
+ 1727 002c FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1728              	.LVL173:
+ 312:Core/Src/bm83.c **** }
+ 1729              		.loc 1 312 1 view .LVU452
+ 1730 0030 08BD     		pop	{r3, pc}
+ 1731              		.cfi_endproc
+ 1732              	.LFE158:
+ 1734              		.section	.text.BM83_enable_advertising,"ax",%progbits
+ 1735              		.align	1
+ 1736              		.global	BM83_enable_advertising
+ 1737              		.syntax unified
+ 1738              		.thumb
+ 1739              		.thumb_func
+ 1741              	BM83_enable_advertising:
+ 1742              	.LVL174:
+ 1743              	.LFB159:
+ 313:Core/Src/bm83.c **** 
+ 314:Core/Src/bm83.c **** err_t BM83_enable_advertising ( BM83_t *ctx )
+ 315:Core/Src/bm83.c **** {
+ 1744              		.loc 1 315 1 is_stmt 1 view -0
+ 1745              		.cfi_startproc
+ 1746              		@ args = 0, pretend = 0, frame = 0
+ 1747              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1748              		.loc 1 315 1 is_stmt 0 view .LVU454
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 38
+
+
+ 1749 0000 08B5     		push	{r3, lr}
+ 1750              	.LCFI31:
+ 1751              		.cfi_def_cfa_offset 8
+ 1752              		.cfi_offset 3, -8
+ 1753              		.cfi_offset 14, -4
+ 316:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_LE_SIGNALING;
+ 1754              		.loc 1 316 5 is_stmt 1 view .LVU455
+ 1755              		.loc 1 316 32 is_stmt 0 view .LVU456
+ 1756 0002 2922     		movs	r2, #41
+ 1757 0004 80F80024 		strb	r2, [r0, #1024]
+ 317:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = 0x01;
+ 1758              		.loc 1 317 5 is_stmt 1 view .LVU457
+ 1759              		.loc 1 317 40 is_stmt 0 view .LVU458
+ 1760 0008 0122     		movs	r2, #1
+ 1761 000a 80F80124 		strb	r2, [r0, #1025]
+ 318:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = 0x01;
+ 1762              		.loc 1 318 5 is_stmt 1 view .LVU459
+ 1763              		.loc 1 318 40 is_stmt 0 view .LVU460
+ 1764 000e 80F80224 		strb	r2, [r0, #1026]
+ 319:Core/Src/bm83.c ****     ctx->command_packet.param_len = 2;
+ 1765              		.loc 1 319 5 is_stmt 1 view .LVU461
+ 1766              		.loc 1 319 35 is_stmt 0 view .LVU462
+ 1767 0012 0222     		movs	r2, #2
+ 1768 0014 80F80125 		strb	r2, [r0, #1281]
+ 320:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1769              		.loc 1 320 5 is_stmt 1 view .LVU463
+ 1770              		.loc 1 320 12 is_stmt 0 view .LVU464
+ 1771 0018 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1772              	.LVL175:
+ 321:Core/Src/bm83.c **** }
+ 1773              		.loc 1 321 1 view .LVU465
+ 1774 001c 08BD     		pop	{r3, pc}
+ 1775              		.cfi_endproc
+ 1776              	.LFE159:
+ 1778              		.section	.text.BM83_disable_advertising,"ax",%progbits
+ 1779              		.align	1
+ 1780              		.global	BM83_disable_advertising
+ 1781              		.syntax unified
+ 1782              		.thumb
+ 1783              		.thumb_func
+ 1785              	BM83_disable_advertising:
+ 1786              	.LVL176:
+ 1787              	.LFB160:
+ 322:Core/Src/bm83.c **** 
+ 323:Core/Src/bm83.c **** err_t BM83_disable_advertising ( BM83_t *ctx )
+ 324:Core/Src/bm83.c **** {
+ 1788              		.loc 1 324 1 is_stmt 1 view -0
+ 1789              		.cfi_startproc
+ 1790              		@ args = 0, pretend = 0, frame = 0
+ 1791              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1792              		.loc 1 324 1 is_stmt 0 view .LVU467
+ 1793 0000 08B5     		push	{r3, lr}
+ 1794              	.LCFI32:
+ 1795              		.cfi_def_cfa_offset 8
+ 1796              		.cfi_offset 3, -8
+ 1797              		.cfi_offset 14, -4
+ 325:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_LE_SIGNALING;
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 39
+
+
+ 1798              		.loc 1 325 5 is_stmt 1 view .LVU468
+ 1799              		.loc 1 325 32 is_stmt 0 view .LVU469
+ 1800 0002 2922     		movs	r2, #41
+ 1801 0004 80F80024 		strb	r2, [r0, #1024]
+ 326:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = 0x01;
+ 1802              		.loc 1 326 5 is_stmt 1 view .LVU470
+ 1803              		.loc 1 326 40 is_stmt 0 view .LVU471
+ 1804 0008 0122     		movs	r2, #1
+ 1805 000a 80F80124 		strb	r2, [r0, #1025]
+ 327:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = 0x00;
+ 1806              		.loc 1 327 5 is_stmt 1 view .LVU472
+ 1807              		.loc 1 327 40 is_stmt 0 view .LVU473
+ 1808 000e 0022     		movs	r2, #0
+ 1809 0010 80F80224 		strb	r2, [r0, #1026]
+ 328:Core/Src/bm83.c ****     ctx->command_packet.param_len = 2;
+ 1810              		.loc 1 328 5 is_stmt 1 view .LVU474
+ 1811              		.loc 1 328 35 is_stmt 0 view .LVU475
+ 1812 0014 0222     		movs	r2, #2
+ 1813 0016 80F80125 		strb	r2, [r0, #1281]
+ 329:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1814              		.loc 1 329 5 is_stmt 1 view .LVU476
+ 1815              		.loc 1 329 12 is_stmt 0 view .LVU477
+ 1816 001a FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1817              	.LVL177:
+ 330:Core/Src/bm83.c **** }
+ 1818              		.loc 1 330 1 view .LVU478
+ 1819 001e 08BD     		pop	{r3, pc}
+ 1820              		.cfi_endproc
+ 1821              	.LFE160:
+ 1823              		.section	.text.BM83_set_eq_mode,"ax",%progbits
+ 1824              		.align	1
+ 1825              		.global	BM83_set_eq_mode
+ 1826              		.syntax unified
+ 1827              		.thumb
+ 1828              		.thumb_func
+ 1830              	BM83_set_eq_mode:
+ 1831              	.LVL178:
+ 1832              	.LFB161:
+ 331:Core/Src/bm83.c **** 
+ 332:Core/Src/bm83.c **** err_t BM83_set_eq_mode ( BM83_t *ctx, BM83_eq_mode_t eq_mode )
+ 333:Core/Src/bm83.c **** {
+ 1833              		.loc 1 333 1 is_stmt 1 view -0
+ 1834              		.cfi_startproc
+ 1835              		@ args = 0, pretend = 0, frame = 0
+ 1836              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1837              		.loc 1 333 1 is_stmt 0 view .LVU480
+ 1838 0000 08B5     		push	{r3, lr}
+ 1839              	.LCFI33:
+ 1840              		.cfi_def_cfa_offset 8
+ 1841              		.cfi_offset 3, -8
+ 1842              		.cfi_offset 14, -4
+ 334:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_EQ_MODE_SETTING;
+ 1843              		.loc 1 334 5 is_stmt 1 view .LVU481
+ 1844              		.loc 1 334 32 is_stmt 0 view .LVU482
+ 1845 0002 1C22     		movs	r2, #28
+ 1846 0004 80F80024 		strb	r2, [r0, #1024]
+ 335:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = eq_mode;
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 40
+
+
+ 1847              		.loc 1 335 5 is_stmt 1 view .LVU483
+ 1848              		.loc 1 335 40 is_stmt 0 view .LVU484
+ 1849 0008 80F80114 		strb	r1, [r0, #1025]
+ 336:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 1 ] = 0x00;
+ 1850              		.loc 1 336 5 is_stmt 1 view .LVU485
+ 1851              		.loc 1 336 40 is_stmt 0 view .LVU486
+ 1852 000c 0022     		movs	r2, #0
+ 1853 000e 80F80224 		strb	r2, [r0, #1026]
+ 337:Core/Src/bm83.c ****     return BM83_send_command_with_ack_check ( ctx );
+ 1854              		.loc 1 337 5 is_stmt 1 view .LVU487
+ 1855              		.loc 1 337 12 is_stmt 0 view .LVU488
+ 1856 0012 FFF7FEFF 		bl	BM83_send_command_with_ack_check
+ 1857              	.LVL179:
+ 338:Core/Src/bm83.c **** }
+ 1858              		.loc 1 338 1 view .LVU489
+ 1859 0016 08BD     		pop	{r3, pc}
+ 1860              		.cfi_endproc
+ 1861              	.LFE161:
+ 1863              		.text
+ 1864              	.Letext0:
+ 1865              		.file 2 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
+ 1866              		.file 3 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
+ 1867              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 1868              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 1869              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 1870              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 1871              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 1872              		.file 9 "Core/Inc/hal_target.h"
+ 1873              		.file 10 "Core/Inc/bm83.h"
+ 1874              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 1875              		.file 12 "<built-in>"
+ 1876              		.file 13 "Core/Inc/usart.h"
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 41
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 bm83.c
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:21     .text.BM83_generic_write:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:27     .text.BM83_generic_write:00000000 BM83_generic_write
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:53     .text.BM83_generic_write:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:58     .text.BM83_generic_read:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:64     .text.BM83_generic_read:00000000 BM83_generic_read
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:90     .text.BM83_generic_read:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:95     .text.BM83_set_mfb_pin:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:101    .text.BM83_set_mfb_pin:00000000 BM83_set_mfb_pin
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:147    .text.BM83_set_mfb_pin:00000020 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:152    .text.BM83_set_rst_pin:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:158    .text.BM83_set_rst_pin:00000000 BM83_set_rst_pin
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:204    .text.BM83_set_rst_pin:00000020 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:209    .text.BM83_set_application_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:215    .text.BM83_set_application_mode:00000000 BM83_set_application_mode
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:242    .text.BM83_set_test_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:248    .text.BM83_set_test_mode:00000000 BM83_set_test_mode
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:275    .text.BM83_soft_mute_output:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:281    .text.BM83_soft_mute_output:00000000 BM83_soft_mute_output
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:307    .text.BM83_soft_mute_output:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:312    .text.BM83_soft_unmute_output:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:318    .text.BM83_soft_unmute_output:00000000 BM83_soft_unmute_output
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:344    .text.BM83_soft_unmute_output:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:349    .text.BM83_send_command:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:355    .text.BM83_send_command:00000000 BM83_send_command
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:498    .text.BM83_read_event:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:504    .text.BM83_read_event:00000000 BM83_read_event
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:775    .text.BM83_send_command_with_ack_check:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:781    .text.BM83_send_command_with_ack_check:00000000 BM83_send_command_with_ack_check
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:859    .text.BM83_wait_for_event:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:865    .text.BM83_wait_for_event:00000000 BM83_wait_for_event
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:902    .text.BM83_clear_events:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:908    .text.BM83_clear_events:00000000 BM83_clear_events
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:955    .text.BM83_reset_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:961    .text.BM83_reset_device:00000000 BM83_reset_device
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1011   .text.BM83_reset_device:00000038 $d
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1016   .text.BM83_send_mmi_action:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1022   .text.BM83_send_mmi_action:00000000 BM83_send_mmi_action
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1058   .text.BM83_power_on_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1064   .text.BM83_power_on_device:00000000 BM83_power_on_device
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1126   .text.BM83_power_off_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1132   .text.BM83_power_off_device:00000000 BM83_power_off_device
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1194   .text.BM83_enter_pairing_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1200   .text.BM83_enter_pairing_mode:00000000 BM83_enter_pairing_mode
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1250   .text.BM83_reset_to_default:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1256   .text.BM83_reset_to_default:00000000 BM83_reset_to_default
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1300   .text.BM83_Initialise:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1306   .text.BM83_Initialise:00000000 BM83_Initialise
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1378   .text.BM83_set_device_name:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1384   .text.BM83_set_device_name:00000000 BM83_set_device_name
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1490   .text.BM83_music_control:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1496   .text.BM83_music_control:00000000 BM83_music_control
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1534   .text.BM83_make_call:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1540   .text.BM83_make_call:00000000 BM83_make_call
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1617   .text.BM83_volume_up:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1623   .text.BM83_volume_up:00000000 BM83_volume_up
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 42
+
+
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1676   .text.BM83_volume_down:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1682   .text.BM83_volume_down:00000000 BM83_volume_down
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1735   .text.BM83_enable_advertising:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1741   .text.BM83_enable_advertising:00000000 BM83_enable_advertising
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1779   .text.BM83_disable_advertising:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1785   .text.BM83_disable_advertising:00000000 BM83_disable_advertising
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1824   .text.BM83_set_eq_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1830   .text.BM83_set_eq_mode:00000000 BM83_set_eq_mode
+
+UNDEFINED SYMBOLS
+HAL_UART_Transmit
+huart1
+HAL_UART_Receive
+HAL_GPIO_WritePin
+HAL_Delay
+memset
+strlen
+memcpy
