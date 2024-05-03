@@ -313,25 +313,6 @@ typedef struct
     
 } BM83_packet_t;
 
-err_t BM83_Initialise( BM83_t *dev)
-{
-    err_t error_flag = BM83_OK;
-
-    err_t error_flag = BM83_OK;
-    
-    BM83_set_application_mode (dev);
-    BM83_set_mfb_pin (dev, 1);
-    BM83_soft_unmute_output (dev);
-    BM83_reset_device (dev);
-
-    error_flag |= BM83_power_on_device (dev);
-    error_flag |= BM83_reset_to_default (dev);
-    error_flag |= BM83_enter_pairing_mode (dev);
-    BM83_clear_events (dev);
-    
-    return error_flag;
-}
-
 typedef struct {
     /* UART Handle*/
     UART_HandleTypeDef *uartHandle;
@@ -415,6 +396,13 @@ typedef struct
 {
     log_level_t log_level;
 } log_t;
+
+/**
+ * BM83 Initialization function
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+*/
+err_t BM83_Initialise(BM83_t *dev);
 
 /**
  * @brief BM83 data writing function.

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   34              		.loc 1 22 1 is_stmt 0 view .LVU1
   35 0000 08B5     		push	{r3, lr}
   36              	.LCFI0:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 2
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 2
 
 
   37              		.cfi_def_cfa_offset 8
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   86 000c 08BD     		pop	{r3, pc}
   87              	.L8:
   88 000e 00BF     		.align	2
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 3
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 3
 
 
   89              	.L7:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  135              	.LVL11:
   36:Core/Src/bm83.c ****     }
  136              		.loc 1 36 9 is_stmt 0 view .LVU21
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 4
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 4
 
 
  137 0018 0148     		ldr	r0, .L13
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   46:Core/Src/bm83.c ****     }
   47:Core/Src/bm83.c **** }
  185              		.loc 1 47 1 view .LVU31
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 5
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 5
 
 
  186 0010 08BD     		pop	{r3, pc}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  235              	.LVL24:
   52:Core/Src/bm83.c **** }
  236              		.loc 1 52 1 view .LVU40
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 6
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 6
 
 
  237 000c 08BD     		pop	{r3, pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   64:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_SET);
   65:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
   66:Core/Src/bm83.c **** }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 7
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 7
 
 
   67:Core/Src/bm83.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  331              		.loc 1 75 5 is_stmt 1 view .LVU53
  332 0002 0022     		movs	r2, #0
  333 0004 8021     		movs	r1, #128
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 8
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 8
 
 
  334 0006 0248     		ldr	r0, .L31
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  383              		.loc 1 82 18 is_stmt 0 view .LVU64
  384 0010 AA22     		movs	r2, #170
  385 0012 8DF80420 		strb	r2, [sp, #4]
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 9
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 9
 
 
   83:Core/Src/bm83.c ****     cmd_buf[ 1 ] = ( uint8_t ) ( ( package_len >> 8 ) & 0xFF );
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   92:Core/Src/bm83.c ****         BM83_generic_write ( ctx, ctx->command_packet.param_buf, ctx->command_packet.param_len );
   93:Core/Src/bm83.c ****         for ( uint16_t cnt = 0; cnt < ctx->command_packet.param_len; cnt++ )
   94:Core/Src/bm83.c ****         {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 10
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 10
 
 
   95:Core/Src/bm83.c ****             checksum += ctx->command_packet.param_buf[ cnt ];
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
   95:Core/Src/bm83.c ****         }
  472              		.loc 1 95 54 is_stmt 0 discriminator 3 view .LVU97
  473 0084 E218     		adds	r2, r4, r3
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 11
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 11
 
 
  474 0086 92F80124 		ldrb	r2, [r2, #1025]	@ zero_extendqisi2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  119:Core/Src/bm83.c ****     }
  120:Core/Src/bm83.c ****     return BM83_ERROR;
  121:Core/Src/bm83.c **** }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 12
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 12
 
 
  122:Core/Src/bm83.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  550              		.loc 1 131 9 view .LVU116
  551              		.loc 1 131 16 is_stmt 0 view .LVU117
  552 0024 631E     		subs	r3, r4, #1
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 13
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 13
 
 
  553              	.LVL52:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  596              	.L43:
  597              		.loc 1 142 37 is_stmt 1 discriminator 1 view .LVU135
  598              		.loc 1 142 56 is_stmt 0 discriminator 1 view .LVU136
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 14
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 14
 
 
  599 005c 95F80366 		ldrb	r6, [r5, #1539]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  640              		.loc 1 150 16 view .LVU150
  641 0092 0128     		cmp	r0, #1
  642 0094 2ED1     		bne	.L45
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 15
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 15
 
 
  643              	.LBB5:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  687 00c0 9942     		cmp	r1, r3
  688 00c2 F4D8     		bhi	.L47
  153:Core/Src/bm83.c ****                 for ( uint16_t cnt = 0; cnt < ctx->event_packet.param_len; cnt++ )
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 16
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 16
 
 
  689              		.loc 1 153 45 discriminator 1 view .LVU170
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  725              		@ sp needed
  726 00da 70BD     		pop	{r4, r5, r6, pc}
  727              	.LVL74:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 17
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 17
 
 
  728              	.L55:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  770 0104 E8E7     		b	.L39
  771              		.cfi_endproc
  772              	.LFE146:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 18
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 18
 
 
  774              		.section	.text.BM83_send_command_with_ack_check,"ax",%progbits
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  817 0022 9A42     		cmp	r2, r3
  818 0024 13D1     		bne	.L60
  116:Core/Src/bm83.c ****     {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 19
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 19
 
 
  819              		.loc 1 116 34 view .LVU208
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  866              	.LVL86:
  867              	.LFB147:
  174:Core/Src/bm83.c **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 20
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 20
 
 
  175:Core/Src/bm83.c **** void BM83_wait_for_event ( BM83_t *ctx, uint8_t opcode )
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  914              		@ frame_needed = 0, uses_anonymous_args = 0
  915              		.loc 1 184 1 is_stmt 0 view .LVU228
  916 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 21
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 21
 
 
  917              	.LCFI18:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  967              		@ frame_needed = 0, uses_anonymous_args = 0
   60:Core/Src/bm83.c ****     HAL_GPIO_WritePin(rst_port, rst_pin, GPIO_PIN_RESET);
  968              		.loc 1 60 1 is_stmt 0 view .LVU241
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 22
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 22
 
 
  969 0000 38B5     		push	{r3, r4, r5, lr}
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1016              		.align	1
  1017              		.global	BM83_send_mmi_action
  1018              		.syntax unified
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 23
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 23
 
 
  1019              		.thumb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  199:Core/Src/bm83.c **** 
  200:Core/Src/bm83.c **** err_t BM83_power_on_device ( BM83_t *ctx )
  201:Core/Src/bm83.c **** {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 24
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 24
 
 
  1067              		.loc 1 201 1 is_stmt 1 view -0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1114              		.loc 1 208 39 discriminator 1 view .LVU276
  1115 002c 022B     		cmp	r3, #2
  1116 002e F7D1     		bne	.L77
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 25
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 25
 
 
  209:Core/Src/bm83.c ****     return error_flag;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1165              	.LVL115:
  1166              		.loc 1 216 19 view .LVU287
  1167 001a FFF7FEFF 		bl	BM83_send_mmi_action
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 26
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 26
 
 
  1168              	.LVL116:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1215 0002 0446     		mov	r4, r0
  226:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
  1216              		.loc 1 226 5 is_stmt 1 view .LVU299
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 27
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 27
 
 
  1217 0004 FFF7FEFF 		bl	BM83_clear_events
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1263              		.loc 1 236 1 is_stmt 0 view .LVU311
  1264 0000 38B5     		push	{r3, r4, r5, lr}
  1265              	.LCFI24:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 28
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 28
 
 
  1266              		.cfi_def_cfa_offset 16
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1315              	.LCFI25:
  1316              		.cfi_def_cfa_offset 16
  1317              		.cfi_offset 3, -16
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 29
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 29
 
 
  1318              		.cfi_offset 4, -12
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1359 002c 2046     		mov	r0, r4
  1360 002e FFF7FEFF 		bl	BM83_enter_pairing_mode
  1361              	.LVL141:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 30
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 30
 
 
   15:Core/Src/bm83.c ****     BM83_clear_events ( ctx );
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1409              	.LVL146:
  1410              		.loc 1 245 13 view .LVU345
  1411 000e C6B2     		uxtb	r6, r0
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 31
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 31
 
 
  1412              	.LVL147:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1452              		.loc 1 259 5 is_stmt 1 view .LVU362
  1453              		.loc 1 259 40 is_stmt 0 view .LVU363
  1454 0048 84F80364 		strb	r6, [r4, #1027]
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 32
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 32
 
 
  260:Core/Src/bm83.c ****     memcpy ( &ctx->command_packet.param_buf[ 3 ], device_name, device_name_size );
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1502              		@ frame_needed = 0, uses_anonymous_args = 0
  1503              		.loc 1 267 1 is_stmt 0 view .LVU376
  1504 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 33
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 33
 
 
  1505              	.LCFI27:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1552              		.cfi_offset 5, -12
  1553              		.cfi_offset 6, -8
  1554              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 34
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 34
 
 
  1555 0002 0446     		mov	r4, r0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1600 003c 2046     		mov	r0, r4
  1601 003e FFF7FEFF 		bl	BM83_send_command_with_ack_check
  1602              	.LVL166:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 35
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 35
 
 
  1603              	.L95:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1650              		.loc 1 293 40 view .LVU419
  1651 0014 80F80324 		strb	r2, [r0, #1027]
  294:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 3 ] = 0x00;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 36
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 36
 
 
  1652              		.loc 1 294 5 is_stmt 1 view .LVU420
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  304:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = database_index;
  1699              		.loc 1 304 5 is_stmt 1 view .LVU435
  1700              		.loc 1 304 40 is_stmt 0 view .LVU436
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 37
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 37
 
 
  1701 000a 80F80114 		strb	r1, [r0, #1025]
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1746              		@ args = 0, pretend = 0, frame = 0
  1747              		@ frame_needed = 0, uses_anonymous_args = 0
  1748              		.loc 1 315 1 is_stmt 0 view .LVU454
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 38
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 38
 
 
  1749 0000 08B5     		push	{r3, lr}
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1796              		.cfi_offset 3, -8
  1797              		.cfi_offset 14, -4
  325:Core/Src/bm83.c ****     ctx->command_packet.opcode = BM83_CMD_LE_SIGNALING;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 39
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 39
 
 
  1798              		.loc 1 325 5 is_stmt 1 view .LVU468
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1845 0002 1C22     		movs	r2, #28
  1846 0004 80F80024 		strb	r2, [r0, #1024]
  335:Core/Src/bm83.c ****     ctx->command_packet.param_buf[ 0 ] = eq_mode;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 40
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 40
 
 
  1847              		.loc 1 335 5 is_stmt 1 view .LVU483
@@ -2373,77 +2373,77 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 1
  1874              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  1875              		.file 12 "<built-in>"
  1876              		.file 13 "Core/Inc/usart.h"
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 41
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 41
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 bm83.c
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:21     .text.BM83_generic_write:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:27     .text.BM83_generic_write:00000000 BM83_generic_write
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:53     .text.BM83_generic_write:00000010 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:58     .text.BM83_generic_read:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:64     .text.BM83_generic_read:00000000 BM83_generic_read
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:90     .text.BM83_generic_read:00000010 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:95     .text.BM83_set_mfb_pin:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:101    .text.BM83_set_mfb_pin:00000000 BM83_set_mfb_pin
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:147    .text.BM83_set_mfb_pin:00000020 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:152    .text.BM83_set_rst_pin:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:158    .text.BM83_set_rst_pin:00000000 BM83_set_rst_pin
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:204    .text.BM83_set_rst_pin:00000020 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:209    .text.BM83_set_application_mode:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:215    .text.BM83_set_application_mode:00000000 BM83_set_application_mode
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:242    .text.BM83_set_test_mode:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:248    .text.BM83_set_test_mode:00000000 BM83_set_test_mode
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:275    .text.BM83_soft_mute_output:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:281    .text.BM83_soft_mute_output:00000000 BM83_soft_mute_output
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:307    .text.BM83_soft_mute_output:00000010 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:312    .text.BM83_soft_unmute_output:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:318    .text.BM83_soft_unmute_output:00000000 BM83_soft_unmute_output
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:344    .text.BM83_soft_unmute_output:00000010 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:349    .text.BM83_send_command:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:355    .text.BM83_send_command:00000000 BM83_send_command
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:498    .text.BM83_read_event:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:504    .text.BM83_read_event:00000000 BM83_read_event
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:775    .text.BM83_send_command_with_ack_check:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:781    .text.BM83_send_command_with_ack_check:00000000 BM83_send_command_with_ack_check
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:859    .text.BM83_wait_for_event:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:865    .text.BM83_wait_for_event:00000000 BM83_wait_for_event
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:902    .text.BM83_clear_events:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:908    .text.BM83_clear_events:00000000 BM83_clear_events
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:955    .text.BM83_reset_device:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:961    .text.BM83_reset_device:00000000 BM83_reset_device
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1011   .text.BM83_reset_device:00000038 $d
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1016   .text.BM83_send_mmi_action:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1022   .text.BM83_send_mmi_action:00000000 BM83_send_mmi_action
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1058   .text.BM83_power_on_device:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1064   .text.BM83_power_on_device:00000000 BM83_power_on_device
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1126   .text.BM83_power_off_device:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1132   .text.BM83_power_off_device:00000000 BM83_power_off_device
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1194   .text.BM83_enter_pairing_mode:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1200   .text.BM83_enter_pairing_mode:00000000 BM83_enter_pairing_mode
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1250   .text.BM83_reset_to_default:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1256   .text.BM83_reset_to_default:00000000 BM83_reset_to_default
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1300   .text.BM83_Initialise:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1306   .text.BM83_Initialise:00000000 BM83_Initialise
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1378   .text.BM83_set_device_name:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1384   .text.BM83_set_device_name:00000000 BM83_set_device_name
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1490   .text.BM83_music_control:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1496   .text.BM83_music_control:00000000 BM83_music_control
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1534   .text.BM83_make_call:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1540   .text.BM83_make_call:00000000 BM83_make_call
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1617   .text.BM83_volume_up:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1623   .text.BM83_volume_up:00000000 BM83_volume_up
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s 			page 42
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:21     .text.BM83_generic_write:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:27     .text.BM83_generic_write:00000000 BM83_generic_write
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:53     .text.BM83_generic_write:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:58     .text.BM83_generic_read:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:64     .text.BM83_generic_read:00000000 BM83_generic_read
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:90     .text.BM83_generic_read:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:95     .text.BM83_set_mfb_pin:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:101    .text.BM83_set_mfb_pin:00000000 BM83_set_mfb_pin
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:147    .text.BM83_set_mfb_pin:00000020 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:152    .text.BM83_set_rst_pin:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:158    .text.BM83_set_rst_pin:00000000 BM83_set_rst_pin
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:204    .text.BM83_set_rst_pin:00000020 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:209    .text.BM83_set_application_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:215    .text.BM83_set_application_mode:00000000 BM83_set_application_mode
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:242    .text.BM83_set_test_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:248    .text.BM83_set_test_mode:00000000 BM83_set_test_mode
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:275    .text.BM83_soft_mute_output:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:281    .text.BM83_soft_mute_output:00000000 BM83_soft_mute_output
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:307    .text.BM83_soft_mute_output:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:312    .text.BM83_soft_unmute_output:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:318    .text.BM83_soft_unmute_output:00000000 BM83_soft_unmute_output
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:344    .text.BM83_soft_unmute_output:00000010 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:349    .text.BM83_send_command:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:355    .text.BM83_send_command:00000000 BM83_send_command
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:498    .text.BM83_read_event:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:504    .text.BM83_read_event:00000000 BM83_read_event
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:775    .text.BM83_send_command_with_ack_check:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:781    .text.BM83_send_command_with_ack_check:00000000 BM83_send_command_with_ack_check
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:859    .text.BM83_wait_for_event:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:865    .text.BM83_wait_for_event:00000000 BM83_wait_for_event
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:902    .text.BM83_clear_events:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:908    .text.BM83_clear_events:00000000 BM83_clear_events
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:955    .text.BM83_reset_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:961    .text.BM83_reset_device:00000000 BM83_reset_device
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1011   .text.BM83_reset_device:00000038 $d
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1016   .text.BM83_send_mmi_action:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1022   .text.BM83_send_mmi_action:00000000 BM83_send_mmi_action
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1058   .text.BM83_power_on_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1064   .text.BM83_power_on_device:00000000 BM83_power_on_device
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1126   .text.BM83_power_off_device:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1132   .text.BM83_power_off_device:00000000 BM83_power_off_device
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1194   .text.BM83_enter_pairing_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1200   .text.BM83_enter_pairing_mode:00000000 BM83_enter_pairing_mode
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1250   .text.BM83_reset_to_default:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1256   .text.BM83_reset_to_default:00000000 BM83_reset_to_default
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1300   .text.BM83_Initialise:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1306   .text.BM83_Initialise:00000000 BM83_Initialise
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1378   .text.BM83_set_device_name:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1384   .text.BM83_set_device_name:00000000 BM83_set_device_name
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1490   .text.BM83_music_control:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1496   .text.BM83_music_control:00000000 BM83_music_control
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1534   .text.BM83_make_call:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1540   .text.BM83_make_call:00000000 BM83_make_call
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1617   .text.BM83_volume_up:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1623   .text.BM83_volume_up:00000000 BM83_volume_up
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s 			page 42
 
 
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1676   .text.BM83_volume_down:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1682   .text.BM83_volume_down:00000000 BM83_volume_down
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1735   .text.BM83_enable_advertising:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1741   .text.BM83_enable_advertising:00000000 BM83_enable_advertising
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1779   .text.BM83_disable_advertising:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1785   .text.BM83_disable_advertising:00000000 BM83_disable_advertising
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1824   .text.BM83_set_eq_mode:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc5I9fPO.s:1830   .text.BM83_set_eq_mode:00000000 BM83_set_eq_mode
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1676   .text.BM83_volume_down:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1682   .text.BM83_volume_down:00000000 BM83_volume_down
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1735   .text.BM83_enable_advertising:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1741   .text.BM83_enable_advertising:00000000 BM83_enable_advertising
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1779   .text.BM83_disable_advertising:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1785   .text.BM83_disable_advertising:00000000 BM83_disable_advertising
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1824   .text.BM83_set_eq_mode:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccNEeKW4.s:1830   .text.BM83_set_eq_mode:00000000 BM83_set_eq_mode
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit

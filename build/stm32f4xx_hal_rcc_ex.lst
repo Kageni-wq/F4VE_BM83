@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /** @defgroup RCCEx RCCEx
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 2
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief RCCEx HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval HAL status
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 3
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_SAI1_CONFIG(PeriphClkInit->Sai1ClockSelection);
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Enable the PLLI2S when it's used as clock source for SAI */
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if(PeriphClkInit->Sai1ClockSelection == RCC_SAI1CLKSOURCE_PLLI2S)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 4
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 4
 
 
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Reset the Backup domain only if the RTC Clock source selection is modified from reset value 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tmpreg1 = (RCC->BDCR & RCC_BDCR_RTCSEL);
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 5
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 5
 
 
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((tmpreg1 != 0x00000000U) && ((tmpreg1) != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure the CEC clock source */
  257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_CEC_CONFIG(PeriphClkInit->CecClockSelection);
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 6
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 6
 
 
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Get tick */
  313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tickstart = HAL_GetTick();
  314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLI2S is disabled */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 7
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 7
 
 
  315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while(__HAL_RCC_GET_FLAG(RCC_FLAG_PLLI2SRDY)  != RESET)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  369:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* check for Parameters */
  370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLI2SP_VALUE(PeriphClkInit->PLLI2S.PLLI2SP));
  371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Read PLLI2SR value from PLLI2SCFGR register (this value is not need for SAI configuration)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 8
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 8
 
 
  372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       plli2sq = ((((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SP) >> RCC_PLLI2SCFGR_PLLI2SP_Pos) + 1U) 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  426:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Check the PLLSAI division factors */
  428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_PLLSAIM_VALUE(PeriphClkInit->PLLSAI.PLLSAIM));
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 9
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 9
 
 
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_PLLSAIN_VALUE(PeriphClkInit->PLLSAI.PLLSAIN));
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  483:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief  Get the RCC_PeriphCLKInitTypeDef according to the internal
  484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         RCC configuration registers.
  485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 10
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 10
 
 
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         will be configured.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  540:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the SDIO clock configuration ----------------------------------------*/
  542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->SdioClockSelection = __HAL_RCC_GET_SDIO_SOURCE();
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 11
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 11
 
 
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  597:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (HSI_VALUE / (uint32_t)(RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIM));
  598:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  599:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           else
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 12
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 12
 
 
  600:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  654:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  656:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* PLL_VCO Output = PLL_VCO Input * PLLN */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 13
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 13
 
 
  657:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* SAI_CLK_x = PLL_VCO Output/PLLR */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  711:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           else
  712:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
  713:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             /* Get the I2S source clock value */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 14
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 14
 
 
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (uint32_t)(HSI_VALUE / (uint32_t)(RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SM))
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  768:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  769:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Get the current I2S source */
  770:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       srcclk = __HAL_RCC_GET_I2S_APB2_SOURCE();
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 15
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 15
 
 
  771:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       switch (srcclk)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  825:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       case RCC_I2SAPB2CLKSOURCE_PLLSRC:
  826:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
  827:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLSOURCE_HSE)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 16
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 16
 
 
  828:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  882:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_CLK48) == RCC_PERIPHCLK_CLK48)
  883:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
  884:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Check the parameters */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 17
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 17
 
 
  885:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_CLK48CLKSOURCE(PeriphClkInit->Clk48ClockSelection));
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  939:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  940:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  941:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /*---------------------------- SAI configuration -------------------------*/
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 18
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 18
 
 
  942:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* In Case of SAI Clock Configuration through PLLI2S, PLLI2SQ and PLLI2S_DIVQ must
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  996:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
  997:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Check the PLLSAI division factors */
  998:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_PLLSAIN_VALUE(PeriphClkInit->PLLSAI.PLLSAIN));
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 19
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 19
 
 
  999:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1053:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure the PLLSAI when it is used as clock source for CLK48 */
 1054:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_CLK48) == (RCC_PERIPHCLK_CLK48)) &&
 1055:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        (PeriphClkInit->Clk48ClockSelection == RCC_CLK48CLKSOURCE_PLLSAIP))
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 20
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 20
 
 
 1056:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((tmpreg1 != 0x00000000U) && ((tmpreg1) != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
 1111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
 1112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Store the content of BDCR register before the reset of Backup Domain */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 21
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 21
 
 
 1113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       tmpreg1 = (RCC->BDCR & ~(RCC_BDCR_RTCSEL));
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SR = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SR) >> RCC_PLLI
 1168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SQ = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SQ) >> RCC_PLLI
 1169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the PLLSAI Clock configuration --------------------------------------*/
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 22
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 22
 
 
 1170:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLSAI.PLLSAIN = (uint32_t)((RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIN) >> RCC_PLLS
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
 1225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* Set the I2S clock to the external clock  value */
 1226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           frequency = EXTERNAL_CLOCK_VALUE;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 23
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 23
 
 
 1227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *
 1282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval HAL status
 1283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 24
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 24
 
 
 1284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1338:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if(PeriphClkInit->SaiAClockSelection == RCC_SAIACLKSOURCE_PLLI2SR)
 1339:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
 1340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       plli2sused = 1U;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 25
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 25
 
 
 1341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1395:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while((PWR->CR & PWR_CR_DBP) == RESET)
 1396:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
 1397:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       if((HAL_GetTick() - tickstart ) > RCC_DBP_TIMEOUT_VALUE)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 26
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 26
 
 
 1398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*------------------------------------- CLK48 Configuration ----------------*/
 1454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_CLK48) == RCC_PERIPHCLK_CLK48)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 27
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 27
 
 
 1455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1509:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_I2S_APB2) == RCC_PERIPHCLK_I2S_APB2
 1510:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_CLK48) == RCC_PERIPHCLK_CLK48) && (
 1511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_SDIO) == RCC_PERIPHCLK_SDIO) && (Pe
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 28
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 28
 
 
 1512:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1566:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       if((HAL_GetTick() - tickstart ) > PLLI2S_TIMEOUT_VALUE)
 1567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
 1568:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* return in case of Timeout detected */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 29
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 29
 
 
 1569:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         return HAL_TIMEOUT;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1623:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Check the parameters */
 1624:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_LPTIM1CLKSOURCE(PeriphClkInit->Lptim1ClockSelection));
 1625:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 30
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 30
 
 
 1626:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure the LPTIM1 clock source */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1680:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->I2sApb2ClockSelection = __HAL_RCC_GET_I2S_APB2_SOURCE();
 1681:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1682:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the RTC Clock configuration -----------------------------------------*/
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 31
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 31
 
 
 1683:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   tempreg = (RCC->CFGR & RCC_CFGR_RTCPRE);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1737:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
 1738:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** uint32_t HAL_RCCEx_GetPeriphCLKFreq(uint32_t PeriphClk)
 1739:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 32
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 32
 
 
 1740:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* This variable used to store the I2S clock frequency (value in Hz) */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1794:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* Configure the PLL division factor R */
 1795:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* PLL_VCO Input  = PLL_SOURCE/PLLM */
 1796:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLSOURCE_HSE)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 33
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 33
 
 
 1797:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1851:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SSRC) == RCC_PLLI2SCFGR_PLLI2SSRC)
 1852:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
 1853:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             /* Get the I2S source clock value */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 34
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 34
 
 
 1854:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (uint32_t)(EXTERNAL_CLOCK_VALUE / (uint32_t)(RCC->PLLI2SCFGR & RCC_PLLI2SCFG
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1908:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             frequency = HSI_VALUE;
 1909:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
 1910:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 35
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 35
 
 
 1911:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         }
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 1965:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1966:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while((PWR->CR & PWR_CR_DBP) == RESET)
 1967:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 36
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 36
 
 
 1968:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       if((HAL_GetTick() - tickstart ) > RCC_DBP_TIMEOUT_VALUE)
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2022:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2023:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*---------------------------- LPTIM1 Configuration ------------------------*/
 2024:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_LPTIM1) == RCC_PERIPHCLK_LPTIM1)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 37
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 37
 
 
 2025:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2079:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /**
 2080:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief  Return the peripheral clock frequency for a given peripheral(SAI..)
 2081:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @note   Return 0 if peripheral clock identifier not managed by this API
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 38
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 38
 
 
 2082:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @param  PeriphClk Peripheral clock identifier
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLSOURCE_HSE)
 2137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
 2138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             frequency = HSE_VALUE;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 39
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 39
 
 
 2139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2193:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****      (((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_PLLI2S) == RCC_PERIPHCLK_PLLI2S))
 2194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
 2195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* check for Parameters */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 40
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 40
 
 
 2196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_PLLI2SN_VALUE(PeriphClkInit->PLLI2S.PLLI2SN));
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLI2SR_VALUE(PeriphClkInit->PLLI2S.PLLI2SR));
 2251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Configure the PLLI2S multiplication and division factors */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 41
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 41
 
 
 2253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       __HAL_RCC_PLLI2S_SAICLK_CONFIG(PeriphClkInit->PLLI2S.PLLI2SN, PeriphClkInit->PLLI2S.PLLI2SQ, 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2307:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* PLLSAI_VCO Output = PLLSAI_VCO Input * PLLSAIN */
 2308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* SAI_CLK(first level) = PLLSAI_VCO Output/PLLSAIQ */
 2309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       __HAL_RCC_PLLSAI_CONFIG(PeriphClkInit->PLLSAI.PLLSAIN , PeriphClkInit->PLLSAI.PLLSAIQ, tmpreg
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 42
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 42
 
 
 2310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* SAI_CLK_x = SAI_CLK(first level)/PLLSAIDIVQ */
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2364:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         return HAL_TIMEOUT;
 2365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
 2366:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 43
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 43
 
 
 2367:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Reset the Backup domain only if the RTC Clock source selection is modified from reset value 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2421:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the PLLI2S Clock configuration -----------------------------------------------*/
 2422:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SN = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SN) >> RCC_PLLI
 2423:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SR = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SR) >> RCC_PLLI
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 44
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 44
 
 
 2424:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SQ = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SQ) >> RCC_PLLI
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2478:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         }
 2479:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Check if I2S clock selection is PLLI2S VCO output clock divided by PLLI2SR used as I2S clo
 2480:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       case RCC_I2SCLKSOURCE_PLLI2S:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 45
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 45
 
 
 2481:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
   30              		.loc 1 2534 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 46
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 46
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2565:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined(STM32F411xE)
 2566:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure the PLLI2S division factors */
 2567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* PLLI2S_VCO = f(VCO clock) = f(PLLI2S clock input) * (PLLI2SN/PLLI2SM) */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 47
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 47
 
 
 2568:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* I2SCLK = f(PLLI2S clock output) = f(VCO clock) / PLLI2SR */
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2616:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((tmpreg1 != 0x00000000U) && ((tmpreg1) != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
 2617:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
 2618:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Store the content of BDCR register before the reset of Backup Domain */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 48
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 48
 
 
 2619:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       tmpreg1 = (RCC->BDCR & ~(RCC_BDCR_RTCSEL));
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
   80              		.loc 1 2552 5 view .LVU15
   81 001c 4A4B     		ldr	r3, .L27
   82 001e 0022     		movs	r2, #0
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 49
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 49
 
 
   83 0020 9A66     		str	r2, [r3, #104]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  123 0054 9A66     		str	r2, [r3, #104]
 2580:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLI2S is ready */
  124              		.loc 1 2580 5 view .LVU30
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 50
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 50
 
 
 2580:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLI2S is ready */
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  164              		.loc 1 2599 5 view .LVU45
  165 0082 1B6C     		ldr	r3, [r3, #64]
  166 0084 03F08053 		and	r3, r3, #268435456
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 51
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 51
 
 
  167 0088 0193     		str	r3, [sp, #4]
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  205 00b2 B1E7     		b	.L4
  206              	.L24:
 2615:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((tmpreg1 != 0x00000000U) && ((tmpreg1) != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 52
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 52
 
 
  207              		.loc 1 2615 5 is_stmt 1 view .LVU62
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
  245              		.loc 1 2627 10 is_stmt 0 view .LVU79
  246 00e0 1B6F     		ldr	r3, [r3, #112]
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 53
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 53
 
 
 2627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2633:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
  289              		.loc 1 2633 51 view .LVU92
  290 011a 13F0020F 		tst	r3, #2
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 54
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 54
 
 
  291 011e E3D1     		bne	.L10
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval None
 2660:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
 2661:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** void HAL_RCCEx_GetPeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 55
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 55
 
 
 2662:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** {
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  374 0028 C360     		str	r3, [r0, #12]
 2677:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2678:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined(STM32F401xC) || defined(STM32F401xE) || defined(STM32F411xE)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 56
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 56
 
 
 2679:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the TIM Prescaler configuration -------------------------------------*/
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  402              		.loc 1 2707 3 view .LVU124
 2708:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   switch (PeriphClk)
  403              		.loc 1 2708 3 view .LVU125
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 57
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 57
 
 
  404 0000 0128     		cmp	r0, #1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2735:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
 2736:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             /* Get the I2S source clock value */
 2737:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (uint32_t)(HSI_VALUE / (uint32_t)(RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SM))
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 58
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 58
 
 
 2738:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  465 0042 C3F30273 		ubfx	r3, r3, #28, #3
  466              		.loc 1 2756 21 view .LVU148
  467 0046 B0FBF3F0 		udiv	r0, r0, r3
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 59
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 59
 
 
  468              	.LVL39:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  499 006c 0024F400 		.word	16000000
  500              		.cfi_endproc
  501              	.LFE136:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 60
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 60
 
 
  503              		.section	.text.HAL_RCCEx_EnablePLLI2S,"ax",%progbits
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2820:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined(RCC_PLLI2S_SUPPORT)
 2821:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /**
 2822:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief  Enable PLLI2S.
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 61
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 61
 
 
 2823:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @param  PLLI2SInit  pointer to an RCC_PLLI2SInitTypeDef structure that
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  540              		.loc 1 2849 3 is_stmt 1 view .LVU167
  541              	.L43:
  542              		.loc 1 2849 48 view .LVU168
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 62
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 62
 
 
  543              		.loc 1 2849 9 is_stmt 0 view .LVU169
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2886:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   __HAL_RCC_PLLI2S_CONFIG(PLLI2SInit->PLLI2SN, PLLI2SInit->PLLI2SR);
 2887:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* STM32F446xx */
 2888:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 63
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 63
 
 
 2889:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Enable the PLLI2S */
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2896:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  591              		.loc 1 2896 5 is_stmt 1 view .LVU185
 2896:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 64
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 64
 
 
  592              		.loc 1 2896 9 is_stmt 0 view .LVU186
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2915:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   __HAL_RCC_PLLI2S_DISABLE();
  634              		.loc 1 2915 3 view .LVU193
  635 0002 0A4B     		ldr	r3, .L62
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 65
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 65
 
 
  636 0004 0022     		movs	r2, #0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  676 002c 00004742 		.word	1111949312
  677 0030 00380240 		.word	1073887232
  678              		.cfi_endproc
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 66
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 66
 
 
  679              	.LFE138:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 2975:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* SAIQCLK = PLLSAI_VCO / PLLSAIQ */
 2976:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* SAIRCLK = PLLSAI_VCO / PLLSAIR */
 2977:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   __HAL_RCC_PLLSAI_CONFIG(PLLSAIInit->PLLSAIM, PLLSAIInit->PLLSAIN, \
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 67
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 67
 
 
 2978:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****                           PLLSAIInit->PLLSAIP, PLLSAIInit->PLLSAIQ, 0U);
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3032:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   return HAL_OK;
 3033:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** }
 3034:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 68
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 68
 
 
 3035:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* RCC_PLLSAI_SUPPORT */
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3089:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        break;
 3090:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
 3091:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     case RCC_CFGR_SWS_HSE:  /* HSE used as system clock  source */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 69
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 69
 
 
 3092:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /**
 3147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @}
 3148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 70
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 70
 
 
 3149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  714              	.LVL58:
  715              	.L65:
  716              		.loc 1 3178 43 view .LVU214
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 71
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 71
 
 
  717              		.loc 1 3178 10 is_stmt 0 view .LVU215
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       return HAL_TIMEOUT;
 3216:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
 3217:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 72
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 72
 
 
 3218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3272:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #elif defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx)
 3273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   RCC->PLLCFGR = RCC_PLLCFGR_PLLR_0 | RCC_PLLCFGR_PLLR_1 | RCC_PLLCFGR_PLLR_2 | RCC_PLLCFGR_PLLM_4 
 3274:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #else
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 73
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 73
 
 
 3275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   RCC->PLLCFGR = RCC_PLLCFGR_PLLM_4 | RCC_PLLCFGR_PLLN_6 | RCC_PLLCFGR_PLLN_7 | RCC_PLLCFGR_PLLQ_2;
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
 3329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(HAL_InitTick(uwTickPrio) != HAL_OK)
 3330:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
 3331:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     return HAL_ERROR;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 74
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 74
 
 
 3332:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  771 0052 9842     		cmp	r0, r3
  772 0054 F3D9     		bls	.L68
 3200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 75
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 75
 
 
  773              		.loc 1 3200 14 view .LVU235
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  813 0082 FFF7FEFF 		bl	HAL_GetTick
  814              	.LVL69:
  815 0086 0446     		mov	r4, r0
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 76
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 76
 
 
  816              	.LVL70:
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  856              		.loc 1 3242 3 view .LVU263
  857              	.LVL75:
  858              	.L74:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 77
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 77
 
 
 3242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  898 00f0 42F41F02 		orr	r2, r2, #10420224
  899 00f4 DA60     		str	r2, [r3, #12]
 3312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* RCC_CIR_PLLI2SRDYC */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 78
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 78
 
 
  900              		.loc 1 3312 3 view .LVU279
@@ -4678,33 +4678,33 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 1
  947              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  948              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
  949              		.file 8 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 79
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 79
 
 
  950              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s 			page 80
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s 			page 80
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_rcc_ex.c
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:21     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:27     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:319    .text.HAL_RCCEx_PeriphCLKConfig:00000148 $d
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:326    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:332    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:380    .text.HAL_RCCEx_GetPeriphCLKConfig:0000002c $d
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:385    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:391    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:496    .text.HAL_RCCEx_GetPeriphCLKFreq:00000060 $d
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:504    .text.HAL_RCCEx_EnablePLLI2S:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:510    .text.HAL_RCCEx_EnablePLLI2S:00000000 HAL_RCCEx_EnablePLLI2S
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:610    .text.HAL_RCCEx_EnablePLLI2S:00000060 $d
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:616    .text.HAL_RCCEx_DisablePLLI2S:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:622    .text.HAL_RCCEx_DisablePLLI2S:00000000 HAL_RCCEx_DisablePLLI2S
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:676    .text.HAL_RCCEx_DisablePLLI2S:0000002c $d
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:682    .text.HAL_RCC_DeInit:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:688    .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
-C:\Users\Kagen\AppData\Local\Temp\cchDSB0Z.s:932    .text.HAL_RCC_DeInit:00000124 $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:21     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:27     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:319    .text.HAL_RCCEx_PeriphCLKConfig:00000148 $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:326    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:332    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:380    .text.HAL_RCCEx_GetPeriphCLKConfig:0000002c $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:385    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:391    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:496    .text.HAL_RCCEx_GetPeriphCLKFreq:00000060 $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:504    .text.HAL_RCCEx_EnablePLLI2S:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:510    .text.HAL_RCCEx_EnablePLLI2S:00000000 HAL_RCCEx_EnablePLLI2S
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:610    .text.HAL_RCCEx_EnablePLLI2S:00000060 $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:616    .text.HAL_RCCEx_DisablePLLI2S:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:622    .text.HAL_RCCEx_DisablePLLI2S:00000000 HAL_RCCEx_DisablePLLI2S
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:676    .text.HAL_RCCEx_DisablePLLI2S:0000002c $d
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:682    .text.HAL_RCC_DeInit:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:688    .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+C:\Users\Kagen\AppData\Local\Temp\ccE9ahPh.s:932    .text.HAL_RCC_DeInit:00000124 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

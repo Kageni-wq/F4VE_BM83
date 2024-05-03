@@ -21,6 +21,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "bm832.h"
+#include <string.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -202,59 +203,59 @@ static err_t BM83_event_handler ( BM83_t *dev )
                 if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PLAY ) )
                 {
                     error_flag |= BM83_music_control ( &BM83, BM83_PLAY );
-                    log_printf( &logger, " > play music\r\n\n" );
+                    
                 } 
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PAUSE ) )
                 {
                     error_flag |= BM83_music_control ( &BM83, BM83_PAUSE );
-                    log_printf( &logger, " > pause music\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_STOP ) )
                 {
                     error_flag |= BM83_music_control ( &BM83, BM83_STOP );
-                    log_printf( &logger, " > stop music\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_NEXT ) )
                 {
                     error_flag |= BM83_music_control ( &BM83, BM83_NEXT_SONG );
-                    log_printf( &logger, " > next song\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PREVIOUS ) )
                 {
                     error_flag |= BM83_music_control ( &BM83, BM83_PREVIOUS_SONG );
-                    log_printf( &logger, " > previous song\r\n\n" );
+                   
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOLUME_UP ) )
                 {
                     error_flag |= BM83_volume_up ( &BM83, 0, BM83_VOLUME_MASK_A2DP );
-                    log_printf( &logger, " > volume up\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOLUME_DOWN ) )
                 {
                     error_flag |= BM83_volume_down ( &BM83, 0, BM83_VOLUME_MASK_A2DP );
-                    log_printf( &logger, " > volume down\r\n\n" );
+                   
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_UNMUTE ) )
                 {
                     BM83_soft_unmute_output ( &BM83 );
-                    log_printf( &logger, " > unmute output\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_MUTE ) )
                 {
                     BM83_soft_mute_output ( &BM83 );
-                    log_printf( &logger, " > mute output\r\n\n" );
+                   
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_CALL ) )
                 {
                     uint8_t phone_number[ 19 ] = { 0 };
                     memcpy ( phone_number, strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_CALL ) + 5, payload_len - 7 );
                     error_flag |= BM83_make_call ( &BM83, 0x00, phone_number );
-                    log_printf( &logger, " > calling number: %s\r\n\n", phone_number );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOICE ) )
                 {
                     error_flag |= BM83_send_mmi_action ( dev, 0, BM83_MMI_VOICE_DIAL );
-                    log_printf( &logger, " > start voice recognition\r\n\n" );
+                    
                 }
                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_MODE_UP ) )
                 {
@@ -267,79 +268,79 @@ static err_t BM83_event_handler ( BM83_t *dev )
                         eq_mode++;
                     }
                     BM83_set_eq_mode ( &BM83, eq_mode );
-                    log_printf( &logger, " > equalizer mode: " );
+                   
                     switch ( eq_mode )
                     {
                         case BM83_EQ_MODE_OFF:
                         {
-                            log_printf( &logger, "off\r\n\n" );
+                            
                             break;
                         }
                         case BM83_EQ_MODE_SOFT:
                         {
-                            log_printf( &logger, "soft\r\n\n" );
+                            
                             break;
                         }
                         case BM83_EQ_MODE_BASS:
                         {
-                            log_printf( &logger, "bass\r\n\n" );
+                           
                             break;
                         } 
                         case BM83_EQ_MODE_TREBLE:
                         {
-                            log_printf( &logger, "treble\r\n\n" );
+                            
                             break;
                         }  
                         case BM83_EQ_MODE_CLASSIC:
                         {
-                            log_printf( &logger, "classic\r\n\n" );
+                            
                             break;
                         }
                         case BM83_EQ_MODE_ROCK:
                         {
-                            log_printf( &logger, "rock\r\n\n" );
+                            
                             break;
                         }
                         case BM83_EQ_MODE_JAZZ:
                         {
-                            log_printf( &logger, "jazz\r\n\n" );
+                            
                             break;
                         }
                         case BM83_EQ_MODE_POP:
                         {
-                            log_printf( &logger, "pop\r\n\n" );
+                            printf( &logger, "pop\r\n\n" );
                             break;
                         }
                         case BM83_EQ_MODE_DANCE:
                         {
-                            log_printf( &logger, "dance\r\n\n" );
+                            printf( &logger, "dance\r\n\n" );
                             break;
                         }
                         case BM83_EQ_MODE_RNB:
                         {
-                            log_printf( &logger, "rnb\r\n\n" );
+                            printf( &logger, "rnb\r\n\n" );
                             break;
                         }
                         case BM83_EQ_MODE_USER1:
                         {
-                            log_printf( &logger, "user1\r\n\n" );
+                            printf( &logger, "user1\r\n\n" );
                             break;
                         }
                         default:
                         {
-                            log_printf( &logger, "unknown\r\n\n" );
+                            printf( &logger, "unknown\r\n\n" );
                             break;
                         }
                     }
                 }
                 else
                 {
-                    log_printf( &logger, " Unknown command: ", &dev->event_packet.param_buf[ 6 ] );
+                    printf( &logger, " Unknown command: ", &dev->event_packet.param_buf[ 6 ] );
                     for ( uint16_t cnt = 0; cnt < payload_len; cnt++ )
                     {
-                        log_printf( &logger, "%c", dev->event_packet.param_buf[ cnt + 6 ] );
+                        printf( &logger, "%c", dev->event_packet.param_buf[ cnt + 6 ] );
                     }
-                    log_printf( &logger, "\r\n\n" );
+                    printf( &logger, "\r\n\n" );
                 }
             }
             break;
@@ -350,71 +351,71 @@ static err_t BM83_event_handler ( BM83_t *dev )
             {
                 case BM83_BTM_STATE_PAIRING_SUCCESSFULL:
                 {
-                    log_printf( &logger, " < Pairing successfull - linked device ID: %u\r\n\n", 
+                    printf( &logger, " < Pairing successfull - linked device ID: %u\r\n\n", 
                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
                     break;
                 }
                 case BM83_BTM_STATE_SCO_LINK_CONNECTED:
                 {
-                    log_printf( &logger, " < SCO link connected - linked device ID: %u\r\n\n", 
+                    printf( &logger, " < SCO link connected - linked device ID: %u\r\n\n", 
                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
                     break;
                 }
                 case BM83_BTM_STATE_SCO_LINK_DISCONNECTED:
                 {
-                    log_printf( &logger, " < SCO link disconnected - linked device ID: %u\r\n\n", 
+                    printf( &logger, " < SCO link disconnected - linked device ID: %u\r\n\n", 
                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
                     break;
                 }
                 case BM83_BTM_STATE_ACL_CONNECTED:
                 {
-                    log_printf( &logger, " < ACL connected - linked data base: %u\r\n\n", 
+                    printf( &logger, " < ACL connected - linked data base: %u\r\n\n", 
                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
                     break;
                 }
                 case BM83_BTM_STATE_ACL_DISCONNECTED:
                 {
-                    log_printf( &logger, " < ACL disconnected - " );
+                    printf( &logger, " < ACL disconnected - " );
                     if ( 0 == dev->event_packet.param_buf[ 1 ] )
                     {
-                        log_printf( &logger, "disconnection\r\n\n" );
+                        printf( &logger, "disconnection\r\n\n" );
                     }
                     else if ( 1 == dev->event_packet.param_buf[ 1 ] )
                     {
-                        log_printf( &logger, "link loss\r\n\n" );
+                        printf( &logger, "link loss\r\n\n" );
                     }
                     break;
                 }
                 case BM83_BTM_STATE_STANDBY_STATE:
                 {
-                    log_printf( &logger, " < Standby state\r\n\n" );
-                    log_printf( &logger, " > ReEnter pairing mode\r\n\n" );
+                    printf( &logger, " < Standby state\r\n\n" );
+                    printf( &logger, " > ReEnter pairing mode\r\n\n" );
                     error_flag |= BM83_enter_pairing_mode ( &BM83 );
                     break;
                 }
                 case BM83_BTM_STATE_UNKNOWN_AUDIO_SOURCE:
                 {
-                    log_printf( &logger, " < Unknown audio source\r\n\n" );
+                    printf( &logger, " < Unknown audio source\r\n\n" );
                     break;
                 }
                 case BM83_BTM_STATE_AUX_IN_AUDIO_SOURCE:
                 {
-                    log_printf( &logger, " < AUX-IN audio source\r\n\n" );
+                    printf( &logger, " < AUX-IN audio source\r\n\n" );
                     break;
                 }
                 case BM83_BTM_STATE_A2DP_AUDIO_SOURCE:
                 {
-                    log_printf( &logger, " < A2DP audio source\r\n\n" );
+                    printf( &logger, " < A2DP audio source\r\n\n" );
                     break;
                 }
                 default:
                 {
-                    log_printf( &logger, " < EVENT BTM STATE: " );
+                    printf( &logger, " < EVENT BTM STATE: " );
                     for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
                     {
-                        log_printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ] );
+                        printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ] );
                     }
-                    log_printf( &logger, "\r\n\n" );
+                    printf( &logger, "\r\n\n" );
                     break;
                 }
             }
@@ -422,12 +423,12 @@ static err_t BM83_event_handler ( BM83_t *dev )
         }
         default: 
         {
-            log_printf( &logger, " < EVENT 0x%.2X: ", ( uint16_t ) dev->event_packet.opcode );
+            printf( &logger, " < EVENT 0x%.2X: ", ( uint16_t ) dev->event_packet.opcode );
             for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
             {
-                log_printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ] );
+                printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ] );
             }
-            log_printf( &logger, "\r\n\n" );
+            printf( &logger, "\r\n\n" );
             break;
         }
     }

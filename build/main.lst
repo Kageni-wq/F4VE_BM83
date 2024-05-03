@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -20,22 +20,212 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              		.file 1 "Core/Src/main.c"
-  20              		.section	.rodata.application_init.str1.4,"aMS",%progbits,1
+  20              		.section	.rodata.BM83_event_handler.str1.4,"aMS",%progbits,1
   21              		.align	2
   22              	.LC0:
-  23 0000 42542041 		.ascii	"BT Audio 3 click\000"
-  23      7564696F 
-  23      20332063 
-  23      6C69636B 
+  23 0000 706C6179 		.ascii	"play\000"
   23      00
-  24              		.section	.text.application_init,"ax",%progbits
-  25              		.align	1
-  26              		.global	application_init
-  27              		.syntax unified
-  28              		.thumb
-  29              		.thumb_func
-  31              	application_init:
-  32              	.LFB134:
+  24 0005 000000   		.align	2
+  25              	.LC1:
+  26 0008 70617573 		.ascii	"pause\000"
+  26      6500
+  27 000e 0000     		.align	2
+  28              	.LC2:
+  29 0010 73746F70 		.ascii	"stop\000"
+  29      00
+  30 0015 000000   		.align	2
+  31              	.LC3:
+  32 0018 6E657874 		.ascii	"next\000"
+  32      00
+  33 001d 000000   		.align	2
+  34              	.LC4:
+  35 0020 70726576 		.ascii	"prev\000"
+  35      00
+  36 0025 000000   		.align	2
+  37              	.LC5:
+  38 0028 757000   		.ascii	"up\000"
+  39 002b 00       		.align	2
+  40              	.LC6:
+  41 002c 646F776E 		.ascii	"down\000"
+  41      00
+  42 0031 000000   		.align	2
+  43              	.LC7:
+  44 0034 756E6D75 		.ascii	"unmute\000"
+  44      746500
+  45 003b 00       		.align	2
+  46              	.LC8:
+  47 003c 6D757465 		.ascii	"mute\000"
+  47      00
+  48 0041 000000   		.align	2
+  49              	.LC9:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 2
+
+
+  50 0044 63616C6C 		.ascii	"call\000"
+  50      00
+  51 0049 000000   		.align	2
+  52              	.LC10:
+  53 004c 766F6963 		.ascii	"voice\000"
+  53      6500
+  54 0052 0000     		.align	2
+  55              	.LC11:
+  56 0054 6D6F6465 		.ascii	"mode\000"
+  56      00
+  57 0059 000000   		.align	2
+  58              	.LC12:
+  59 005c 706F700D 		.ascii	"pop\015\012\012\000"
+  59      0A0A00
+  60 0063 00       		.align	2
+  61              	.LC13:
+  62 0064 64616E63 		.ascii	"dance\015\012\012\000"
+  62      650D0A0A 
+  62      00
+  63 006d 000000   		.align	2
+  64              	.LC14:
+  65 0070 726E620D 		.ascii	"rnb\015\012\012\000"
+  65      0A0A00
+  66 0077 00       		.align	2
+  67              	.LC15:
+  68 0078 75736572 		.ascii	"user1\015\012\012\000"
+  68      310D0A0A 
+  68      00
+  69 0081 000000   		.align	2
+  70              	.LC16:
+  71 0084 756E6B6E 		.ascii	"unknown\015\012\012\000"
+  71      6F776E0D 
+  71      0A0A00
+  72 008f 00       		.align	2
+  73              	.LC17:
+  74 0090 20556E6B 		.ascii	" Unknown command: \000"
+  74      6E6F776E 
+  74      20636F6D 
+  74      6D616E64 
+  74      3A2000
+  75 00a3 00       		.align	2
+  76              	.LC18:
+  77 00a4 256300   		.ascii	"%c\000"
+  78 00a7 00       		.align	2
+  79              	.LC19:
+  80 00a8 0D0A0A00 		.ascii	"\015\012\012\000"
+  81              		.align	2
+  82              	.LC20:
+  83 00ac 203C2050 		.ascii	" < Pairing successfull - linked device ID: %u\015\012"
+  83      61697269 
+  83      6E672073 
+  83      75636365 
+  83      73736675 
+  84 00db 0A00     		.ascii	"\012\000"
+  85 00dd 000000   		.align	2
+  86              	.LC21:
+  87 00e0 203C2053 		.ascii	" < SCO link connected - linked device ID: %u\015\012"
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 3
+
+
+  87      434F206C 
+  87      696E6B20 
+  87      636F6E6E 
+  87      65637465 
+  88 010e 0A00     		.ascii	"\012\000"
+  89              		.align	2
+  90              	.LC22:
+  91 0110 203C2053 		.ascii	" < SCO link disconnected - linked device ID: %u\015"
+  91      434F206C 
+  91      696E6B20 
+  91      64697363 
+  91      6F6E6E65 
+  92 0140 0A0A00   		.ascii	"\012\012\000"
+  93 0143 00       		.align	2
+  94              	.LC23:
+  95 0144 203C2041 		.ascii	" < ACL connected - linked data base: %u\015\012\012"
+  95      434C2063 
+  95      6F6E6E65 
+  95      63746564 
+  95      202D206C 
+  96 016e 00       		.ascii	"\000"
+  97 016f 00       		.align	2
+  98              	.LC24:
+  99 0170 203C2041 		.ascii	" < ACL disconnected - \000"
+  99      434C2064 
+  99      6973636F 
+  99      6E6E6563 
+  99      74656420 
+ 100 0187 00       		.align	2
+ 101              	.LC25:
+ 102 0188 64697363 		.ascii	"disconnection\015\012\012\000"
+ 102      6F6E6E65 
+ 102      6374696F 
+ 102      6E0D0A0A 
+ 102      00
+ 103 0199 000000   		.align	2
+ 104              	.LC26:
+ 105 019c 6C696E6B 		.ascii	"link loss\015\012\012\000"
+ 105      206C6F73 
+ 105      730D0A0A 
+ 105      00
+ 106 01a9 000000   		.align	2
+ 107              	.LC27:
+ 108 01ac 203C2053 		.ascii	" < Standby state\015\012\012\000"
+ 108      74616E64 
+ 108      62792073 
+ 108      74617465 
+ 108      0D0A0A00 
+ 109              		.align	2
+ 110              	.LC28:
+ 111 01c0 203E2052 		.ascii	" > ReEnter pairing mode\015\012\012\000"
+ 111      65456E74 
+ 111      65722070 
+ 111      61697269 
+ 111      6E67206D 
+ 112 01db 00       		.align	2
+ 113              	.LC29:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 4
+
+
+ 114 01dc 203C2055 		.ascii	" < Unknown audio source\015\012\012\000"
+ 114      6E6B6E6F 
+ 114      776E2061 
+ 114      7564696F 
+ 114      20736F75 
+ 115 01f7 00       		.align	2
+ 116              	.LC30:
+ 117 01f8 203C2041 		.ascii	" < AUX-IN audio source\015\012\012\000"
+ 117      55582D49 
+ 117      4E206175 
+ 117      64696F20 
+ 117      736F7572 
+ 118 0212 0000     		.align	2
+ 119              	.LC31:
+ 120 0214 203C2041 		.ascii	" < A2DP audio source\015\012\012\000"
+ 120      32445020 
+ 120      61756469 
+ 120      6F20736F 
+ 120      75726365 
+ 121              		.align	2
+ 122              	.LC32:
+ 123 022c 203C2045 		.ascii	" < EVENT BTM STATE: \000"
+ 123      56454E54 
+ 123      2042544D 
+ 123      20535441 
+ 123      54453A20 
+ 124 0241 000000   		.align	2
+ 125              	.LC33:
+ 126 0244 3078252E 		.ascii	"0x%.2X \000"
+ 126      32582000 
+ 127              		.align	2
+ 128              	.LC34:
+ 129 024c 203C2045 		.ascii	" < EVENT 0x%.2X: \000"
+ 129      56454E54 
+ 129      20307825 
+ 129      2E32583A 
+ 129      2000
+ 130              		.section	.text.BM83_event_handler,"ax",%progbits
+ 131              		.align	1
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 136              	BM83_event_handler:
+ 137              	.LVL0:
+ 138              	.LFB138:
    1:Core/Src/main.c **** /* USER CODE BEGIN Header */
    2:Core/Src/main.c **** /**
    3:Core/Src/main.c ****   ******************************************************************************
@@ -48,6 +238,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   10:Core/Src/main.c ****   * All rights reserved.
   11:Core/Src/main.c ****   *
   12:Core/Src/main.c ****   * This software is licensed under terms that can be found in the LICENSE file
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 5
+
+
   13:Core/Src/main.c ****   * in the root directory of this software component.
   14:Core/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   15:Core/Src/main.c ****   *
@@ -58,322 +251,1663 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   20:Core/Src/main.c **** #include "main.h"
   21:Core/Src/main.c **** #include "usart.h"
   22:Core/Src/main.c **** #include "gpio.h"
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 2
+  23:Core/Src/main.c **** #include "bm832.h"
+  24:Core/Src/main.c **** #include <string.h>
+  25:Core/Src/main.c **** 
+  26:Core/Src/main.c **** /* Private includes ----------------------------------------------------------*/
+  27:Core/Src/main.c **** /* USER CODE BEGIN Includes */
+  28:Core/Src/main.c **** 
+  29:Core/Src/main.c **** /* USER CODE END Includes */
+  30:Core/Src/main.c **** 
+  31:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
+  32:Core/Src/main.c **** /* USER CODE BEGIN PTD */
+  33:Core/Src/main.c **** 
+  34:Core/Src/main.c **** /* USER CODE END PTD */
+  35:Core/Src/main.c **** 
+  36:Core/Src/main.c **** /* Private define ------------------------------------------------------------*/
+  37:Core/Src/main.c **** /* USER CODE BEGIN PD */
+  38:Core/Src/main.c **** 
+  39:Core/Src/main.c **** /* USER CODE END PD */
+  40:Core/Src/main.c **** 
+  41:Core/Src/main.c **** /* Private macro -------------------------------------------------------------*/
+  42:Core/Src/main.c **** /* USER CODE BEGIN PM */
+  43:Core/Src/main.c **** 
+  44:Core/Src/main.c **** /* USER CODE END PM */
+  45:Core/Src/main.c **** 
+  46:Core/Src/main.c **** /* Private variables ---------------------------------------------------------*/
+  47:Core/Src/main.c **** 
+  48:Core/Src/main.c **** /* USER CODE BEGIN PV */
+  49:Core/Src/main.c **** 
+  50:Core/Src/main.c **** /* USER CODE END PV */
+  51:Core/Src/main.c **** 
+  52:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
+  53:Core/Src/main.c **** void SystemClock_Config(void);
+  54:Core/Src/main.c **** /* USER CODE BEGIN PFP */
+  55:Core/Src/main.c **** 
+  56:Core/Src/main.c **** /* USER CODE END PFP */
+  57:Core/Src/main.c **** 
+  58:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
+  59:Core/Src/main.c **** /* USER CODE BEGIN 0 */
+  60:Core/Src/main.c **** static err_t BM83_event_handler ( BM83_t *dev );
+  61:Core/Src/main.c **** static BM83_t BM83;
+  62:Core/Src/main.c **** static log_t logger;
+  63:Core/Src/main.c **** 
+  64:Core/Src/main.c **** 
+  65:Core/Src/main.c **** void application_init ( void ) 
+  66:Core/Src/main.c **** {
+  67:Core/Src/main.c ****     
+  68:Core/Src/main.c ****     
+  69:Core/Src/main.c ****     /** 
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 6
 
 
-  23:Core/Src/main.c **** #include "bm83.h"
-  24:Core/Src/main.c **** 
-  25:Core/Src/main.c **** /* Private includes ----------------------------------------------------------*/
-  26:Core/Src/main.c **** /* USER CODE BEGIN Includes */
-  27:Core/Src/main.c **** 
-  28:Core/Src/main.c **** /* USER CODE END Includes */
-  29:Core/Src/main.c **** 
-  30:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
-  31:Core/Src/main.c **** /* USER CODE BEGIN PTD */
-  32:Core/Src/main.c **** 
-  33:Core/Src/main.c **** /* USER CODE END PTD */
-  34:Core/Src/main.c **** 
-  35:Core/Src/main.c **** /* Private define ------------------------------------------------------------*/
-  36:Core/Src/main.c **** /* USER CODE BEGIN PD */
-  37:Core/Src/main.c **** 
-  38:Core/Src/main.c **** /* USER CODE END PD */
-  39:Core/Src/main.c **** 
-  40:Core/Src/main.c **** /* Private macro -------------------------------------------------------------*/
-  41:Core/Src/main.c **** /* USER CODE BEGIN PM */
-  42:Core/Src/main.c **** 
-  43:Core/Src/main.c **** /* USER CODE END PM */
-  44:Core/Src/main.c **** 
-  45:Core/Src/main.c **** /* Private variables ---------------------------------------------------------*/
-  46:Core/Src/main.c **** 
-  47:Core/Src/main.c **** /* USER CODE BEGIN PV */
-  48:Core/Src/main.c **** 
-  49:Core/Src/main.c **** /* USER CODE END PV */
-  50:Core/Src/main.c **** 
-  51:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
-  52:Core/Src/main.c **** void SystemClock_Config(void);
-  53:Core/Src/main.c **** /* USER CODE BEGIN PFP */
-  54:Core/Src/main.c **** 
-  55:Core/Src/main.c **** /* USER CODE END PFP */
-  56:Core/Src/main.c **** 
-  57:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
-  58:Core/Src/main.c **** /* USER CODE BEGIN 0 */
-  59:Core/Src/main.c **** static err_t BM83_event_handler ( BM83_t *ctx );
-  60:Core/Src/main.c **** static BM83_t BM83;
-  61:Core/Src/main.c **** 
-  62:Core/Src/main.c **** 
-  63:Core/Src/main.c **** void application_init ( void ) 
-  64:Core/Src/main.c **** {
-  33              		.loc 1 64 1 view -0
-  34              		.cfi_startproc
-  35              		@ args = 0, pretend = 0, frame = 0
-  36              		@ frame_needed = 0, uses_anonymous_args = 0
-  37 0000 10B5     		push	{r4, lr}
-  38              	.LCFI0:
-  39              		.cfi_def_cfa_offset 8
-  40              		.cfi_offset 4, -8
-  41              		.cfi_offset 14, -4
-  65:Core/Src/main.c ****     
-  66:Core/Src/main.c ****     
-  67:Core/Src/main.c ****     /** 
-  68:Core/Src/main.c ****      * Logger initialization.
-  69:Core/Src/main.c ****      * Default baud rate: 115200
-  70:Core/Src/main.c ****      * Default log level: LOG_LEVEL_DEBUG
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 3
-
-
-  71:Core/Src/main.c ****      * @note If USB_UART_RX and USB_UART_TX 
-  72:Core/Src/main.c ****      * are defined as HAL_PIN_NC, you will 
-  73:Core/Src/main.c ****      * need to define them manually for log to work. 
-  74:Core/Src/main.c ****      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
-  75:Core/Src/main.c ****      */
-  76:Core/Src/main.c **** 
-  77:Core/Src/main.c **** 
-  78:Core/Src/main.c ****     // Click initialization.
-  79:Core/Src/main.c ****     BM83_Initialise( &BM83 );
-  42              		.loc 1 79 5 view .LVU1
-  43 0002 044C     		ldr	r4, .L3
-  44 0004 2046     		mov	r0, r4
-  45 0006 FFF7FEFF 		bl	BM83_Initialise
-  46              	.LVL0:
-  80:Core/Src/main.c **** 
-  81:Core/Src/main.c ****      if ( BM83_OK != BM83_set_device_name ( &BM83, DEVICE_NAME ) ){
-  47              		.loc 1 81 6 view .LVU2
-  48              		.loc 1 81 22 is_stmt 0 view .LVU3
-  49 000a 0349     		ldr	r1, .L3+4
-  50 000c 2046     		mov	r0, r4
-  51 000e FFF7FEFF 		bl	BM83_set_device_name
-  52              	.LVL1:
-  82:Core/Src/main.c ****       
-  83:Core/Src/main.c ****      }
-  53              		.loc 1 83 6 is_stmt 1 view .LVU4
-  84:Core/Src/main.c ****     
-  85:Core/Src/main.c **** }
-  54              		.loc 1 85 1 is_stmt 0 view .LVU5
-  55 0012 10BD     		pop	{r4, pc}
-  56              	.L4:
-  57              		.align	2
-  58              	.L3:
-  59 0014 00000000 		.word	BM83
-  60 0018 00000000 		.word	.LC0
-  61              		.cfi_endproc
-  62              	.LFE134:
-  64              		.section	.text.application_task,"ax",%progbits
-  65              		.align	1
-  66              		.global	application_task
-  67              		.syntax unified
-  68              		.thumb
-  69              		.thumb_func
-  71              	application_task:
-  72              	.LFB135:
-  86:Core/Src/main.c **** 
-  87:Core/Src/main.c **** void application_task ( void ) 
-  88:Core/Src/main.c **** {
-  73              		.loc 1 88 1 is_stmt 1 view -0
-  74              		.cfi_startproc
-  75              		@ args = 0, pretend = 0, frame = 0
-  76              		@ frame_needed = 0, uses_anonymous_args = 0
-  77 0000 08B5     		push	{r3, lr}
-  78              	.LCFI1:
-  79              		.cfi_def_cfa_offset 8
-  80              		.cfi_offset 3, -8
-  81              		.cfi_offset 14, -4
-  89:Core/Src/main.c ****     if ( BM83_OK == BM83_read_event ( &BM83 ) ) 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 4
-
-
-  82              		.loc 1 89 5 view .LVU7
-  83              		.loc 1 89 21 is_stmt 0 view .LVU8
-  84 0002 0448     		ldr	r0, .L9
-  85 0004 FFF7FEFF 		bl	BM83_read_event
-  86              	.LVL2:
-  87              		.loc 1 89 8 view .LVU9
-  88 0008 00B1     		cbz	r0, .L8
-  89              	.L5:
-  90:Core/Src/main.c ****     {
-  91:Core/Src/main.c ****         BM83_event_handler ( &BM83 );
-  92:Core/Src/main.c ****     }
-  93:Core/Src/main.c **** }
-  90              		.loc 1 93 1 view .LVU10
-  91 000a 08BD     		pop	{r3, pc}
-  92              	.L8:
-  91:Core/Src/main.c ****     }
-  93              		.loc 1 91 9 is_stmt 1 view .LVU11
-  94 000c 0148     		ldr	r0, .L9
-  95 000e FFF7FEFF 		bl	BM83_event_handler
-  96              	.LVL3:
-  97              		.loc 1 93 1 is_stmt 0 view .LVU12
-  98 0012 FAE7     		b	.L5
-  99              	.L10:
- 100              		.align	2
- 101              	.L9:
- 102 0014 00000000 		.word	BM83
- 103              		.cfi_endproc
- 104              	.LFE135:
- 106              		.section	.text.main,"ax",%progbits
- 107              		.align	1
- 108              		.global	main
- 109              		.syntax unified
- 110              		.thumb
- 111              		.thumb_func
- 113              	main:
- 114              	.LFB136:
-  94:Core/Src/main.c **** /* USER CODE END 0 */
-  95:Core/Src/main.c **** 
-  96:Core/Src/main.c **** /**
-  97:Core/Src/main.c ****   * @brief  The application entry point.
-  98:Core/Src/main.c ****   * @retval int
-  99:Core/Src/main.c ****   */
- 100:Core/Src/main.c **** int main(void)
- 101:Core/Src/main.c **** {
- 115              		.loc 1 101 1 is_stmt 1 view -0
- 116              		.cfi_startproc
- 117              		@ Volatile: function does not return.
- 118              		@ args = 0, pretend = 0, frame = 0
- 119              		@ frame_needed = 0, uses_anonymous_args = 0
- 120 0000 08B5     		push	{r3, lr}
- 121              	.LCFI2:
- 122              		.cfi_def_cfa_offset 8
- 123              		.cfi_offset 3, -8
- 124              		.cfi_offset 14, -4
- 102:Core/Src/main.c **** 
- 103:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
- 104:Core/Src/main.c ****   application_init( );
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 5
-
-
- 125              		.loc 1 104 3 view .LVU14
- 126 0002 FFF7FEFF 		bl	application_init
- 127              	.LVL4:
- 128              	.L12:
- 105:Core/Src/main.c ****     
- 106:Core/Src/main.c ****     for ( ; ; ) 
- 129              		.loc 1 106 5 discriminator 1 view .LVU15
- 107:Core/Src/main.c ****     {
- 108:Core/Src/main.c ****         application_task( );
- 130              		.loc 1 108 9 discriminator 1 view .LVU16
- 131 0006 FFF7FEFF 		bl	application_task
- 132              	.LVL5:
- 106:Core/Src/main.c ****     {
- 133              		.loc 1 106 5 discriminator 1 view .LVU17
- 134 000a FCE7     		b	.L12
- 135              		.cfi_endproc
- 136              	.LFE136:
- 138              		.section	.text.Error_Handler,"ax",%progbits
- 139              		.align	1
- 140              		.global	Error_Handler
- 141              		.syntax unified
- 142              		.thumb
- 143              		.thumb_func
- 145              	Error_Handler:
- 146              	.LFB138:
- 109:Core/Src/main.c ****     }
- 110:Core/Src/main.c **** 
- 111:Core/Src/main.c ****     return 0;
- 112:Core/Src/main.c ****   /* USER CODE END 1 */
- 113:Core/Src/main.c **** 
- 114:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
+  70:Core/Src/main.c ****      * Logger initialization.
+  71:Core/Src/main.c ****      * Default baud rate: 115200
+  72:Core/Src/main.c ****      * Default log level: LOG_LEVEL_DEBUG
+  73:Core/Src/main.c ****      * @note If USB_UART_RX and USB_UART_TX 
+  74:Core/Src/main.c ****      * are defined as HAL_PIN_NC, you will 
+  75:Core/Src/main.c ****      * need to define them manually for log to work. 
+  76:Core/Src/main.c ****      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+  77:Core/Src/main.c ****      */
+  78:Core/Src/main.c **** 
+  79:Core/Src/main.c **** 
+  80:Core/Src/main.c ****     // Click initialization.
+  81:Core/Src/main.c ****     BM83_Initialise( &BM83 );
+  82:Core/Src/main.c **** 
+  83:Core/Src/main.c ****      if ( BM83_OK != BM83_set_device_name ( &BM83, DEVICE_NAME ) ){
+  84:Core/Src/main.c ****       
+  85:Core/Src/main.c ****      }
+  86:Core/Src/main.c ****     
+  87:Core/Src/main.c **** }
+  88:Core/Src/main.c **** 
+  89:Core/Src/main.c **** void application_task ( void ) 
+  90:Core/Src/main.c **** {
+  91:Core/Src/main.c ****     if ( BM83_OK == BM83_read_event ( &BM83 ) ) 
+  92:Core/Src/main.c ****     {
+  93:Core/Src/main.c ****         BM83_event_handler ( &BM83 );
+  94:Core/Src/main.c ****     }
+  95:Core/Src/main.c **** }
+  96:Core/Src/main.c **** /* USER CODE END 0 */
+  97:Core/Src/main.c **** 
+  98:Core/Src/main.c **** /**
+  99:Core/Src/main.c ****   * @brief  The application entry point.
+ 100:Core/Src/main.c ****   * @retval int
+ 101:Core/Src/main.c ****   */
+ 102:Core/Src/main.c **** int main(void)
+ 103:Core/Src/main.c **** {
+ 104:Core/Src/main.c **** 
+ 105:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
+ 106:Core/Src/main.c ****   application_init( );
+ 107:Core/Src/main.c ****     
+ 108:Core/Src/main.c ****     for ( ; ; ) 
+ 109:Core/Src/main.c ****     {
+ 110:Core/Src/main.c ****         application_task( );
+ 111:Core/Src/main.c ****     }
+ 112:Core/Src/main.c **** 
+ 113:Core/Src/main.c ****     return 0;
+ 114:Core/Src/main.c ****   /* USER CODE END 1 */
  115:Core/Src/main.c **** 
- 116:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
- 117:Core/Src/main.c ****   HAL_Init();
- 118:Core/Src/main.c **** 
- 119:Core/Src/main.c ****   /* USER CODE BEGIN Init */
+ 116:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
+ 117:Core/Src/main.c **** 
+ 118:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 119:Core/Src/main.c ****   HAL_Init();
  120:Core/Src/main.c **** 
- 121:Core/Src/main.c ****   /* USER CODE END Init */
+ 121:Core/Src/main.c ****   /* USER CODE BEGIN Init */
  122:Core/Src/main.c **** 
- 123:Core/Src/main.c ****   /* Configure the system clock */
- 124:Core/Src/main.c ****   SystemClock_Config();
- 125:Core/Src/main.c **** 
- 126:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
+ 123:Core/Src/main.c ****   /* USER CODE END Init */
+ 124:Core/Src/main.c **** 
+ 125:Core/Src/main.c ****   /* Configure the system clock */
+ 126:Core/Src/main.c ****   SystemClock_Config();
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 7
+
+
  127:Core/Src/main.c **** 
- 128:Core/Src/main.c ****   /* USER CODE END SysInit */
+ 128:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
  129:Core/Src/main.c **** 
- 130:Core/Src/main.c ****   /* Initialize all configured peripherals */
- 131:Core/Src/main.c ****   MX_GPIO_Init();
- 132:Core/Src/main.c ****   MX_USART1_UART_Init();
- 133:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 134:Core/Src/main.c **** 
- 135:Core/Src/main.c ****   /* USER CODE END 2 */
+ 130:Core/Src/main.c ****   /* USER CODE END SysInit */
+ 131:Core/Src/main.c **** 
+ 132:Core/Src/main.c ****   /* Initialize all configured peripherals */
+ 133:Core/Src/main.c ****   MX_GPIO_Init();
+ 134:Core/Src/main.c ****   MX_USART1_UART_Init();
+ 135:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
  136:Core/Src/main.c **** 
- 137:Core/Src/main.c ****   /* Infinite loop */
- 138:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
- 139:Core/Src/main.c ****   while (1)
- 140:Core/Src/main.c ****   {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 6
+ 137:Core/Src/main.c ****   /* USER CODE END 2 */
+ 138:Core/Src/main.c **** 
+ 139:Core/Src/main.c ****   /* Infinite loop */
+ 140:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 141:Core/Src/main.c ****   while (1)
+ 142:Core/Src/main.c ****   {
+ 143:Core/Src/main.c ****     /* USER CODE END WHILE */
+ 144:Core/Src/main.c **** 
+ 145:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 146:Core/Src/main.c ****   }
+ 147:Core/Src/main.c ****   /* USER CODE END 3 */
+ 148:Core/Src/main.c **** }
+ 149:Core/Src/main.c **** 
+ 150:Core/Src/main.c **** /**
+ 151:Core/Src/main.c ****   * @brief System Clock Configuration
+ 152:Core/Src/main.c ****   * @retval None
+ 153:Core/Src/main.c ****   */
+ 154:Core/Src/main.c **** void SystemClock_Config(void)
+ 155:Core/Src/main.c **** {
+ 156:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 157:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 158:Core/Src/main.c **** 
+ 159:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
+ 160:Core/Src/main.c ****   */
+ 161:Core/Src/main.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+ 162:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 163:Core/Src/main.c **** 
+ 164:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 165:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 166:Core/Src/main.c ****   */
+ 167:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+ 168:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 169:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 170:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 171:Core/Src/main.c ****   {
+ 172:Core/Src/main.c ****     Error_Handler();
+ 173:Core/Src/main.c ****   }
+ 174:Core/Src/main.c **** 
+ 175:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
+ 176:Core/Src/main.c ****   */
+ 177:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 178:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 179:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+ 180:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 181:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 182:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 183:Core/Src/main.c **** 
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 8
 
 
- 141:Core/Src/main.c ****     /* USER CODE END WHILE */
- 142:Core/Src/main.c **** 
- 143:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
- 144:Core/Src/main.c ****   }
- 145:Core/Src/main.c ****   /* USER CODE END 3 */
- 146:Core/Src/main.c **** }
- 147:Core/Src/main.c **** 
- 148:Core/Src/main.c **** /**
- 149:Core/Src/main.c ****   * @brief System Clock Configuration
- 150:Core/Src/main.c ****   * @retval None
- 151:Core/Src/main.c ****   */
- 152:Core/Src/main.c **** void SystemClock_Config(void)
- 153:Core/Src/main.c **** {
- 154:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 155:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 156:Core/Src/main.c **** 
- 157:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
- 158:Core/Src/main.c ****   */
- 159:Core/Src/main.c ****   __HAL_RCC_PWR_CLK_ENABLE();
- 160:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 161:Core/Src/main.c **** 
- 162:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
- 163:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
- 164:Core/Src/main.c ****   */
- 165:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
- 166:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 167:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 168:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 169:Core/Src/main.c ****   {
- 170:Core/Src/main.c ****     Error_Handler();
- 171:Core/Src/main.c ****   }
- 172:Core/Src/main.c **** 
- 173:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
- 174:Core/Src/main.c ****   */
- 175:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 176:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 177:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
- 178:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 179:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 180:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 181:Core/Src/main.c **** 
- 182:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
- 183:Core/Src/main.c ****   {
- 184:Core/Src/main.c ****     Error_Handler();
- 185:Core/Src/main.c ****   }
- 186:Core/Src/main.c **** }
- 187:Core/Src/main.c **** 
- 188:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 184:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+ 185:Core/Src/main.c ****   {
+ 186:Core/Src/main.c ****     Error_Handler();
+ 187:Core/Src/main.c ****   }
+ 188:Core/Src/main.c **** }
  189:Core/Src/main.c **** 
- 190:Core/Src/main.c **** /* USER CODE END 4 */
- 191:Core/Src/main.c **** 
- 192:Core/Src/main.c **** /**
- 193:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 194:Core/Src/main.c ****   * @retval None
- 195:Core/Src/main.c ****   */
- 196:Core/Src/main.c **** void Error_Handler(void)
- 197:Core/Src/main.c **** {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 7
+ 190:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 191:Core/Src/main.c **** static err_t BM83_event_handler ( BM83_t *dev )
+ 192:Core/Src/main.c **** {
+ 139              		.loc 1 192 1 view -0
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 24
+ 142              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143              		.loc 1 192 1 is_stmt 0 view .LVU1
+ 144 0000 70B5     		push	{r4, r5, r6, lr}
+ 145              	.LCFI0:
+ 146              		.cfi_def_cfa_offset 16
+ 147              		.cfi_offset 4, -16
+ 148              		.cfi_offset 5, -12
+ 149              		.cfi_offset 6, -8
+ 150              		.cfi_offset 14, -4
+ 151 0002 86B0     		sub	sp, sp, #24
+ 152              	.LCFI1:
+ 153              		.cfi_def_cfa_offset 40
+ 154 0004 0546     		mov	r5, r0
+ 193:Core/Src/main.c ****     err_t error_flag = BM83_OK;
+ 155              		.loc 1 193 5 is_stmt 1 view .LVU2
+ 156              	.LVL1:
+ 194:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 157              		.loc 1 194 5 view .LVU3
+ 195:Core/Src/main.c ****     switch ( dev->event_packet.opcode )
+ 158              		.loc 1 195 5 view .LVU4
+ 159              		.loc 1 195 31 is_stmt 0 view .LVU5
+ 160 0006 90F80625 		ldrb	r2, [r0, #1286]	@ zero_extendqisi2
+ 161              		.loc 1 195 5 view .LVU6
+ 162 000a 012A     		cmp	r2, #1
+ 163 000c 00F0EF80 		beq	.L2
+ 164 0010 222A     		cmp	r2, #34
+ 165 0012 40F0B781 		bne	.L3
+ 196:Core/Src/main.c ****     {
+ 197:Core/Src/main.c ****         case BM83_EVT_REPORT_SPP_DATA:
+ 198:Core/Src/main.c ****         {
+ 199:Core/Src/main.c ****             if ( 0 == dev->event_packet.param_buf[ 1 ] ) // single packet
+ 166              		.loc 1 199 13 is_stmt 1 view .LVU7
+ 167              		.loc 1 199 50 is_stmt 0 view .LVU8
+ 168 0016 90F80835 		ldrb	r3, [r0, #1288]	@ zero_extendqisi2
+ 169              		.loc 1 199 16 view .LVU9
+ 170 001a 002B     		cmp	r3, #0
+ 171 001c 40F0CC81 		bne	.L44
+ 172              	.LBB4:
+ 200:Core/Src/main.c ****             {                
+ 201:Core/Src/main.c ****                 uint16_t payload_len = ( ( uint16_t ) dev->event_packet.param_buf[ 4 ] << 8 ) | 
+ 173              		.loc 1 201 17 is_stmt 1 view .LVU10
+ 174              		.loc 1 201 82 is_stmt 0 view .LVU11
+ 175 0020 90F80B25 		ldrb	r2, [r0, #1291]	@ zero_extendqisi2
+ 202:Core/Src/main.c ****                                                       dev->event_packet.param_buf[ 5 ];
+ 176              		.loc 1 202 82 view .LVU12
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 9
 
 
- 147              		.loc 1 197 1 view -0
- 148              		.cfi_startproc
- 149              		@ Volatile: function does not return.
- 150              		@ args = 0, pretend = 0, frame = 0
- 151              		@ frame_needed = 0, uses_anonymous_args = 0
- 152              		@ link register save eliminated.
- 198:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 199:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 200:Core/Src/main.c ****   __disable_irq();
- 153              		.loc 1 200 3 view .LVU19
- 154              	.LBB4:
- 155              	.LBI4:
- 156              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+ 177 0024 90F80C35 		ldrb	r3, [r0, #1292]	@ zero_extendqisi2
+ 201:Core/Src/main.c ****                                                       dev->event_packet.param_buf[ 5 ];
+ 178              		.loc 1 201 26 view .LVU13
+ 179 0028 43EA0226 		orr	r6, r3, r2, lsl #8
+ 180              	.LVL2:
+ 203:Core/Src/main.c ****                 if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PLAY ) )
+ 181              		.loc 1 203 17 is_stmt 1 view .LVU14
+ 182              		.loc 1 203 31 is_stmt 0 view .LVU15
+ 183 002c 00F20D54 		addw	r4, r0, #1293
+ 184              		.loc 1 203 22 view .LVU16
+ 185 0030 9A49     		ldr	r1, .L53
+ 186 0032 2046     		mov	r0, r4
+ 187              	.LVL3:
+ 188              		.loc 1 203 22 view .LVU17
+ 189 0034 FFF7FEFF 		bl	strstr
+ 190              	.LVL4:
+ 191              		.loc 1 203 20 view .LVU18
+ 192 0038 20B1     		cbz	r0, .L5
+ 204:Core/Src/main.c ****                 {
+ 205:Core/Src/main.c ****                     error_flag |= BM83_music_control ( &BM83, BM83_PLAY );
+ 193              		.loc 1 205 21 is_stmt 1 view .LVU19
+ 194              		.loc 1 205 35 is_stmt 0 view .LVU20
+ 195 003a 0521     		movs	r1, #5
+ 196 003c 9848     		ldr	r0, .L53+4
+ 197 003e FFF7FEFF 		bl	BM83_music_control
+ 198              	.LVL5:
+ 199              		.loc 1 205 35 view .LVU21
+ 200 0042 B7E1     		b	.L1
+ 201              	.LVL6:
+ 202              	.L5:
+ 206:Core/Src/main.c ****                     
+ 207:Core/Src/main.c ****                 } 
+ 208:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PAUSE ) )
+ 203              		.loc 1 208 22 is_stmt 1 view .LVU22
+ 204              		.loc 1 208 27 is_stmt 0 view .LVU23
+ 205 0044 9749     		ldr	r1, .L53+8
+ 206 0046 2046     		mov	r0, r4
+ 207 0048 FFF7FEFF 		bl	strstr
+ 208              	.LVL7:
+ 209              		.loc 1 208 25 view .LVU24
+ 210 004c 20B1     		cbz	r0, .L6
+ 209:Core/Src/main.c ****                 {
+ 210:Core/Src/main.c ****                     error_flag |= BM83_music_control ( &BM83, BM83_PAUSE );
+ 211              		.loc 1 210 21 is_stmt 1 view .LVU25
+ 212              		.loc 1 210 35 is_stmt 0 view .LVU26
+ 213 004e 0621     		movs	r1, #6
+ 214 0050 9348     		ldr	r0, .L53+4
+ 215 0052 FFF7FEFF 		bl	BM83_music_control
+ 216              	.LVL8:
+ 217              		.loc 1 210 35 view .LVU27
+ 218 0056 ADE1     		b	.L1
+ 219              	.LVL9:
+ 220              	.L6:
+ 211:Core/Src/main.c ****                     
+ 212:Core/Src/main.c ****                 }
+ 213:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_STOP ) )
+ 221              		.loc 1 213 22 is_stmt 1 view .LVU28
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 10
+
+
+ 222              		.loc 1 213 27 is_stmt 0 view .LVU29
+ 223 0058 9349     		ldr	r1, .L53+12
+ 224 005a 2046     		mov	r0, r4
+ 225 005c FFF7FEFF 		bl	strstr
+ 226              	.LVL10:
+ 227              		.loc 1 213 25 view .LVU30
+ 228 0060 20B1     		cbz	r0, .L7
+ 214:Core/Src/main.c ****                 {
+ 215:Core/Src/main.c ****                     error_flag |= BM83_music_control ( &BM83, BM83_STOP );
+ 229              		.loc 1 215 21 is_stmt 1 view .LVU31
+ 230              		.loc 1 215 35 is_stmt 0 view .LVU32
+ 231 0062 0821     		movs	r1, #8
+ 232 0064 8E48     		ldr	r0, .L53+4
+ 233 0066 FFF7FEFF 		bl	BM83_music_control
+ 234              	.LVL11:
+ 235              		.loc 1 215 35 view .LVU33
+ 236 006a A3E1     		b	.L1
+ 237              	.LVL12:
+ 238              	.L7:
+ 216:Core/Src/main.c ****                     
+ 217:Core/Src/main.c ****                 }
+ 218:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_NEXT ) )
+ 239              		.loc 1 218 22 is_stmt 1 view .LVU34
+ 240              		.loc 1 218 27 is_stmt 0 view .LVU35
+ 241 006c 8F49     		ldr	r1, .L53+16
+ 242 006e 2046     		mov	r0, r4
+ 243 0070 FFF7FEFF 		bl	strstr
+ 244              	.LVL13:
+ 245              		.loc 1 218 25 view .LVU36
+ 246 0074 20B1     		cbz	r0, .L8
+ 219:Core/Src/main.c ****                 {
+ 220:Core/Src/main.c ****                     error_flag |= BM83_music_control ( &BM83, BM83_NEXT_SONG );
+ 247              		.loc 1 220 21 is_stmt 1 view .LVU37
+ 248              		.loc 1 220 35 is_stmt 0 view .LVU38
+ 249 0076 0921     		movs	r1, #9
+ 250 0078 8948     		ldr	r0, .L53+4
+ 251 007a FFF7FEFF 		bl	BM83_music_control
+ 252              	.LVL14:
+ 253              		.loc 1 220 35 view .LVU39
+ 254 007e 99E1     		b	.L1
+ 255              	.LVL15:
+ 256              	.L8:
+ 221:Core/Src/main.c ****                     
+ 222:Core/Src/main.c ****                 }
+ 223:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_PREVIOUS ) )
+ 257              		.loc 1 223 22 is_stmt 1 view .LVU40
+ 258              		.loc 1 223 27 is_stmt 0 view .LVU41
+ 259 0080 8B49     		ldr	r1, .L53+20
+ 260 0082 2046     		mov	r0, r4
+ 261 0084 FFF7FEFF 		bl	strstr
+ 262              	.LVL16:
+ 263              		.loc 1 223 25 view .LVU42
+ 264 0088 20B1     		cbz	r0, .L9
+ 224:Core/Src/main.c ****                 {
+ 225:Core/Src/main.c ****                     error_flag |= BM83_music_control ( &BM83, BM83_PREVIOUS_SONG );
+ 265              		.loc 1 225 21 is_stmt 1 view .LVU43
+ 266              		.loc 1 225 35 is_stmt 0 view .LVU44
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 11
+
+
+ 267 008a 0A21     		movs	r1, #10
+ 268 008c 8448     		ldr	r0, .L53+4
+ 269 008e FFF7FEFF 		bl	BM83_music_control
+ 270              	.LVL17:
+ 271              		.loc 1 225 35 view .LVU45
+ 272 0092 8FE1     		b	.L1
+ 273              	.LVL18:
+ 274              	.L9:
+ 226:Core/Src/main.c ****                    
+ 227:Core/Src/main.c ****                 }
+ 228:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOLUME_UP ) )
+ 275              		.loc 1 228 22 is_stmt 1 view .LVU46
+ 276              		.loc 1 228 27 is_stmt 0 view .LVU47
+ 277 0094 8749     		ldr	r1, .L53+24
+ 278 0096 2046     		mov	r0, r4
+ 279 0098 FFF7FEFF 		bl	strstr
+ 280              	.LVL19:
+ 281              		.loc 1 228 25 view .LVU48
+ 282 009c 28B1     		cbz	r0, .L10
+ 229:Core/Src/main.c ****                 {
+ 230:Core/Src/main.c ****                     error_flag |= BM83_volume_up ( &BM83, 0, BM83_VOLUME_MASK_A2DP );
+ 283              		.loc 1 230 21 is_stmt 1 view .LVU49
+ 284              		.loc 1 230 35 is_stmt 0 view .LVU50
+ 285 009e 0122     		movs	r2, #1
+ 286 00a0 0021     		movs	r1, #0
+ 287 00a2 7F48     		ldr	r0, .L53+4
+ 288 00a4 FFF7FEFF 		bl	BM83_volume_up
+ 289              	.LVL20:
+ 290              		.loc 1 230 35 view .LVU51
+ 291 00a8 84E1     		b	.L1
+ 292              	.LVL21:
+ 293              	.L10:
+ 231:Core/Src/main.c ****                     
+ 232:Core/Src/main.c ****                 }
+ 233:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOLUME_DOWN ) )
+ 294              		.loc 1 233 22 is_stmt 1 view .LVU52
+ 295              		.loc 1 233 27 is_stmt 0 view .LVU53
+ 296 00aa 8349     		ldr	r1, .L53+28
+ 297 00ac 2046     		mov	r0, r4
+ 298 00ae FFF7FEFF 		bl	strstr
+ 299              	.LVL22:
+ 300              		.loc 1 233 25 view .LVU54
+ 301 00b2 28B1     		cbz	r0, .L11
+ 234:Core/Src/main.c ****                 {
+ 235:Core/Src/main.c ****                     error_flag |= BM83_volume_down ( &BM83, 0, BM83_VOLUME_MASK_A2DP );
+ 302              		.loc 1 235 21 is_stmt 1 view .LVU55
+ 303              		.loc 1 235 35 is_stmt 0 view .LVU56
+ 304 00b4 0122     		movs	r2, #1
+ 305 00b6 0021     		movs	r1, #0
+ 306 00b8 7948     		ldr	r0, .L53+4
+ 307 00ba FFF7FEFF 		bl	BM83_volume_down
+ 308              	.LVL23:
+ 309              		.loc 1 235 35 view .LVU57
+ 310 00be 79E1     		b	.L1
+ 311              	.LVL24:
+ 312              	.L11:
+ 236:Core/Src/main.c ****                    
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 12
+
+
+ 237:Core/Src/main.c ****                 }
+ 238:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_UNMUTE ) )
+ 313              		.loc 1 238 22 is_stmt 1 view .LVU58
+ 314              		.loc 1 238 27 is_stmt 0 view .LVU59
+ 315 00c0 7E49     		ldr	r1, .L53+32
+ 316 00c2 2046     		mov	r0, r4
+ 317 00c4 FFF7FEFF 		bl	strstr
+ 318              	.LVL25:
+ 319              		.loc 1 238 25 view .LVU60
+ 320 00c8 20B1     		cbz	r0, .L12
+ 239:Core/Src/main.c ****                 {
+ 240:Core/Src/main.c ****                     BM83_soft_unmute_output ( &BM83 );
+ 321              		.loc 1 240 21 is_stmt 1 view .LVU61
+ 322 00ca 7548     		ldr	r0, .L53+4
+ 323 00cc FFF7FEFF 		bl	BM83_soft_unmute_output
+ 324              	.LVL26:
+ 325              	.LBE4:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 326              		.loc 1 193 11 is_stmt 0 view .LVU62
+ 327 00d0 0020     		movs	r0, #0
+ 328              	.LBB18:
+ 329 00d2 6FE1     		b	.L1
+ 330              	.L12:
+ 241:Core/Src/main.c ****                     
+ 242:Core/Src/main.c ****                 }
+ 243:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_MUTE ) )
+ 331              		.loc 1 243 22 is_stmt 1 view .LVU63
+ 332              		.loc 1 243 27 is_stmt 0 view .LVU64
+ 333 00d4 7A49     		ldr	r1, .L53+36
+ 334 00d6 2046     		mov	r0, r4
+ 335 00d8 FFF7FEFF 		bl	strstr
+ 336              	.LVL27:
+ 337              		.loc 1 243 25 view .LVU65
+ 338 00dc 20B1     		cbz	r0, .L13
+ 244:Core/Src/main.c ****                 {
+ 245:Core/Src/main.c ****                     BM83_soft_mute_output ( &BM83 );
+ 339              		.loc 1 245 21 is_stmt 1 view .LVU66
+ 340 00de 7048     		ldr	r0, .L53+4
+ 341 00e0 FFF7FEFF 		bl	BM83_soft_mute_output
+ 342              	.LVL28:
+ 343              	.LBE18:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 344              		.loc 1 193 11 is_stmt 0 view .LVU67
+ 345 00e4 0020     		movs	r0, #0
+ 346              	.LBB19:
+ 347 00e6 65E1     		b	.L1
+ 348              	.L13:
+ 246:Core/Src/main.c ****                    
+ 247:Core/Src/main.c ****                 }
+ 248:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_CALL ) )
+ 349              		.loc 1 248 22 is_stmt 1 view .LVU68
+ 350              		.loc 1 248 27 is_stmt 0 view .LVU69
+ 351 00e8 7649     		ldr	r1, .L53+40
+ 352 00ea 2046     		mov	r0, r4
+ 353 00ec FFF7FEFF 		bl	strstr
+ 354              	.LVL29:
+ 355              		.loc 1 248 25 view .LVU70
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 13
+
+
+ 356 00f0 A8B1     		cbz	r0, .L14
+ 357              	.LBB5:
+ 249:Core/Src/main.c ****                 {
+ 250:Core/Src/main.c ****                     uint8_t phone_number[ 19 ] = { 0 };
+ 358              		.loc 1 250 21 is_stmt 1 view .LVU71
+ 359              		.loc 1 250 29 is_stmt 0 view .LVU72
+ 360 00f2 0025     		movs	r5, #0
+ 361              	.LVL30:
+ 362              		.loc 1 250 29 view .LVU73
+ 363 00f4 0195     		str	r5, [sp, #4]
+ 364 00f6 0295     		str	r5, [sp, #8]
+ 365 00f8 0395     		str	r5, [sp, #12]
+ 366 00fa 0495     		str	r5, [sp, #16]
+ 367 00fc CDF81350 		str	r5, [sp, #19]	@ unaligned
+ 251:Core/Src/main.c ****                     memcpy ( phone_number, strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_CALL
+ 368              		.loc 1 251 21 is_stmt 1 view .LVU74
+ 369              		.loc 1 251 44 is_stmt 0 view .LVU75
+ 370 0100 7049     		ldr	r1, .L53+40
+ 371 0102 2046     		mov	r0, r4
+ 372 0104 FFF7FEFF 		bl	strstr
+ 373              	.LVL31:
+ 374              		.loc 1 251 21 view .LVU76
+ 375 0108 F21F     		subs	r2, r6, #7
+ 376 010a 411D     		adds	r1, r0, #5
+ 377 010c 01A8     		add	r0, sp, #4
+ 378 010e FFF7FEFF 		bl	memcpy
+ 379              	.LVL32:
+ 252:Core/Src/main.c ****                     error_flag |= BM83_make_call ( &BM83, 0x00, phone_number );
+ 380              		.loc 1 252 21 is_stmt 1 view .LVU77
+ 381              		.loc 1 252 35 is_stmt 0 view .LVU78
+ 382 0112 01AA     		add	r2, sp, #4
+ 383 0114 2946     		mov	r1, r5
+ 384 0116 6248     		ldr	r0, .L53+4
+ 385 0118 FFF7FEFF 		bl	BM83_make_call
+ 386              	.LVL33:
+ 387              		.loc 1 252 35 view .LVU79
+ 388              	.LBE5:
+ 389 011c 4AE1     		b	.L1
+ 390              	.LVL34:
+ 391              	.L14:
+ 253:Core/Src/main.c ****                     
+ 254:Core/Src/main.c ****                 }
+ 255:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_VOICE ) )
+ 392              		.loc 1 255 22 is_stmt 1 view .LVU80
+ 393              		.loc 1 255 27 is_stmt 0 view .LVU81
+ 394 011e 6A49     		ldr	r1, .L53+44
+ 395 0120 2046     		mov	r0, r4
+ 396 0122 FFF7FEFF 		bl	strstr
+ 397              	.LVL35:
+ 398              		.loc 1 255 25 view .LVU82
+ 399 0126 28B1     		cbz	r0, .L15
+ 256:Core/Src/main.c ****                 {
+ 257:Core/Src/main.c ****                     error_flag |= BM83_send_mmi_action ( dev, 0, BM83_MMI_VOICE_DIAL );
+ 400              		.loc 1 257 21 is_stmt 1 view .LVU83
+ 401              		.loc 1 257 35 is_stmt 0 view .LVU84
+ 402 0128 0A22     		movs	r2, #10
+ 403 012a 0021     		movs	r1, #0
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 14
+
+
+ 404 012c 2846     		mov	r0, r5
+ 405 012e FFF7FEFF 		bl	BM83_send_mmi_action
+ 406              	.LVL36:
+ 407              		.loc 1 257 35 view .LVU85
+ 408 0132 3FE1     		b	.L1
+ 409              	.LVL37:
+ 410              	.L15:
+ 258:Core/Src/main.c ****                     
+ 259:Core/Src/main.c ****                 }
+ 260:Core/Src/main.c ****                 else if ( strstr ( &dev->event_packet.param_buf[ 6 ], COMMAND_MODE_UP ) )
+ 411              		.loc 1 260 22 is_stmt 1 view .LVU86
+ 412              		.loc 1 260 27 is_stmt 0 view .LVU87
+ 413 0134 6549     		ldr	r1, .L53+48
+ 414 0136 2046     		mov	r0, r4
+ 415 0138 FFF7FEFF 		bl	strstr
+ 416              	.LVL38:
+ 417              		.loc 1 260 25 view .LVU88
+ 418 013c 0028     		cmp	r0, #0
+ 419 013e 3DD0     		beq	.L16
+ 261:Core/Src/main.c ****                 {
+ 262:Core/Src/main.c ****                     if ( BM83_EQ_MODE_USER1 == eq_mode )
+ 420              		.loc 1 262 21 is_stmt 1 view .LVU89
+ 421              		.loc 1 262 45 is_stmt 0 view .LVU90
+ 422 0140 634B     		ldr	r3, .L53+52
+ 423 0142 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 424              		.loc 1 262 24 view .LVU91
+ 425 0144 0A2B     		cmp	r3, #10
+ 426 0146 17D0     		beq	.L49
+ 263:Core/Src/main.c ****                     {
+ 264:Core/Src/main.c ****                         eq_mode = BM83_EQ_MODE_OFF;
+ 265:Core/Src/main.c ****                     }
+ 266:Core/Src/main.c ****                     else
+ 267:Core/Src/main.c ****                     {
+ 268:Core/Src/main.c ****                         eq_mode++;
+ 427              		.loc 1 268 25 is_stmt 1 view .LVU92
+ 428              		.loc 1 268 32 is_stmt 0 view .LVU93
+ 429 0148 0133     		adds	r3, r3, #1
+ 430 014a 614A     		ldr	r2, .L53+52
+ 431 014c 1370     		strb	r3, [r2]
+ 432              	.L18:
+ 269:Core/Src/main.c ****                     }
+ 270:Core/Src/main.c ****                     BM83_set_eq_mode ( &BM83, eq_mode );
+ 433              		.loc 1 270 21 is_stmt 1 view .LVU94
+ 434 014e 604C     		ldr	r4, .L53+52
+ 435 0150 2178     		ldrb	r1, [r4]	@ zero_extendqisi2
+ 436 0152 5348     		ldr	r0, .L53+4
+ 437 0154 FFF7FEFF 		bl	BM83_set_eq_mode
+ 438              	.LVL39:
+ 271:Core/Src/main.c ****                    
+ 272:Core/Src/main.c ****                     switch ( eq_mode )
+ 439              		.loc 1 272 21 view .LVU95
+ 440 0158 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 441 015a 0A2B     		cmp	r3, #10
+ 442 015c 28D8     		bhi	.L19
+ 443 015e DFE813F0 		tbh	[pc, r3, lsl #1]
+ 444              	.L21:
+ 445 0162 2D01     		.2byte	(.L45-.L21)/2
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 15
+
+
+ 446 0164 2D01     		.2byte	(.L45-.L21)/2
+ 447 0166 2D01     		.2byte	(.L45-.L21)/2
+ 448 0168 2D01     		.2byte	(.L45-.L21)/2
+ 449 016a 2D01     		.2byte	(.L45-.L21)/2
+ 450 016c 2D01     		.2byte	(.L45-.L21)/2
+ 451 016e 2D01     		.2byte	(.L45-.L21)/2
+ 452 0170 0F00     		.2byte	(.L24-.L21)/2
+ 453 0172 1500     		.2byte	(.L23-.L21)/2
+ 454 0174 1B00     		.2byte	(.L22-.L21)/2
+ 455 0176 2100     		.2byte	(.L20-.L21)/2
+ 456              		.p2align 1
+ 457              	.L49:
+ 264:Core/Src/main.c ****                     }
+ 458              		.loc 1 264 25 view .LVU96
+ 264:Core/Src/main.c ****                     }
+ 459              		.loc 1 264 33 is_stmt 0 view .LVU97
+ 460 0178 554B     		ldr	r3, .L53+52
+ 461 017a 0022     		movs	r2, #0
+ 462 017c 1A70     		strb	r2, [r3]
+ 463 017e E6E7     		b	.L18
+ 464              	.L24:
+ 465              	.LBB6:
+ 273:Core/Src/main.c ****                     {
+ 274:Core/Src/main.c ****                         case BM83_EQ_MODE_OFF:
+ 275:Core/Src/main.c ****                         {
+ 276:Core/Src/main.c ****                             
+ 277:Core/Src/main.c ****                             break;
+ 278:Core/Src/main.c ****                         }
+ 279:Core/Src/main.c ****                         case BM83_EQ_MODE_SOFT:
+ 280:Core/Src/main.c ****                         {
+ 281:Core/Src/main.c ****                             
+ 282:Core/Src/main.c ****                             break;
+ 283:Core/Src/main.c ****                         }
+ 284:Core/Src/main.c ****                         case BM83_EQ_MODE_BASS:
+ 285:Core/Src/main.c ****                         {
+ 286:Core/Src/main.c ****                            
+ 287:Core/Src/main.c ****                             break;
+ 288:Core/Src/main.c ****                         } 
+ 289:Core/Src/main.c ****                         case BM83_EQ_MODE_TREBLE:
+ 290:Core/Src/main.c ****                         {
+ 291:Core/Src/main.c ****                             
+ 292:Core/Src/main.c ****                             break;
+ 293:Core/Src/main.c ****                         }  
+ 294:Core/Src/main.c ****                         case BM83_EQ_MODE_CLASSIC:
+ 295:Core/Src/main.c ****                         {
+ 296:Core/Src/main.c ****                             
+ 297:Core/Src/main.c ****                             break;
+ 298:Core/Src/main.c ****                         }
+ 299:Core/Src/main.c ****                         case BM83_EQ_MODE_ROCK:
+ 300:Core/Src/main.c ****                         {
+ 301:Core/Src/main.c ****                             
+ 302:Core/Src/main.c ****                             break;
+ 303:Core/Src/main.c ****                         }
+ 304:Core/Src/main.c ****                         case BM83_EQ_MODE_JAZZ:
+ 305:Core/Src/main.c ****                         {
+ 306:Core/Src/main.c ****                             
+ 307:Core/Src/main.c ****                             break;
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 16
+
+
+ 308:Core/Src/main.c ****                         }
+ 309:Core/Src/main.c ****                         case BM83_EQ_MODE_POP:
+ 310:Core/Src/main.c ****                         {
+ 311:Core/Src/main.c ****                             printf( &logger, "pop\r\n\n" );
+ 466              		.loc 1 311 29 is_stmt 1 view .LVU98
+ 467 0180 5449     		ldr	r1, .L53+56
+ 468 0182 5548     		ldr	r0, .L53+60
+ 469 0184 FFF7FEFF 		bl	printf
+ 470              	.LVL40:
+ 312:Core/Src/main.c ****                             break;
+ 471              		.loc 1 312 29 view .LVU99
+ 472              	.LBE6:
+ 473              	.LBE19:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 474              		.loc 1 193 11 is_stmt 0 view .LVU100
+ 475 0188 0020     		movs	r0, #0
+ 476              	.LBB20:
+ 477              	.LBB7:
+ 478              		.loc 1 312 29 view .LVU101
+ 479 018a 13E1     		b	.L1
+ 480              	.L23:
+ 481              	.LBE7:
+ 482              	.LBB8:
+ 313:Core/Src/main.c ****                         }
+ 314:Core/Src/main.c ****                         case BM83_EQ_MODE_DANCE:
+ 315:Core/Src/main.c ****                         {
+ 316:Core/Src/main.c ****                             printf( &logger, "dance\r\n\n" );
+ 483              		.loc 1 316 29 is_stmt 1 view .LVU102
+ 484 018c 5349     		ldr	r1, .L53+64
+ 485 018e 5248     		ldr	r0, .L53+60
+ 486 0190 FFF7FEFF 		bl	printf
+ 487              	.LVL41:
+ 317:Core/Src/main.c ****                             break;
+ 488              		.loc 1 317 29 view .LVU103
+ 489              	.LBE8:
+ 490              	.LBE20:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 491              		.loc 1 193 11 is_stmt 0 view .LVU104
+ 492 0194 0020     		movs	r0, #0
+ 493              	.LBB21:
+ 494              	.LBB9:
+ 495              		.loc 1 317 29 view .LVU105
+ 496 0196 0DE1     		b	.L1
+ 497              	.L22:
+ 498              	.LBE9:
+ 499              	.LBB10:
+ 318:Core/Src/main.c ****                         }
+ 319:Core/Src/main.c ****                         case BM83_EQ_MODE_RNB:
+ 320:Core/Src/main.c ****                         {
+ 321:Core/Src/main.c ****                             printf( &logger, "rnb\r\n\n" );
+ 500              		.loc 1 321 29 is_stmt 1 view .LVU106
+ 501 0198 5149     		ldr	r1, .L53+68
+ 502 019a 4F48     		ldr	r0, .L53+60
+ 503 019c FFF7FEFF 		bl	printf
+ 504              	.LVL42:
+ 322:Core/Src/main.c ****                             break;
+ 505              		.loc 1 322 29 view .LVU107
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 17
+
+
+ 506              	.LBE10:
+ 507              	.LBE21:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 508              		.loc 1 193 11 is_stmt 0 view .LVU108
+ 509 01a0 0020     		movs	r0, #0
+ 510              	.LBB22:
+ 511              	.LBB11:
+ 512              		.loc 1 322 29 view .LVU109
+ 513 01a2 07E1     		b	.L1
+ 514              	.L20:
+ 515              	.LBE11:
+ 516              	.LBB12:
+ 323:Core/Src/main.c ****                         }
+ 324:Core/Src/main.c ****                         case BM83_EQ_MODE_USER1:
+ 325:Core/Src/main.c ****                         {
+ 326:Core/Src/main.c ****                             printf( &logger, "user1\r\n\n" );
+ 517              		.loc 1 326 29 is_stmt 1 view .LVU110
+ 518 01a4 4F49     		ldr	r1, .L53+72
+ 519 01a6 4C48     		ldr	r0, .L53+60
+ 520 01a8 FFF7FEFF 		bl	printf
+ 521              	.LVL43:
+ 327:Core/Src/main.c ****                             break;
+ 522              		.loc 1 327 29 view .LVU111
+ 523              	.LBE12:
+ 524              	.LBE22:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 525              		.loc 1 193 11 is_stmt 0 view .LVU112
+ 526 01ac 0020     		movs	r0, #0
+ 527              	.LBB23:
+ 528              	.LBB13:
+ 529              		.loc 1 327 29 view .LVU113
+ 530 01ae 01E1     		b	.L1
+ 531              	.L19:
+ 532              	.LBE13:
+ 533              	.LBB14:
+ 328:Core/Src/main.c ****                         }
+ 329:Core/Src/main.c ****                         default:
+ 330:Core/Src/main.c ****                         {
+ 331:Core/Src/main.c ****                             printf( &logger, "unknown\r\n\n" );
+ 534              		.loc 1 331 29 is_stmt 1 view .LVU114
+ 535 01b0 4D49     		ldr	r1, .L53+76
+ 536 01b2 4948     		ldr	r0, .L53+60
+ 537 01b4 FFF7FEFF 		bl	printf
+ 538              	.LVL44:
+ 332:Core/Src/main.c ****                             break;
+ 539              		.loc 1 332 29 view .LVU115
+ 540              	.LBE14:
+ 541              	.LBE23:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 542              		.loc 1 193 11 is_stmt 0 view .LVU116
+ 543 01b8 0020     		movs	r0, #0
+ 544              	.LBB24:
+ 545              	.LBB15:
+ 546              		.loc 1 332 29 view .LVU117
+ 547 01ba FBE0     		b	.L1
+ 548              	.L16:
+ 549              	.LBE15:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 18
+
+
+ 550              	.LBB16:
+ 333:Core/Src/main.c ****                         }
+ 334:Core/Src/main.c ****                     }
+ 335:Core/Src/main.c ****                 }
+ 336:Core/Src/main.c ****                 else
+ 337:Core/Src/main.c ****                 {
+ 338:Core/Src/main.c ****                     printf( &logger, " Unknown command: ", &dev->event_packet.param_buf[ 6 ] );
+ 551              		.loc 1 338 21 is_stmt 1 view .LVU118
+ 552 01bc 2246     		mov	r2, r4
+ 553 01be 4B49     		ldr	r1, .L53+80
+ 554 01c0 4548     		ldr	r0, .L53+60
+ 555 01c2 FFF7FEFF 		bl	printf
+ 556              	.LVL45:
+ 339:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < payload_len; cnt++ )
+ 557              		.loc 1 339 21 view .LVU119
+ 558              	.LBB17:
+ 559              		.loc 1 339 27 view .LVU120
+ 560              		.loc 1 339 36 is_stmt 0 view .LVU121
+ 561 01c6 0024     		movs	r4, #0
+ 562              		.loc 1 339 21 view .LVU122
+ 563 01c8 09E0     		b	.L25
+ 564              	.LVL46:
+ 565              	.L26:
+ 340:Core/Src/main.c ****                     {
+ 341:Core/Src/main.c ****                         printf( &logger, "%c", dev->event_packet.param_buf[ cnt + 6 ] );
+ 566              		.loc 1 341 25 is_stmt 1 discriminator 3 view .LVU123
+ 567              		.loc 1 341 81 is_stmt 0 discriminator 3 view .LVU124
+ 568 01ca A31D     		adds	r3, r4, #6
+ 569              		.loc 1 341 75 discriminator 3 view .LVU125
+ 570 01cc 2B44     		add	r3, r3, r5
+ 571              		.loc 1 341 25 discriminator 3 view .LVU126
+ 572 01ce 93F80725 		ldrb	r2, [r3, #1287]	@ zero_extendqisi2
+ 573 01d2 4749     		ldr	r1, .L53+84
+ 574 01d4 4048     		ldr	r0, .L53+60
+ 575 01d6 FFF7FEFF 		bl	printf
+ 576              	.LVL47:
+ 339:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < payload_len; cnt++ )
+ 577              		.loc 1 339 67 is_stmt 1 discriminator 3 view .LVU127
+ 578 01da 0134     		adds	r4, r4, #1
+ 579              	.LVL48:
+ 339:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < payload_len; cnt++ )
+ 580              		.loc 1 339 67 is_stmt 0 discriminator 3 view .LVU128
+ 581 01dc A4B2     		uxth	r4, r4
+ 582              	.LVL49:
+ 583              	.L25:
+ 339:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < payload_len; cnt++ )
+ 584              		.loc 1 339 49 is_stmt 1 discriminator 1 view .LVU129
+ 585 01de B442     		cmp	r4, r6
+ 586 01e0 F3D3     		bcc	.L26
+ 587              	.LBE17:
+ 342:Core/Src/main.c ****                     }
+ 343:Core/Src/main.c ****                     printf( &logger, "\r\n\n" );
+ 588              		.loc 1 343 21 view .LVU130
+ 589 01e2 4449     		ldr	r1, .L53+88
+ 590 01e4 3C48     		ldr	r0, .L53+60
+ 591 01e6 FFF7FEFF 		bl	printf
+ 592              	.LVL50:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 19
+
+
+ 593              	.LBE16:
+ 594              	.LBE24:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 595              		.loc 1 193 11 is_stmt 0 view .LVU131
+ 596 01ea 0020     		movs	r0, #0
+ 597 01ec E2E0     		b	.L1
+ 598              	.LVL51:
+ 599              	.L2:
+ 344:Core/Src/main.c ****                 }
+ 345:Core/Src/main.c ****             }
+ 346:Core/Src/main.c ****             break;
+ 347:Core/Src/main.c ****         }
+ 348:Core/Src/main.c ****         case BM83_EVT_BTM_STATE:
+ 349:Core/Src/main.c ****         {
+ 350:Core/Src/main.c ****             switch ( dev->event_packet.param_buf[ 0 ] )
+ 600              		.loc 1 350 13 is_stmt 1 view .LVU132
+ 601              		.loc 1 350 49 is_stmt 0 view .LVU133
+ 602 01ee 90F80735 		ldrb	r3, [r0, #1287]	@ zero_extendqisi2
+ 603 01f2 152B     		cmp	r3, #21
+ 604 01f4 12D8     		bhi	.L27
+ 605 01f6 032B     		cmp	r3, #3
+ 606 01f8 C0F0AB80 		bcc	.L28
+ 607 01fc 033B     		subs	r3, r3, #3
+ 608 01fe 122B     		cmp	r3, #18
+ 609 0200 00F2A780 		bhi	.L28
+ 610 0204 DFE803F0 		tbb	[pc, r3]
+ 611              	.L30:
+ 612 0208 1E       		.byte	(.L35-.L30)/2
+ 613 0209 A5       		.byte	(.L28-.L30)/2
+ 614 020a A5       		.byte	(.L28-.L30)/2
+ 615 020b A5       		.byte	(.L28-.L30)/2
+ 616 020c A5       		.byte	(.L28-.L30)/2
+ 617 020d A5       		.byte	(.L28-.L30)/2
+ 618 020e 26       		.byte	(.L34-.L30)/2
+ 619 020f 2E       		.byte	(.L33-.L30)/2
+ 620 0210 A5       		.byte	(.L28-.L30)/2
+ 621 0211 A5       		.byte	(.L28-.L30)/2
+ 622 0212 A5       		.byte	(.L28-.L30)/2
+ 623 0213 A5       		.byte	(.L28-.L30)/2
+ 624 0214 92       		.byte	(.L32-.L30)/2
+ 625 0215 A5       		.byte	(.L28-.L30)/2
+ 626 0216 3E       		.byte	(.L31-.L30)/2
+ 627 0217 A5       		.byte	(.L28-.L30)/2
+ 628 0218 A5       		.byte	(.L28-.L30)/2
+ 629 0219 A5       		.byte	(.L28-.L30)/2
+ 630 021a 36       		.byte	(.L29-.L30)/2
+ 631 021b 00       		.p2align 1
+ 632              	.L27:
+ 633 021c 812B     		cmp	r3, #129
+ 634 021e 00F09280 		beq	.L36
+ 635 0222 822B     		cmp	r3, #130
+ 636 0224 05D1     		bne	.L50
+ 637              	.LBB25:
+ 351:Core/Src/main.c ****             {
+ 352:Core/Src/main.c ****                 case BM83_BTM_STATE_PAIRING_SUCCESSFULL:
+ 353:Core/Src/main.c ****                 {
+ 354:Core/Src/main.c ****                     printf( &logger, " < Pairing successfull - linked device ID: %u\r\n\n", 
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 20
+
+
+ 355:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 356:Core/Src/main.c ****                     break;
+ 357:Core/Src/main.c ****                 }
+ 358:Core/Src/main.c ****                 case BM83_BTM_STATE_SCO_LINK_CONNECTED:
+ 359:Core/Src/main.c ****                 {
+ 360:Core/Src/main.c ****                     printf( &logger, " < SCO link connected - linked device ID: %u\r\n\n", 
+ 361:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 362:Core/Src/main.c ****                     break;
+ 363:Core/Src/main.c ****                 }
+ 364:Core/Src/main.c ****                 case BM83_BTM_STATE_SCO_LINK_DISCONNECTED:
+ 365:Core/Src/main.c ****                 {
+ 366:Core/Src/main.c ****                     printf( &logger, " < SCO link disconnected - linked device ID: %u\r\n\n", 
+ 367:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 368:Core/Src/main.c ****                     break;
+ 369:Core/Src/main.c ****                 }
+ 370:Core/Src/main.c ****                 case BM83_BTM_STATE_ACL_CONNECTED:
+ 371:Core/Src/main.c ****                 {
+ 372:Core/Src/main.c ****                     printf( &logger, " < ACL connected - linked data base: %u\r\n\n", 
+ 373:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 374:Core/Src/main.c ****                     break;
+ 375:Core/Src/main.c ****                 }
+ 376:Core/Src/main.c ****                 case BM83_BTM_STATE_ACL_DISCONNECTED:
+ 377:Core/Src/main.c ****                 {
+ 378:Core/Src/main.c ****                     printf( &logger, " < ACL disconnected - " );
+ 379:Core/Src/main.c ****                     if ( 0 == dev->event_packet.param_buf[ 1 ] )
+ 380:Core/Src/main.c ****                     {
+ 381:Core/Src/main.c ****                         printf( &logger, "disconnection\r\n\n" );
+ 382:Core/Src/main.c ****                     }
+ 383:Core/Src/main.c ****                     else if ( 1 == dev->event_packet.param_buf[ 1 ] )
+ 384:Core/Src/main.c ****                     {
+ 385:Core/Src/main.c ****                         printf( &logger, "link loss\r\n\n" );
+ 386:Core/Src/main.c ****                     }
+ 387:Core/Src/main.c ****                     break;
+ 388:Core/Src/main.c ****                 }
+ 389:Core/Src/main.c ****                 case BM83_BTM_STATE_STANDBY_STATE:
+ 390:Core/Src/main.c ****                 {
+ 391:Core/Src/main.c ****                     printf( &logger, " < Standby state\r\n\n" );
+ 392:Core/Src/main.c ****                     printf( &logger, " > ReEnter pairing mode\r\n\n" );
+ 393:Core/Src/main.c ****                     error_flag |= BM83_enter_pairing_mode ( &BM83 );
+ 394:Core/Src/main.c ****                     break;
+ 395:Core/Src/main.c ****                 }
+ 396:Core/Src/main.c ****                 case BM83_BTM_STATE_UNKNOWN_AUDIO_SOURCE:
+ 397:Core/Src/main.c ****                 {
+ 398:Core/Src/main.c ****                     printf( &logger, " < Unknown audio source\r\n\n" );
+ 399:Core/Src/main.c ****                     break;
+ 400:Core/Src/main.c ****                 }
+ 401:Core/Src/main.c ****                 case BM83_BTM_STATE_AUX_IN_AUDIO_SOURCE:
+ 402:Core/Src/main.c ****                 {
+ 403:Core/Src/main.c ****                     printf( &logger, " < AUX-IN audio source\r\n\n" );
+ 404:Core/Src/main.c ****                     break;
+ 405:Core/Src/main.c ****                 }
+ 406:Core/Src/main.c ****                 case BM83_BTM_STATE_A2DP_AUDIO_SOURCE:
+ 407:Core/Src/main.c ****                 {
+ 408:Core/Src/main.c ****                     printf( &logger, " < A2DP audio source\r\n\n" );
+ 638              		.loc 1 408 21 is_stmt 1 view .LVU134
+ 639 0226 3449     		ldr	r1, .L53+92
+ 640 0228 2B48     		ldr	r0, .L53+60
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 21
+
+
+ 641              	.LVL52:
+ 642              		.loc 1 408 21 is_stmt 0 view .LVU135
+ 643 022a FFF7FEFF 		bl	printf
+ 644              	.LVL53:
+ 409:Core/Src/main.c ****                     break;
+ 645              		.loc 1 409 21 is_stmt 1 view .LVU136
+ 646              	.LBE25:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 647              		.loc 1 193 11 is_stmt 0 view .LVU137
+ 648 022e 0020     		movs	r0, #0
+ 649              	.LBB26:
+ 650              		.loc 1 409 21 view .LVU138
+ 651 0230 C0E0     		b	.L1
+ 652              	.LVL54:
+ 653              	.L50:
+ 654              		.loc 1 409 21 view .LVU139
+ 655              	.LBE26:
+ 656 0232 802B     		cmp	r3, #128
+ 657 0234 40F08D80 		bne	.L28
+ 658              	.LBB27:
+ 398:Core/Src/main.c ****                     break;
+ 659              		.loc 1 398 21 is_stmt 1 view .LVU140
+ 660 0238 3049     		ldr	r1, .L53+96
+ 661 023a 2748     		ldr	r0, .L53+60
+ 662              	.LVL55:
+ 398:Core/Src/main.c ****                     break;
+ 663              		.loc 1 398 21 is_stmt 0 view .LVU141
+ 664 023c FFF7FEFF 		bl	printf
+ 665              	.LVL56:
+ 399:Core/Src/main.c ****                 }
+ 666              		.loc 1 399 21 is_stmt 1 view .LVU142
+ 667              	.LBE27:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 668              		.loc 1 193 11 is_stmt 0 view .LVU143
+ 669 0240 0020     		movs	r0, #0
+ 670              	.LBB28:
+ 399:Core/Src/main.c ****                 }
+ 671              		.loc 1 399 21 view .LVU144
+ 672 0242 B7E0     		b	.L1
+ 673              	.LVL57:
+ 674              	.L35:
+ 399:Core/Src/main.c ****                 }
+ 675              		.loc 1 399 21 view .LVU145
+ 676              	.LBE28:
+ 677              	.LBB29:
+ 354:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 678              		.loc 1 354 21 is_stmt 1 view .LVU146
+ 679 0244 90F80825 		ldrb	r2, [r0, #1288]	@ zero_extendqisi2
+ 680 0248 2D49     		ldr	r1, .L53+100
+ 681 024a 2348     		ldr	r0, .L53+60
+ 682              	.LVL58:
+ 354:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 683              		.loc 1 354 21 is_stmt 0 view .LVU147
+ 684 024c FFF7FEFF 		bl	printf
+ 685              	.LVL59:
+ 356:Core/Src/main.c ****                 }
+ 686              		.loc 1 356 21 is_stmt 1 view .LVU148
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 22
+
+
+ 687              	.LBE29:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 688              		.loc 1 193 11 is_stmt 0 view .LVU149
+ 689 0250 0020     		movs	r0, #0
+ 690              	.LBB30:
+ 356:Core/Src/main.c ****                 }
+ 691              		.loc 1 356 21 view .LVU150
+ 692 0252 AFE0     		b	.L1
+ 693              	.LVL60:
+ 694              	.L34:
+ 356:Core/Src/main.c ****                 }
+ 695              		.loc 1 356 21 view .LVU151
+ 696              	.LBE30:
+ 697              	.LBB31:
+ 360:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 698              		.loc 1 360 21 is_stmt 1 view .LVU152
+ 699 0254 90F80825 		ldrb	r2, [r0, #1288]	@ zero_extendqisi2
+ 700 0258 2A49     		ldr	r1, .L53+104
+ 701 025a 1F48     		ldr	r0, .L53+60
+ 702              	.LVL61:
+ 360:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 703              		.loc 1 360 21 is_stmt 0 view .LVU153
+ 704 025c FFF7FEFF 		bl	printf
+ 705              	.LVL62:
+ 362:Core/Src/main.c ****                 }
+ 706              		.loc 1 362 21 is_stmt 1 view .LVU154
+ 707              	.LBE31:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 708              		.loc 1 193 11 is_stmt 0 view .LVU155
+ 709 0260 0020     		movs	r0, #0
+ 710              	.LBB32:
+ 362:Core/Src/main.c ****                 }
+ 711              		.loc 1 362 21 view .LVU156
+ 712 0262 A7E0     		b	.L1
+ 713              	.LVL63:
+ 714              	.L33:
+ 362:Core/Src/main.c ****                 }
+ 715              		.loc 1 362 21 view .LVU157
+ 716              	.LBE32:
+ 717              	.LBB33:
+ 366:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 718              		.loc 1 366 21 is_stmt 1 view .LVU158
+ 719 0264 90F80825 		ldrb	r2, [r0, #1288]	@ zero_extendqisi2
+ 720 0268 2749     		ldr	r1, .L53+108
+ 721 026a 1B48     		ldr	r0, .L53+60
+ 722              	.LVL64:
+ 366:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 723              		.loc 1 366 21 is_stmt 0 view .LVU159
+ 724 026c FFF7FEFF 		bl	printf
+ 725              	.LVL65:
+ 368:Core/Src/main.c ****                 }
+ 726              		.loc 1 368 21 is_stmt 1 view .LVU160
+ 727              	.LBE33:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 728              		.loc 1 193 11 is_stmt 0 view .LVU161
+ 729 0270 0020     		movs	r0, #0
+ 730              	.LBB34:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 23
+
+
+ 368:Core/Src/main.c ****                 }
+ 731              		.loc 1 368 21 view .LVU162
+ 732 0272 9FE0     		b	.L1
+ 733              	.LVL66:
+ 734              	.L29:
+ 368:Core/Src/main.c ****                 }
+ 735              		.loc 1 368 21 view .LVU163
+ 736              	.LBE34:
+ 737              	.LBB35:
+ 372:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 738              		.loc 1 372 21 is_stmt 1 view .LVU164
+ 739 0274 90F80825 		ldrb	r2, [r0, #1288]	@ zero_extendqisi2
+ 740 0278 2449     		ldr	r1, .L53+112
+ 741 027a 1748     		ldr	r0, .L53+60
+ 742              	.LVL67:
+ 372:Core/Src/main.c ****                                 ( uint16_t ) dev->event_packet.param_buf[ 1 ] );
+ 743              		.loc 1 372 21 is_stmt 0 view .LVU165
+ 744 027c FFF7FEFF 		bl	printf
+ 745              	.LVL68:
+ 374:Core/Src/main.c ****                 }
+ 746              		.loc 1 374 21 is_stmt 1 view .LVU166
+ 747              	.LBE35:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 748              		.loc 1 193 11 is_stmt 0 view .LVU167
+ 749 0280 0020     		movs	r0, #0
+ 750              	.LBB36:
+ 374:Core/Src/main.c ****                 }
+ 751              		.loc 1 374 21 view .LVU168
+ 752 0282 97E0     		b	.L1
+ 753              	.LVL69:
+ 754              	.L31:
+ 374:Core/Src/main.c ****                 }
+ 755              		.loc 1 374 21 view .LVU169
+ 756              	.LBE36:
+ 757              	.LBB37:
+ 378:Core/Src/main.c ****                     if ( 0 == dev->event_packet.param_buf[ 1 ] )
+ 758              		.loc 1 378 21 is_stmt 1 view .LVU170
+ 759 0284 2249     		ldr	r1, .L53+116
+ 760 0286 1448     		ldr	r0, .L53+60
+ 761              	.LVL70:
+ 378:Core/Src/main.c ****                     if ( 0 == dev->event_packet.param_buf[ 1 ] )
+ 762              		.loc 1 378 21 is_stmt 0 view .LVU171
+ 763 0288 FFF7FEFF 		bl	printf
+ 764              	.LVL71:
+ 379:Core/Src/main.c ****                     {
+ 765              		.loc 1 379 21 is_stmt 1 view .LVU172
+ 379:Core/Src/main.c ****                     {
+ 766              		.loc 1 379 58 is_stmt 0 view .LVU173
+ 767 028c 95F80835 		ldrb	r3, [r5, #1288]	@ zero_extendqisi2
+ 379:Core/Src/main.c ****                     {
+ 768              		.loc 1 379 24 view .LVU174
+ 769 0290 002B     		cmp	r3, #0
+ 770 0292 3FD0     		beq	.L51
+ 383:Core/Src/main.c ****                     {
+ 771              		.loc 1 383 26 is_stmt 1 view .LVU175
+ 383:Core/Src/main.c ****                     {
+ 772              		.loc 1 383 29 is_stmt 0 view .LVU176
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 24
+
+
+ 773 0294 012B     		cmp	r3, #1
+ 774 0296 43D0     		beq	.L52
+ 775              	.LBE37:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 776              		.loc 1 193 11 view .LVU177
+ 777 0298 0020     		movs	r0, #0
+ 410:Core/Src/main.c ****                 }
+ 411:Core/Src/main.c ****                 default:
+ 412:Core/Src/main.c ****                 {
+ 413:Core/Src/main.c ****                     printf( &logger, " < EVENT BTM STATE: " );
+ 414:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 415:Core/Src/main.c ****                     {
+ 416:Core/Src/main.c ****                         printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ]
+ 417:Core/Src/main.c ****                     }
+ 418:Core/Src/main.c ****                     printf( &logger, "\r\n\n" );
+ 419:Core/Src/main.c ****                     break;
+ 420:Core/Src/main.c ****                 }
+ 421:Core/Src/main.c ****             }
+ 422:Core/Src/main.c ****             break;
+ 423:Core/Src/main.c ****         }
+ 424:Core/Src/main.c ****         default: 
+ 425:Core/Src/main.c ****         {
+ 426:Core/Src/main.c ****             printf( &logger, " < EVENT 0x%.2X: ", ( uint16_t ) dev->event_packet.opcode );
+ 427:Core/Src/main.c ****             for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 428:Core/Src/main.c ****             {
+ 429:Core/Src/main.c ****                 printf( &logger, "0x%.2X ", ( uint16_t ) dev->event_packet.param_buf[ cnt ] );
+ 430:Core/Src/main.c ****             }
+ 431:Core/Src/main.c ****             printf( &logger, "\r\n\n" );
+ 432:Core/Src/main.c ****             break;
+ 433:Core/Src/main.c ****         }
+ 434:Core/Src/main.c ****     }
+ 435:Core/Src/main.c ****     return error_flag;
+ 778              		.loc 1 435 5 is_stmt 1 view .LVU178
+ 779              		.loc 1 435 12 is_stmt 0 view .LVU179
+ 780 029a 8BE0     		b	.L1
+ 781              	.L54:
+ 782              		.align	2
+ 783              	.L53:
+ 784 029c 00000000 		.word	.LC0
+ 785 02a0 00000000 		.word	BM83
+ 786 02a4 08000000 		.word	.LC1
+ 787 02a8 10000000 		.word	.LC2
+ 788 02ac 18000000 		.word	.LC3
+ 789 02b0 20000000 		.word	.LC4
+ 790 02b4 28000000 		.word	.LC5
+ 791 02b8 2C000000 		.word	.LC6
+ 792 02bc 34000000 		.word	.LC7
+ 793 02c0 3C000000 		.word	.LC8
+ 794 02c4 44000000 		.word	.LC9
+ 795 02c8 4C000000 		.word	.LC10
+ 796 02cc 54000000 		.word	.LC11
+ 797 02d0 00000000 		.word	eq_mode.0
+ 798 02d4 5C000000 		.word	.LC12
+ 799 02d8 00000000 		.word	logger
+ 800 02dc 64000000 		.word	.LC13
+ 801 02e0 70000000 		.word	.LC14
+ 802 02e4 78000000 		.word	.LC15
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 25
+
+
+ 803 02e8 84000000 		.word	.LC16
+ 804 02ec 90000000 		.word	.LC17
+ 805 02f0 A4000000 		.word	.LC18
+ 806 02f4 A8000000 		.word	.LC19
+ 807 02f8 14020000 		.word	.LC31
+ 808 02fc DC010000 		.word	.LC29
+ 809 0300 AC000000 		.word	.LC20
+ 810 0304 E0000000 		.word	.LC21
+ 811 0308 10010000 		.word	.LC22
+ 812 030c 44010000 		.word	.LC23
+ 813 0310 70010000 		.word	.LC24
+ 814              	.L51:
+ 815              	.LBB38:
+ 381:Core/Src/main.c ****                     }
+ 816              		.loc 1 381 25 is_stmt 1 view .LVU180
+ 817 0314 2A49     		ldr	r1, .L55
+ 818 0316 2B48     		ldr	r0, .L55+4
+ 819 0318 FFF7FEFF 		bl	printf
+ 820              	.LVL72:
+ 821              	.LBE38:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 822              		.loc 1 193 11 is_stmt 0 view .LVU181
+ 823 031c 0020     		movs	r0, #0
+ 824              	.LBB39:
+ 825 031e 49E0     		b	.L1
+ 826              	.L52:
+ 385:Core/Src/main.c ****                     }
+ 827              		.loc 1 385 25 is_stmt 1 view .LVU182
+ 828 0320 2949     		ldr	r1, .L55+8
+ 829 0322 2848     		ldr	r0, .L55+4
+ 830 0324 FFF7FEFF 		bl	printf
+ 831              	.LVL73:
+ 832              	.LBE39:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 833              		.loc 1 193 11 is_stmt 0 view .LVU183
+ 834 0328 0020     		movs	r0, #0
+ 835 032a 43E0     		b	.L1
+ 836              	.LVL74:
+ 837              	.L32:
+ 838              	.LBB40:
+ 391:Core/Src/main.c ****                     printf( &logger, " > ReEnter pairing mode\r\n\n" );
+ 839              		.loc 1 391 21 is_stmt 1 view .LVU184
+ 840 032c 254C     		ldr	r4, .L55+4
+ 841 032e 2749     		ldr	r1, .L55+12
+ 842 0330 2046     		mov	r0, r4
+ 843              	.LVL75:
+ 391:Core/Src/main.c ****                     printf( &logger, " > ReEnter pairing mode\r\n\n" );
+ 844              		.loc 1 391 21 is_stmt 0 view .LVU185
+ 845 0332 FFF7FEFF 		bl	printf
+ 846              	.LVL76:
+ 392:Core/Src/main.c ****                     error_flag |= BM83_enter_pairing_mode ( &BM83 );
+ 847              		.loc 1 392 21 is_stmt 1 view .LVU186
+ 848 0336 2649     		ldr	r1, .L55+16
+ 849 0338 2046     		mov	r0, r4
+ 850 033a FFF7FEFF 		bl	printf
+ 851              	.LVL77:
+ 393:Core/Src/main.c ****                     break;
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 26
+
+
+ 852              		.loc 1 393 21 view .LVU187
+ 393:Core/Src/main.c ****                     break;
+ 853              		.loc 1 393 35 is_stmt 0 view .LVU188
+ 854 033e 2548     		ldr	r0, .L55+20
+ 855 0340 FFF7FEFF 		bl	BM83_enter_pairing_mode
+ 856              	.LVL78:
+ 394:Core/Src/main.c ****                 }
+ 857              		.loc 1 394 21 is_stmt 1 view .LVU189
+ 858 0344 36E0     		b	.L1
+ 859              	.LVL79:
+ 860              	.L36:
+ 394:Core/Src/main.c ****                 }
+ 861              		.loc 1 394 21 is_stmt 0 view .LVU190
+ 862              	.LBE40:
+ 863              	.LBB41:
+ 403:Core/Src/main.c ****                     break;
+ 864              		.loc 1 403 21 is_stmt 1 view .LVU191
+ 865 0346 2449     		ldr	r1, .L55+24
+ 866 0348 1E48     		ldr	r0, .L55+4
+ 867              	.LVL80:
+ 403:Core/Src/main.c ****                     break;
+ 868              		.loc 1 403 21 is_stmt 0 view .LVU192
+ 869 034a FFF7FEFF 		bl	printf
+ 870              	.LVL81:
+ 404:Core/Src/main.c ****                 }
+ 871              		.loc 1 404 21 is_stmt 1 view .LVU193
+ 872              	.LBE41:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 873              		.loc 1 193 11 is_stmt 0 view .LVU194
+ 874 034e 0020     		movs	r0, #0
+ 875              	.LBB42:
+ 404:Core/Src/main.c ****                 }
+ 876              		.loc 1 404 21 view .LVU195
+ 877 0350 30E0     		b	.L1
+ 878              	.LVL82:
+ 879              	.L28:
+ 404:Core/Src/main.c ****                 }
+ 880              		.loc 1 404 21 view .LVU196
+ 881              	.LBE42:
+ 882              	.LBB43:
+ 413:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 883              		.loc 1 413 21 is_stmt 1 view .LVU197
+ 884 0352 2249     		ldr	r1, .L55+28
+ 885 0354 1B48     		ldr	r0, .L55+4
+ 886              	.LVL83:
+ 413:Core/Src/main.c ****                     for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 887              		.loc 1 413 21 is_stmt 0 view .LVU198
+ 888 0356 FFF7FEFF 		bl	printf
+ 889              	.LVL84:
+ 414:Core/Src/main.c ****                     {
+ 890              		.loc 1 414 21 is_stmt 1 view .LVU199
+ 891              	.LBB44:
+ 414:Core/Src/main.c ****                     {
+ 892              		.loc 1 414 27 view .LVU200
+ 414:Core/Src/main.c ****                     {
+ 893              		.loc 1 414 36 is_stmt 0 view .LVU201
+ 894 035a 0024     		movs	r4, #0
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 27
+
+
+ 414:Core/Src/main.c ****                     {
+ 895              		.loc 1 414 21 view .LVU202
+ 896 035c 08E0     		b	.L40
+ 897              	.LVL85:
+ 898              	.L41:
+ 416:Core/Src/main.c ****                     }
+ 899              		.loc 1 416 25 is_stmt 1 discriminator 3 view .LVU203
+ 416:Core/Src/main.c ****                     }
+ 900              		.loc 1 416 93 is_stmt 0 discriminator 3 view .LVU204
+ 901 035e 2B19     		adds	r3, r5, r4
+ 416:Core/Src/main.c ****                     }
+ 902              		.loc 1 416 25 discriminator 3 view .LVU205
+ 903 0360 93F80725 		ldrb	r2, [r3, #1287]	@ zero_extendqisi2
+ 904 0364 1E49     		ldr	r1, .L55+32
+ 905 0366 1748     		ldr	r0, .L55+4
+ 906 0368 FFF7FEFF 		bl	printf
+ 907              	.LVL86:
+ 414:Core/Src/main.c ****                     {
+ 908              		.loc 1 414 83 is_stmt 1 discriminator 3 view .LVU206
+ 909 036c 0134     		adds	r4, r4, #1
+ 910              	.LVL87:
+ 414:Core/Src/main.c ****                     {
+ 911              		.loc 1 414 83 is_stmt 0 discriminator 3 view .LVU207
+ 912 036e A4B2     		uxth	r4, r4
+ 913              	.LVL88:
+ 914              	.L40:
+ 414:Core/Src/main.c ****                     {
+ 915              		.loc 1 414 49 is_stmt 1 discriminator 1 view .LVU208
+ 414:Core/Src/main.c ****                     {
+ 916              		.loc 1 414 68 is_stmt 0 discriminator 1 view .LVU209
+ 917 0370 95F80736 		ldrb	r3, [r5, #1543]	@ zero_extendqisi2
+ 414:Core/Src/main.c ****                     {
+ 918              		.loc 1 414 49 discriminator 1 view .LVU210
+ 919 0374 A342     		cmp	r3, r4
+ 920 0376 F2D8     		bhi	.L41
+ 921              	.LBE44:
+ 418:Core/Src/main.c ****                     break;
+ 922              		.loc 1 418 21 is_stmt 1 view .LVU211
+ 923 0378 1A49     		ldr	r1, .L55+36
+ 924 037a 1248     		ldr	r0, .L55+4
+ 925 037c FFF7FEFF 		bl	printf
+ 926              	.LVL89:
+ 419:Core/Src/main.c ****                 }
+ 927              		.loc 1 419 21 view .LVU212
+ 928              	.LBE43:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 929              		.loc 1 193 11 is_stmt 0 view .LVU213
+ 930 0380 0020     		movs	r0, #0
+ 931              	.LBB45:
+ 419:Core/Src/main.c ****                 }
+ 932              		.loc 1 419 21 view .LVU214
+ 933 0382 17E0     		b	.L1
+ 934              	.LVL90:
+ 935              	.L3:
+ 419:Core/Src/main.c ****                 }
+ 936              		.loc 1 419 21 view .LVU215
+ 937              	.LBE45:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 28
+
+
+ 938              	.LBB46:
+ 426:Core/Src/main.c ****             for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 939              		.loc 1 426 13 is_stmt 1 view .LVU216
+ 940 0384 1849     		ldr	r1, .L55+40
+ 941 0386 0F48     		ldr	r0, .L55+4
+ 942              	.LVL91:
+ 426:Core/Src/main.c ****             for ( uint16_t cnt = 0; cnt < dev->event_packet.param_len; cnt++ )
+ 943              		.loc 1 426 13 is_stmt 0 view .LVU217
+ 944 0388 FFF7FEFF 		bl	printf
+ 945              	.LVL92:
+ 427:Core/Src/main.c ****             {
+ 946              		.loc 1 427 13 is_stmt 1 view .LVU218
+ 947              	.LBB47:
+ 427:Core/Src/main.c ****             {
+ 948              		.loc 1 427 19 view .LVU219
+ 427:Core/Src/main.c ****             {
+ 949              		.loc 1 427 28 is_stmt 0 view .LVU220
+ 950 038c 0024     		movs	r4, #0
+ 427:Core/Src/main.c ****             {
+ 951              		.loc 1 427 13 view .LVU221
+ 952 038e 08E0     		b	.L42
+ 953              	.LVL93:
+ 954              	.L43:
+ 429:Core/Src/main.c ****             }
+ 955              		.loc 1 429 17 is_stmt 1 discriminator 3 view .LVU222
+ 429:Core/Src/main.c ****             }
+ 956              		.loc 1 429 85 is_stmt 0 discriminator 3 view .LVU223
+ 957 0390 2B19     		adds	r3, r5, r4
+ 429:Core/Src/main.c ****             }
+ 958              		.loc 1 429 17 discriminator 3 view .LVU224
+ 959 0392 93F80725 		ldrb	r2, [r3, #1287]	@ zero_extendqisi2
+ 960 0396 1249     		ldr	r1, .L55+32
+ 961 0398 0A48     		ldr	r0, .L55+4
+ 962 039a FFF7FEFF 		bl	printf
+ 963              	.LVL94:
+ 427:Core/Src/main.c ****             {
+ 964              		.loc 1 427 75 is_stmt 1 discriminator 3 view .LVU225
+ 965 039e 0134     		adds	r4, r4, #1
+ 966              	.LVL95:
+ 427:Core/Src/main.c ****             {
+ 967              		.loc 1 427 75 is_stmt 0 discriminator 3 view .LVU226
+ 968 03a0 A4B2     		uxth	r4, r4
+ 969              	.LVL96:
+ 970              	.L42:
+ 427:Core/Src/main.c ****             {
+ 971              		.loc 1 427 41 is_stmt 1 discriminator 1 view .LVU227
+ 427:Core/Src/main.c ****             {
+ 972              		.loc 1 427 60 is_stmt 0 discriminator 1 view .LVU228
+ 973 03a2 95F80736 		ldrb	r3, [r5, #1543]	@ zero_extendqisi2
+ 427:Core/Src/main.c ****             {
+ 974              		.loc 1 427 41 discriminator 1 view .LVU229
+ 975 03a6 A342     		cmp	r3, r4
+ 976 03a8 F2D8     		bhi	.L43
+ 977              	.LBE47:
+ 431:Core/Src/main.c ****             break;
+ 978              		.loc 1 431 13 is_stmt 1 view .LVU230
+ 979 03aa 0E49     		ldr	r1, .L55+36
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 29
+
+
+ 980 03ac 0548     		ldr	r0, .L55+4
+ 981 03ae FFF7FEFF 		bl	printf
+ 982              	.LVL97:
+ 432:Core/Src/main.c ****         }
+ 983              		.loc 1 432 13 view .LVU231
+ 984              	.LBE46:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 985              		.loc 1 193 11 is_stmt 0 view .LVU232
+ 986 03b2 0020     		movs	r0, #0
+ 987              	.LVL98:
+ 988              	.L1:
+ 436:Core/Src/main.c **** }
+ 989              		.loc 1 436 1 view .LVU233
+ 990 03b4 06B0     		add	sp, sp, #24
+ 991              	.LCFI2:
+ 992              		.cfi_remember_state
+ 993              		.cfi_def_cfa_offset 16
+ 994              		@ sp needed
+ 995 03b6 70BD     		pop	{r4, r5, r6, pc}
+ 996              	.LVL99:
+ 997              	.L44:
+ 998              	.LCFI3:
+ 999              		.cfi_restore_state
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 1000              		.loc 1 193 11 view .LVU234
+ 1001 03b8 0020     		movs	r0, #0
+ 1002              	.LVL100:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 1003              		.loc 1 193 11 view .LVU235
+ 1004 03ba FBE7     		b	.L1
+ 1005              	.LVL101:
+ 1006              	.L45:
+ 1007              	.LBB48:
+ 193:Core/Src/main.c ****     static BM83_eq_mode_t eq_mode = BM83_EQ_MODE_OFF;
+ 1008              		.loc 1 193 11 view .LVU236
+ 1009 03bc 0020     		movs	r0, #0
+ 1010 03be F9E7     		b	.L1
+ 1011              	.L56:
+ 1012              		.align	2
+ 1013              	.L55:
+ 1014 03c0 88010000 		.word	.LC25
+ 1015 03c4 00000000 		.word	logger
+ 1016 03c8 9C010000 		.word	.LC26
+ 1017 03cc AC010000 		.word	.LC27
+ 1018 03d0 C0010000 		.word	.LC28
+ 1019 03d4 00000000 		.word	BM83
+ 1020 03d8 F8010000 		.word	.LC30
+ 1021 03dc 2C020000 		.word	.LC32
+ 1022 03e0 44020000 		.word	.LC33
+ 1023 03e4 A8000000 		.word	.LC19
+ 1024 03e8 4C020000 		.word	.LC34
+ 1025              	.LBE48:
+ 1026              		.cfi_endproc
+ 1027              	.LFE138:
+ 1029              		.section	.rodata.application_init.str1.4,"aMS",%progbits,1
+ 1030              		.align	2
+ 1031              	.LC35:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 30
+
+
+ 1032 0000 42542041 		.ascii	"BT Audio 3 click\000"
+ 1032      7564696F 
+ 1032      20332063 
+ 1032      6C69636B 
+ 1032      00
+ 1033              		.section	.text.application_init,"ax",%progbits
+ 1034              		.align	1
+ 1035              		.global	application_init
+ 1036              		.syntax unified
+ 1037              		.thumb
+ 1038              		.thumb_func
+ 1040              	application_init:
+ 1041              	.LFB134:
+  66:Core/Src/main.c ****     
+ 1042              		.loc 1 66 1 is_stmt 1 view -0
+ 1043              		.cfi_startproc
+ 1044              		@ args = 0, pretend = 0, frame = 0
+ 1045              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1046 0000 10B5     		push	{r4, lr}
+ 1047              	.LCFI4:
+ 1048              		.cfi_def_cfa_offset 8
+ 1049              		.cfi_offset 4, -8
+ 1050              		.cfi_offset 14, -4
+  81:Core/Src/main.c **** 
+ 1051              		.loc 1 81 5 view .LVU238
+ 1052 0002 044C     		ldr	r4, .L59
+ 1053 0004 2046     		mov	r0, r4
+ 1054 0006 FFF7FEFF 		bl	BM83_Initialise
+ 1055              	.LVL102:
+  83:Core/Src/main.c ****       
+ 1056              		.loc 1 83 6 view .LVU239
+  83:Core/Src/main.c ****       
+ 1057              		.loc 1 83 22 is_stmt 0 view .LVU240
+ 1058 000a 0349     		ldr	r1, .L59+4
+ 1059 000c 2046     		mov	r0, r4
+ 1060 000e FFF7FEFF 		bl	BM83_set_device_name
+ 1061              	.LVL103:
+  85:Core/Src/main.c ****     
+ 1062              		.loc 1 85 6 is_stmt 1 view .LVU241
+  87:Core/Src/main.c **** 
+ 1063              		.loc 1 87 1 is_stmt 0 view .LVU242
+ 1064 0012 10BD     		pop	{r4, pc}
+ 1065              	.L60:
+ 1066              		.align	2
+ 1067              	.L59:
+ 1068 0014 00000000 		.word	BM83
+ 1069 0018 00000000 		.word	.LC35
+ 1070              		.cfi_endproc
+ 1071              	.LFE134:
+ 1073              		.section	.text.application_task,"ax",%progbits
+ 1074              		.align	1
+ 1075              		.global	application_task
+ 1076              		.syntax unified
+ 1077              		.thumb
+ 1078              		.thumb_func
+ 1080              	application_task:
+ 1081              	.LFB135:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 31
+
+
+  90:Core/Src/main.c ****     if ( BM83_OK == BM83_read_event ( &BM83 ) ) 
+ 1082              		.loc 1 90 1 is_stmt 1 view -0
+ 1083              		.cfi_startproc
+ 1084              		@ args = 0, pretend = 0, frame = 0
+ 1085              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1086 0000 08B5     		push	{r3, lr}
+ 1087              	.LCFI5:
+ 1088              		.cfi_def_cfa_offset 8
+ 1089              		.cfi_offset 3, -8
+ 1090              		.cfi_offset 14, -4
+  91:Core/Src/main.c ****     {
+ 1091              		.loc 1 91 5 view .LVU244
+  91:Core/Src/main.c ****     {
+ 1092              		.loc 1 91 21 is_stmt 0 view .LVU245
+ 1093 0002 0448     		ldr	r0, .L65
+ 1094 0004 FFF7FEFF 		bl	BM83_read_event
+ 1095              	.LVL104:
+  91:Core/Src/main.c ****     {
+ 1096              		.loc 1 91 8 view .LVU246
+ 1097 0008 00B1     		cbz	r0, .L64
+ 1098              	.L61:
+  95:Core/Src/main.c **** /* USER CODE END 0 */
+ 1099              		.loc 1 95 1 view .LVU247
+ 1100 000a 08BD     		pop	{r3, pc}
+ 1101              	.L64:
+  93:Core/Src/main.c ****     }
+ 1102              		.loc 1 93 9 is_stmt 1 view .LVU248
+ 1103 000c 0148     		ldr	r0, .L65
+ 1104 000e FFF7FEFF 		bl	BM83_event_handler
+ 1105              	.LVL105:
+  95:Core/Src/main.c **** /* USER CODE END 0 */
+ 1106              		.loc 1 95 1 is_stmt 0 view .LVU249
+ 1107 0012 FAE7     		b	.L61
+ 1108              	.L66:
+ 1109              		.align	2
+ 1110              	.L65:
+ 1111 0014 00000000 		.word	BM83
+ 1112              		.cfi_endproc
+ 1113              	.LFE135:
+ 1115              		.section	.text.main,"ax",%progbits
+ 1116              		.align	1
+ 1117              		.global	main
+ 1118              		.syntax unified
+ 1119              		.thumb
+ 1120              		.thumb_func
+ 1122              	main:
+ 1123              	.LFB136:
+ 103:Core/Src/main.c **** 
+ 1124              		.loc 1 103 1 is_stmt 1 view -0
+ 1125              		.cfi_startproc
+ 1126              		@ Volatile: function does not return.
+ 1127              		@ args = 0, pretend = 0, frame = 0
+ 1128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1129 0000 08B5     		push	{r3, lr}
+ 1130              	.LCFI6:
+ 1131              		.cfi_def_cfa_offset 8
+ 1132              		.cfi_offset 3, -8
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 32
+
+
+ 1133              		.cfi_offset 14, -4
+ 106:Core/Src/main.c ****     
+ 1134              		.loc 1 106 3 view .LVU251
+ 1135 0002 FFF7FEFF 		bl	application_init
+ 1136              	.LVL106:
+ 1137              	.L68:
+ 108:Core/Src/main.c ****     {
+ 1138              		.loc 1 108 5 discriminator 1 view .LVU252
+ 110:Core/Src/main.c ****     }
+ 1139              		.loc 1 110 9 discriminator 1 view .LVU253
+ 1140 0006 FFF7FEFF 		bl	application_task
+ 1141              	.LVL107:
+ 108:Core/Src/main.c ****     {
+ 1142              		.loc 1 108 5 discriminator 1 view .LVU254
+ 1143 000a FCE7     		b	.L68
+ 1144              		.cfi_endproc
+ 1145              	.LFE136:
+ 1147              		.section	.text.Error_Handler,"ax",%progbits
+ 1148              		.align	1
+ 1149              		.global	Error_Handler
+ 1150              		.syntax unified
+ 1151              		.thumb
+ 1152              		.thumb_func
+ 1154              	Error_Handler:
+ 1155              	.LFB139:
+ 437:Core/Src/main.c **** 
+ 438:Core/Src/main.c **** /* USER CODE END 4 */
+ 439:Core/Src/main.c **** 
+ 440:Core/Src/main.c **** /**
+ 441:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 442:Core/Src/main.c ****   * @retval None
+ 443:Core/Src/main.c ****   */
+ 444:Core/Src/main.c **** void Error_Handler(void)
+ 445:Core/Src/main.c **** {
+ 1156              		.loc 1 445 1 view -0
+ 1157              		.cfi_startproc
+ 1158              		@ Volatile: function does not return.
+ 1159              		@ args = 0, pretend = 0, frame = 0
+ 1160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1161              		@ link register save eliminated.
+ 446:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 447:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 448:Core/Src/main.c ****   __disable_irq();
+ 1162              		.loc 1 448 3 view .LVU256
+ 1163              	.LBB49:
+ 1164              	.LBI49:
+ 1165              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -384,6 +1918,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
    8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2021 Arm Limited. All rights reserved.
    9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 33
+
+
   11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
   13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
@@ -418,9 +1955,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
   44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 8
-
-
   45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
   47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
@@ -444,6 +1978,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
   66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 34
+
+
   68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
@@ -478,9 +2015,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
   99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
  100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
  101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 9
-
-
  102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
  103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
  104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
@@ -504,6 +2038,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  122:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __PROGRAM_START
  123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 35
+
+
  125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
  126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
  127:Drivers/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
@@ -538,9 +2075,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  156:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  157:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
  158:Drivers/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 10
-
-
  159:Drivers/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = 0u;
  160:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
  161:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
@@ -564,6 +2098,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  179:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  180:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  181:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 36
+
+
  182:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute__((used, section(".vectors")))
  183:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  184:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -598,9 +2135,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  213:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Otherwise, use general registers, specified by constraint "r" */
  214:Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
  215:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 11
-
-
  216:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+l" (r)
  217:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
  218:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -624,6 +2158,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  236:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  237:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  238:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Event
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 37
+
+
  239:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Event is a hint instruction that permits the processor to enter
  240:Drivers/CMSIS/Include/cmsis_gcc.h ****            a low-power state until one of a number of events occurs.
  241:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -658,9 +2195,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  270:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  271:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dsb 0xF":::"memory");
  272:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 12
-
-
  273:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  274:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  275:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -684,6 +2218,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  293:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  294:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5)
  295:Drivers/CMSIS/Include/cmsis_gcc.h ****   return __builtin_bswap32(value);
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 38
+
+
  296:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  297:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  298:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -718,9 +2255,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  327:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  328:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
  329:Drivers/CMSIS/Include/cmsis_gcc.h ****   return (int16_t)__builtin_bswap16(value);
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 13
-
-
  330:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  331:Drivers/CMSIS/Include/cmsis_gcc.h ****   int16_t result;
  332:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -744,6 +2278,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  350:Drivers/CMSIS/Include/cmsis_gcc.h ****   {
  351:Drivers/CMSIS/Include/cmsis_gcc.h ****     return op1;
  352:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 39
+
+
  353:Drivers/CMSIS/Include/cmsis_gcc.h ****   return (op1 >> op2) | (op1 << (32U - op2));
  354:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  355:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -778,9 +2315,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  384:Drivers/CMSIS/Include/cmsis_gcc.h ****   result = value;                      /* r will be reversed bits of v; first get LSB of v */
  385:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (value >>= 1U; value != 0U; value >>= 1U)
  386:Drivers/CMSIS/Include/cmsis_gcc.h ****   {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 14
-
-
  387:Drivers/CMSIS/Include/cmsis_gcc.h ****     result <<= 1U;
  388:Drivers/CMSIS/Include/cmsis_gcc.h ****     result |= value & 1U;
  389:Drivers/CMSIS/Include/cmsis_gcc.h ****     s--;
@@ -804,6 +2338,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  407:Drivers/CMSIS/Include/cmsis_gcc.h ****      This guarantees ARM-compatible results if happening to compile on a non-ARM
  408:Drivers/CMSIS/Include/cmsis_gcc.h ****      target, and ensures the compiler doesn't decide to activate any
  409:Drivers/CMSIS/Include/cmsis_gcc.h ****      optimisations using the logic "value was passed to __builtin_clz, so it
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 40
+
+
  410:Drivers/CMSIS/Include/cmsis_gcc.h ****      is non-zero".
  411:Drivers/CMSIS/Include/cmsis_gcc.h ****      ARM GCC 7.3 and possibly earlier will optimise this test away, leaving a
  412:Drivers/CMSIS/Include/cmsis_gcc.h ****      single CLZ instruction.
@@ -838,9 +2375,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  441:Drivers/CMSIS/Include/cmsis_gcc.h ****     */
  442:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrexb %0, [%1]" : "=r" (result) : "r" (addr) : "memory" );
  443:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 15
-
-
  444:Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint8_t) result);    /* Add explicit type cast here */
  445:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  446:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -864,6 +2398,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  464:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrexh %0, [%1]" : "=r" (result) : "r" (addr) : "memory" );
  465:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  466:Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint16_t) result);    /* Add explicit type cast here */
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 41
+
+
  467:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  468:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  469:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -898,9 +2435,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  498:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  499:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  500:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 16
-
-
  501:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  502:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  503:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STR Exclusive (16 bit)
@@ -924,6 +2458,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  521:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a exclusive STR instruction for 32 bit values.
  522:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
  523:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 42
+
+
  524:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          0  Function succeeded
  525:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
  526:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -958,9 +2495,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  555:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Signed Saturate
  556:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Saturates a signed value.
  557:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  ARG1  Value to be saturated
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 17
-
-
  558:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  ARG2  Bit position to saturate to (1..32)
  559:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             Saturated value
  560:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -984,6 +2518,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  578:Drivers/CMSIS/Include/cmsis_gcc.h **** __extension__ \
  579:Drivers/CMSIS/Include/cmsis_gcc.h **** ({                          \
  580:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t __RES, __ARG1 = (ARG1); \
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 43
+
+
  581:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("usat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) : "cc" ); \
  582:Drivers/CMSIS/Include/cmsis_gcc.h ****   __RES; \
  583:Drivers/CMSIS/Include/cmsis_gcc.h ****  })
@@ -1018,9 +2555,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  612:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
  613:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrbt %0, %1" : "=r" (result) : "Q" (*ptr) );
  614:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 18
-
-
  615:Drivers/CMSIS/Include/cmsis_gcc.h ****     /* Prior to GCC 4.8, "Q" will be expanded to [rx, #0] which is not
  616:Drivers/CMSIS/Include/cmsis_gcc.h ****        accepted by assembler. So has to use following less efficient pattern.
  617:Drivers/CMSIS/Include/cmsis_gcc.h ****     */
@@ -1044,6 +2578,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  635:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrht %0, %1" : "=r" (result) : "Q" (*ptr) );
  636:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  637:Drivers/CMSIS/Include/cmsis_gcc.h ****     /* Prior to GCC 4.8, "Q" will be expanded to [rx, #0] which is not
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 44
+
+
  638:Drivers/CMSIS/Include/cmsis_gcc.h ****        accepted by assembler. So has to use following less efficient pattern.
  639:Drivers/CMSIS/Include/cmsis_gcc.h ****     */
  640:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrht %0, [%1]" : "=r" (result) : "r" (ptr) : "memory" );
@@ -1078,9 +2615,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  669:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("strbt %1, %0" : "=Q" (*ptr) : "r" ((uint32_t)value) );
  670:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  671:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 19
-
-
  672:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  673:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  674:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STRT Unprivileged (16 bit)
@@ -1104,6 +2638,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  692:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  693:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("strt %1, %0" : "=Q" (*ptr) : "r" (value) );
  694:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 45
+
+
  695:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  696:Drivers/CMSIS/Include/cmsis_gcc.h **** #else  /* ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
  697:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
@@ -1138,9 +2675,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  726:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Unsigned Saturate
  727:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Saturates an unsigned value.
  728:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to be saturated
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 20
-
-
  729:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    sat  Bit position to saturate to (0..31)
  730:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             Saturated value
  731:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1164,6 +2698,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  749:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif /* ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
  750:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
  751:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    ) */
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 46
+
+
  752:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  753:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  754:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
@@ -1198,9 +2735,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  783:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  784:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  785:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 21
-
-
  786:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  787:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire (32 bit)
  788:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a LDA instruction for 32 bit values.
@@ -1224,6 +2758,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  806:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  807:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __STLB(uint8_t value, volatile uint8_t *ptr)
  808:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 47
+
+
  809:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("stlb %1, %0" : "=Q" (*ptr) : "r" ((uint32_t)value) : "memory" );
  810:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  811:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1258,9 +2795,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  840:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
  841:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             value of type uint8_t at (*ptr)
  842:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 22
-
-
  843:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint8_t __LDAEXB(volatile uint8_t *ptr)
  844:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  845:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
@@ -1284,6 +2818,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  863:Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint16_t) result);
  864:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  865:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 48
+
+
  866:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  867:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  868:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Load-Acquire Exclusive (32 bit)
@@ -1318,9 +2855,6 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  897:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  898:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  899:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 23
-
-
  900:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Store-Release Exclusive (16 bit)
  901:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a STLH exclusive instruction for 16 bit values.
  902:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to store
@@ -1344,6 +2878,9 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  920:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
  921:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          0  Function succeeded
  922:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 49
+
+
  923:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  924:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STLEX(uint32_t value, volatile uint32_t *ptr)
  925:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1378,269 +2915,306 @@ ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 1
  954:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  955:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  956:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 24
-
-
  957:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting special-purpose register PRIMASK.
  958:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  959:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  960:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
- 157              		.loc 2 960 27 view .LVU20
- 158              	.LBB5:
+ 1166              		.loc 2 960 27 view .LVU257
+ 1167              	.LBB50:
  961:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  962:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
- 159              		.loc 2 962 3 view .LVU21
- 160              		.syntax unified
- 161              	@ 962 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 162 0000 72B6     		cpsid i
- 163              	@ 0 "" 2
- 164              		.thumb
- 165              		.syntax unified
- 166              	.L15:
- 167              	.LBE5:
- 168              	.LBE4:
- 201:Core/Src/main.c ****   while (1)
- 169              		.loc 1 201 3 discriminator 1 view .LVU22
- 202:Core/Src/main.c ****   {
- 203:Core/Src/main.c ****   }
- 170              		.loc 1 203 3 discriminator 1 view .LVU23
- 201:Core/Src/main.c ****   while (1)
- 171              		.loc 1 201 9 discriminator 1 view .LVU24
- 172 0002 FEE7     		b	.L15
- 173              		.cfi_endproc
- 174              	.LFE138:
- 176              		.section	.text.SystemClock_Config,"ax",%progbits
- 177              		.align	1
- 178              		.global	SystemClock_Config
- 179              		.syntax unified
- 180              		.thumb
- 181              		.thumb_func
- 183              	SystemClock_Config:
- 184              	.LFB137:
- 153:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 185              		.loc 1 153 1 view -0
- 186              		.cfi_startproc
- 187              		@ args = 0, pretend = 0, frame = 80
- 188              		@ frame_needed = 0, uses_anonymous_args = 0
- 189 0000 00B5     		push	{lr}
- 190              	.LCFI3:
- 191              		.cfi_def_cfa_offset 4
- 192              		.cfi_offset 14, -4
- 193 0002 95B0     		sub	sp, sp, #84
- 194              	.LCFI4:
- 195              		.cfi_def_cfa_offset 88
- 154:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 196              		.loc 1 154 3 view .LVU26
- 154:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 197              		.loc 1 154 22 is_stmt 0 view .LVU27
- 198 0004 3022     		movs	r2, #48
- 199 0006 0021     		movs	r1, #0
- 200 0008 08A8     		add	r0, sp, #32
- 201 000a FFF7FEFF 		bl	memset
- 202              	.LVL6:
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 25
+ 1168              		.loc 2 962 3 view .LVU258
+ 1169              		.syntax unified
+ 1170              	@ 962 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1171 0000 72B6     		cpsid i
+ 1172              	@ 0 "" 2
+ 1173              		.thumb
+ 1174              		.syntax unified
+ 1175              	.L71:
+ 1176              	.LBE50:
+ 1177              	.LBE49:
+ 449:Core/Src/main.c ****   while (1)
+ 1178              		.loc 1 449 3 discriminator 1 view .LVU259
+ 450:Core/Src/main.c ****   {
+ 451:Core/Src/main.c ****   }
+ 1179              		.loc 1 451 3 discriminator 1 view .LVU260
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 50
 
 
- 155:Core/Src/main.c **** 
- 203              		.loc 1 155 3 is_stmt 1 view .LVU28
- 155:Core/Src/main.c **** 
- 204              		.loc 1 155 22 is_stmt 0 view .LVU29
- 205 000e 0023     		movs	r3, #0
- 206 0010 0393     		str	r3, [sp, #12]
- 207 0012 0493     		str	r3, [sp, #16]
- 208 0014 0593     		str	r3, [sp, #20]
- 209 0016 0693     		str	r3, [sp, #24]
- 210 0018 0793     		str	r3, [sp, #28]
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 211              		.loc 1 159 3 is_stmt 1 view .LVU30
- 212              	.LBB6:
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 213              		.loc 1 159 3 view .LVU31
- 214 001a 0193     		str	r3, [sp, #4]
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 215              		.loc 1 159 3 view .LVU32
- 216 001c 184A     		ldr	r2, .L22
- 217 001e 116C     		ldr	r1, [r2, #64]
- 218 0020 41F08051 		orr	r1, r1, #268435456
- 219 0024 1164     		str	r1, [r2, #64]
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 220              		.loc 1 159 3 view .LVU33
- 221 0026 126C     		ldr	r2, [r2, #64]
- 222 0028 02F08052 		and	r2, r2, #268435456
- 223 002c 0192     		str	r2, [sp, #4]
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 224              		.loc 1 159 3 view .LVU34
- 225 002e 019A     		ldr	r2, [sp, #4]
- 226              	.LBE6:
- 159:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 227              		.loc 1 159 3 view .LVU35
- 160:Core/Src/main.c **** 
- 228              		.loc 1 160 3 view .LVU36
- 229              	.LBB7:
- 160:Core/Src/main.c **** 
- 230              		.loc 1 160 3 view .LVU37
- 231 0030 0293     		str	r3, [sp, #8]
- 160:Core/Src/main.c **** 
- 232              		.loc 1 160 3 view .LVU38
- 233 0032 144A     		ldr	r2, .L22+4
- 234 0034 1168     		ldr	r1, [r2]
- 235 0036 41F48041 		orr	r1, r1, #16384
- 236 003a 1160     		str	r1, [r2]
- 160:Core/Src/main.c **** 
- 237              		.loc 1 160 3 view .LVU39
- 238 003c 1268     		ldr	r2, [r2]
- 239 003e 02F48042 		and	r2, r2, #16384
- 240 0042 0292     		str	r2, [sp, #8]
- 160:Core/Src/main.c **** 
- 241              		.loc 1 160 3 view .LVU40
- 242 0044 029A     		ldr	r2, [sp, #8]
- 243              	.LBE7:
- 160:Core/Src/main.c **** 
- 244              		.loc 1 160 3 view .LVU41
- 165:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 26
+ 449:Core/Src/main.c ****   while (1)
+ 1180              		.loc 1 449 9 discriminator 1 view .LVU261
+ 1181 0002 FEE7     		b	.L71
+ 1182              		.cfi_endproc
+ 1183              	.LFE139:
+ 1185              		.section	.text.SystemClock_Config,"ax",%progbits
+ 1186              		.align	1
+ 1187              		.global	SystemClock_Config
+ 1188              		.syntax unified
+ 1189              		.thumb
+ 1190              		.thumb_func
+ 1192              	SystemClock_Config:
+ 1193              	.LFB137:
+ 155:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 1194              		.loc 1 155 1 view -0
+ 1195              		.cfi_startproc
+ 1196              		@ args = 0, pretend = 0, frame = 80
+ 1197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1198 0000 00B5     		push	{lr}
+ 1199              	.LCFI7:
+ 1200              		.cfi_def_cfa_offset 4
+ 1201              		.cfi_offset 14, -4
+ 1202 0002 95B0     		sub	sp, sp, #84
+ 1203              	.LCFI8:
+ 1204              		.cfi_def_cfa_offset 88
+ 156:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 1205              		.loc 1 156 3 view .LVU263
+ 156:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 1206              		.loc 1 156 22 is_stmt 0 view .LVU264
+ 1207 0004 3022     		movs	r2, #48
+ 1208 0006 0021     		movs	r1, #0
+ 1209 0008 08A8     		add	r0, sp, #32
+ 1210 000a FFF7FEFF 		bl	memset
+ 1211              	.LVL108:
+ 157:Core/Src/main.c **** 
+ 1212              		.loc 1 157 3 is_stmt 1 view .LVU265
+ 157:Core/Src/main.c **** 
+ 1213              		.loc 1 157 22 is_stmt 0 view .LVU266
+ 1214 000e 0023     		movs	r3, #0
+ 1215 0010 0393     		str	r3, [sp, #12]
+ 1216 0012 0493     		str	r3, [sp, #16]
+ 1217 0014 0593     		str	r3, [sp, #20]
+ 1218 0016 0693     		str	r3, [sp, #24]
+ 1219 0018 0793     		str	r3, [sp, #28]
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 1220              		.loc 1 161 3 is_stmt 1 view .LVU267
+ 1221              	.LBB51:
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 1222              		.loc 1 161 3 view .LVU268
+ 1223 001a 0193     		str	r3, [sp, #4]
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 1224              		.loc 1 161 3 view .LVU269
+ 1225 001c 184A     		ldr	r2, .L78
+ 1226 001e 116C     		ldr	r1, [r2, #64]
+ 1227 0020 41F08051 		orr	r1, r1, #268435456
+ 1228 0024 1164     		str	r1, [r2, #64]
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 51
 
 
- 245              		.loc 1 165 3 view .LVU42
- 165:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 246              		.loc 1 165 36 is_stmt 0 view .LVU43
- 247 0046 0122     		movs	r2, #1
- 248 0048 0892     		str	r2, [sp, #32]
- 166:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 249              		.loc 1 166 3 is_stmt 1 view .LVU44
- 166:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 250              		.loc 1 166 30 is_stmt 0 view .LVU45
- 251 004a 4FF48032 		mov	r2, #65536
- 252 004e 0992     		str	r2, [sp, #36]
- 167:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 253              		.loc 1 167 3 is_stmt 1 view .LVU46
- 167:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 254              		.loc 1 167 34 is_stmt 0 view .LVU47
- 255 0050 0E93     		str	r3, [sp, #56]
- 168:Core/Src/main.c ****   {
- 256              		.loc 1 168 3 is_stmt 1 view .LVU48
- 168:Core/Src/main.c ****   {
- 257              		.loc 1 168 7 is_stmt 0 view .LVU49
- 258 0052 08A8     		add	r0, sp, #32
- 259 0054 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 260              	.LVL7:
- 168:Core/Src/main.c ****   {
- 261              		.loc 1 168 6 view .LVU50
- 262 0058 70B9     		cbnz	r0, .L20
- 175:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 263              		.loc 1 175 3 is_stmt 1 view .LVU51
- 175:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 264              		.loc 1 175 31 is_stmt 0 view .LVU52
- 265 005a 0F23     		movs	r3, #15
- 266 005c 0393     		str	r3, [sp, #12]
- 177:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 267              		.loc 1 177 3 is_stmt 1 view .LVU53
- 177:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 268              		.loc 1 177 34 is_stmt 0 view .LVU54
- 269 005e 0123     		movs	r3, #1
- 270 0060 0493     		str	r3, [sp, #16]
- 178:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 271              		.loc 1 178 3 is_stmt 1 view .LVU55
- 178:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 272              		.loc 1 178 35 is_stmt 0 view .LVU56
- 273 0062 0021     		movs	r1, #0
- 274 0064 0591     		str	r1, [sp, #20]
- 179:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 275              		.loc 1 179 3 is_stmt 1 view .LVU57
- 179:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 276              		.loc 1 179 36 is_stmt 0 view .LVU58
- 277 0066 0691     		str	r1, [sp, #24]
- 180:Core/Src/main.c **** 
- 278              		.loc 1 180 3 is_stmt 1 view .LVU59
- 180:Core/Src/main.c **** 
- 279              		.loc 1 180 36 is_stmt 0 view .LVU60
- 280 0068 0791     		str	r1, [sp, #28]
- 182:Core/Src/main.c ****   {
- 281              		.loc 1 182 3 is_stmt 1 view .LVU61
- 182:Core/Src/main.c ****   {
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 27
+ 1229              		.loc 1 161 3 view .LVU270
+ 1230 0026 126C     		ldr	r2, [r2, #64]
+ 1231 0028 02F08052 		and	r2, r2, #268435456
+ 1232 002c 0192     		str	r2, [sp, #4]
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 1233              		.loc 1 161 3 view .LVU271
+ 1234 002e 019A     		ldr	r2, [sp, #4]
+ 1235              	.LBE51:
+ 161:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 1236              		.loc 1 161 3 view .LVU272
+ 162:Core/Src/main.c **** 
+ 1237              		.loc 1 162 3 view .LVU273
+ 1238              	.LBB52:
+ 162:Core/Src/main.c **** 
+ 1239              		.loc 1 162 3 view .LVU274
+ 1240 0030 0293     		str	r3, [sp, #8]
+ 162:Core/Src/main.c **** 
+ 1241              		.loc 1 162 3 view .LVU275
+ 1242 0032 144A     		ldr	r2, .L78+4
+ 1243 0034 1168     		ldr	r1, [r2]
+ 1244 0036 41F48041 		orr	r1, r1, #16384
+ 1245 003a 1160     		str	r1, [r2]
+ 162:Core/Src/main.c **** 
+ 1246              		.loc 1 162 3 view .LVU276
+ 1247 003c 1268     		ldr	r2, [r2]
+ 1248 003e 02F48042 		and	r2, r2, #16384
+ 1249 0042 0292     		str	r2, [sp, #8]
+ 162:Core/Src/main.c **** 
+ 1250              		.loc 1 162 3 view .LVU277
+ 1251 0044 029A     		ldr	r2, [sp, #8]
+ 1252              	.LBE52:
+ 162:Core/Src/main.c **** 
+ 1253              		.loc 1 162 3 view .LVU278
+ 167:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 1254              		.loc 1 167 3 view .LVU279
+ 167:Core/Src/main.c ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 1255              		.loc 1 167 36 is_stmt 0 view .LVU280
+ 1256 0046 0122     		movs	r2, #1
+ 1257 0048 0892     		str	r2, [sp, #32]
+ 168:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 1258              		.loc 1 168 3 is_stmt 1 view .LVU281
+ 168:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 1259              		.loc 1 168 30 is_stmt 0 view .LVU282
+ 1260 004a 4FF48032 		mov	r2, #65536
+ 1261 004e 0992     		str	r2, [sp, #36]
+ 169:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 1262              		.loc 1 169 3 is_stmt 1 view .LVU283
+ 169:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 1263              		.loc 1 169 34 is_stmt 0 view .LVU284
+ 1264 0050 0E93     		str	r3, [sp, #56]
+ 170:Core/Src/main.c ****   {
+ 1265              		.loc 1 170 3 is_stmt 1 view .LVU285
+ 170:Core/Src/main.c ****   {
+ 1266              		.loc 1 170 7 is_stmt 0 view .LVU286
+ 1267 0052 08A8     		add	r0, sp, #32
+ 1268 0054 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 1269              	.LVL109:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 52
 
 
- 282              		.loc 1 182 7 is_stmt 0 view .LVU62
- 283 006a 03A8     		add	r0, sp, #12
- 284 006c FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 285              	.LVL8:
- 182:Core/Src/main.c ****   {
- 286              		.loc 1 182 6 view .LVU63
- 287 0070 20B9     		cbnz	r0, .L21
- 186:Core/Src/main.c **** 
- 288              		.loc 1 186 1 view .LVU64
- 289 0072 15B0     		add	sp, sp, #84
- 290              	.LCFI5:
- 291              		.cfi_remember_state
- 292              		.cfi_def_cfa_offset 4
- 293              		@ sp needed
- 294 0074 5DF804FB 		ldr	pc, [sp], #4
- 295              	.L20:
- 296              	.LCFI6:
- 297              		.cfi_restore_state
- 170:Core/Src/main.c ****   }
- 298              		.loc 1 170 5 is_stmt 1 view .LVU65
- 299 0078 FFF7FEFF 		bl	Error_Handler
- 300              	.LVL9:
- 301              	.L21:
- 184:Core/Src/main.c ****   }
- 302              		.loc 1 184 5 view .LVU66
- 303 007c FFF7FEFF 		bl	Error_Handler
- 304              	.LVL10:
- 305              	.L23:
- 306              		.align	2
- 307              	.L22:
- 308 0080 00380240 		.word	1073887232
- 309 0084 00700040 		.word	1073770496
- 310              		.cfi_endproc
- 311              	.LFE137:
- 313              		.section	.bss.BM83,"aw",%nobits
- 314              		.align	2
- 317              	BM83:
- 318 0000 00000000 		.space	1540
- 318      00000000 
- 318      00000000 
- 318      00000000 
- 318      00000000 
- 319              		.text
- 320              	.Letext0:
- 321              		.file 3 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
- 322              		.file 4 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
- 323              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 324              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 325              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
- 326              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
- 327              		.file 9 "Core/Inc/hal_target.h"
- 328              		.file 10 "Core/Inc/bm83.h"
- 329              		.file 11 "<built-in>"
-ARM GAS  C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s 			page 28
+ 170:Core/Src/main.c ****   {
+ 1270              		.loc 1 170 6 view .LVU287
+ 1271 0058 70B9     		cbnz	r0, .L76
+ 177:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 1272              		.loc 1 177 3 is_stmt 1 view .LVU288
+ 177:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 1273              		.loc 1 177 31 is_stmt 0 view .LVU289
+ 1274 005a 0F23     		movs	r3, #15
+ 1275 005c 0393     		str	r3, [sp, #12]
+ 179:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 1276              		.loc 1 179 3 is_stmt 1 view .LVU290
+ 179:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 1277              		.loc 1 179 34 is_stmt 0 view .LVU291
+ 1278 005e 0123     		movs	r3, #1
+ 1279 0060 0493     		str	r3, [sp, #16]
+ 180:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 1280              		.loc 1 180 3 is_stmt 1 view .LVU292
+ 180:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 1281              		.loc 1 180 35 is_stmt 0 view .LVU293
+ 1282 0062 0021     		movs	r1, #0
+ 1283 0064 0591     		str	r1, [sp, #20]
+ 181:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 1284              		.loc 1 181 3 is_stmt 1 view .LVU294
+ 181:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 1285              		.loc 1 181 36 is_stmt 0 view .LVU295
+ 1286 0066 0691     		str	r1, [sp, #24]
+ 182:Core/Src/main.c **** 
+ 1287              		.loc 1 182 3 is_stmt 1 view .LVU296
+ 182:Core/Src/main.c **** 
+ 1288              		.loc 1 182 36 is_stmt 0 view .LVU297
+ 1289 0068 0791     		str	r1, [sp, #28]
+ 184:Core/Src/main.c ****   {
+ 1290              		.loc 1 184 3 is_stmt 1 view .LVU298
+ 184:Core/Src/main.c ****   {
+ 1291              		.loc 1 184 7 is_stmt 0 view .LVU299
+ 1292 006a 03A8     		add	r0, sp, #12
+ 1293 006c FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 1294              	.LVL110:
+ 184:Core/Src/main.c ****   {
+ 1295              		.loc 1 184 6 view .LVU300
+ 1296 0070 20B9     		cbnz	r0, .L77
+ 188:Core/Src/main.c **** 
+ 1297              		.loc 1 188 1 view .LVU301
+ 1298 0072 15B0     		add	sp, sp, #84
+ 1299              	.LCFI9:
+ 1300              		.cfi_remember_state
+ 1301              		.cfi_def_cfa_offset 4
+ 1302              		@ sp needed
+ 1303 0074 5DF804FB 		ldr	pc, [sp], #4
+ 1304              	.L76:
+ 1305              	.LCFI10:
+ 1306              		.cfi_restore_state
+ 172:Core/Src/main.c ****   }
+ 1307              		.loc 1 172 5 is_stmt 1 view .LVU302
+ 1308 0078 FFF7FEFF 		bl	Error_Handler
+ 1309              	.LVL111:
+ 1310              	.L77:
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 53
+
+
+ 186:Core/Src/main.c ****   }
+ 1311              		.loc 1 186 5 view .LVU303
+ 1312 007c FFF7FEFF 		bl	Error_Handler
+ 1313              	.LVL112:
+ 1314              	.L79:
+ 1315              		.align	2
+ 1316              	.L78:
+ 1317 0080 00380240 		.word	1073887232
+ 1318 0084 00700040 		.word	1073770496
+ 1319              		.cfi_endproc
+ 1320              	.LFE137:
+ 1322              		.section	.bss.eq_mode.0,"aw",%nobits
+ 1325              	eq_mode.0:
+ 1326 0000 00       		.space	1
+ 1327              		.section	.bss.logger,"aw",%nobits
+ 1328              		.align	2
+ 1331              	logger:
+ 1332 0000 00       		.space	1
+ 1333              		.section	.bss.BM83,"aw",%nobits
+ 1334              		.align	2
+ 1337              	BM83:
+ 1338 0000 00000000 		.space	1544
+ 1338      00000000 
+ 1338      00000000 
+ 1338      00000000 
+ 1338      00000000 
+ 1339              		.text
+ 1340              	.Letext0:
+ 1341              		.file 3 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
+ 1342              		.file 4 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/../
+ 1343              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 1344              		.file 6 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/inc
+ 1345              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 1346              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 1347              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 1348              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 1349              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 1350              		.file 12 "Core/Inc/hal_target.h"
+ 1351              		.file 13 "Core/Inc/bm832.h"
+ 1352              		.file 14 "C:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin/../lib/gcc/arm-none-eabi/12.3.1/..
+ 1353              		.file 15 "<built-in>"
+ARM GAS  C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s 			page 54
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:21     .rodata.application_init.str1.4:00000000 $d
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:25     .text.application_init:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:31     .text.application_init:00000000 application_init
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:59     .text.application_init:00000014 $d
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:317    .bss.BM83:00000000 BM83
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:65     .text.application_task:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:71     .text.application_task:00000000 application_task
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:102    .text.application_task:00000014 $d
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:107    .text.main:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:113    .text.main:00000000 main
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:139    .text.Error_Handler:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:145    .text.Error_Handler:00000000 Error_Handler
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:177    .text.SystemClock_Config:00000000 $t
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:183    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:308    .text.SystemClock_Config:00000080 $d
-C:\Users\Kagen\AppData\Local\Temp\cc8rjSq1.s:314    .bss.BM83:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:21     .rodata.BM83_event_handler.str1.4:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:131    .text.BM83_event_handler:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:136    .text.BM83_event_handler:00000000 BM83_event_handler
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:445    .text.BM83_event_handler:00000162 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:456    .text.BM83_event_handler:00000178 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:612    .text.BM83_event_handler:00000208 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:784    .text.BM83_event_handler:0000029c $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1337   .bss.BM83:00000000 BM83
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1325   .bss.eq_mode.0:00000000 eq_mode.0
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1331   .bss.logger:00000000 logger
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:817    .text.BM83_event_handler:00000314 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1014   .text.BM83_event_handler:000003c0 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1030   .rodata.application_init.str1.4:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1034   .text.application_init:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1040   .text.application_init:00000000 application_init
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1068   .text.application_init:00000014 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1074   .text.application_task:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1080   .text.application_task:00000000 application_task
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1111   .text.application_task:00000014 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1116   .text.main:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1122   .text.main:00000000 main
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1148   .text.Error_Handler:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1154   .text.Error_Handler:00000000 Error_Handler
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1186   .text.SystemClock_Config:00000000 $t
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1192   .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1317   .text.SystemClock_Config:00000080 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1326   .bss.eq_mode.0:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1328   .bss.logger:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:1334   .bss.BM83:00000000 $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:631    .text.BM83_event_handler:0000021b $d
+C:\Users\Kagen\AppData\Local\Temp\ccdHa75f.s:631    .text.BM83_event_handler:0000021c $t
 
 UNDEFINED SYMBOLS
+strstr
+BM83_music_control
+BM83_volume_up
+BM83_volume_down
+BM83_soft_unmute_output
+BM83_soft_mute_output
+memcpy
+BM83_make_call
+BM83_send_mmi_action
+BM83_set_eq_mode
+printf
+BM83_enter_pairing_mode
 BM83_Initialise
 BM83_set_device_name
 BM83_read_event
-BM83_event_handler
 memset
 HAL_RCC_OscConfig
 HAL_RCC_ClockConfig
